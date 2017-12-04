@@ -277,34 +277,8 @@
                                 </xs:complexType>
                             </xs:element>
                             <xs:element maxOccurs="1" minOccurs="0" name="testdetails" type="testdetails"/>
-                            <xs:element maxOccurs="1" minOccurs="0" name="drugdetails" type="drugdetails">
-                            </xs:element>
-                            <xs:element maxOccurs="1" minOccurs="0" name="letterdetails">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element maxOccurs="unbounded" minOccurs="1" name="letter">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element maxOccurs="1" minOccurs="1" name="letterdate" type="xs:dateTime"/>
-                                                    <xs:element maxOccurs="1" minOccurs="1" name="lettertype">
-                                                        <xs:simpleType>
-                                                            <xs:restriction base="xs:string">
-                                                                <xs:maxLength value="50"/>
-                                                            </xs:restriction>
-                                                        </xs:simpleType>
-                                                    </xs:element>
-                                                    <xs:element maxOccurs="1" minOccurs="1" name="lettercontent" type="xs:string">
-                                                        <xs:annotation>
-                                                            <xs:documentation>
-                                                                Letter content should be sent as a CDATA section to avoid parsing errors. E.g.<![CDATA[ and end with the string ]]>															</xs:documentation>
-                                                        </xs:annotation>
-                                                    </xs:element>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
+                            <xs:element maxOccurs="1" minOccurs="0" name="drugdetails" type="drugdetails"/>
+                            <xs:element maxOccurs="1" minOccurs="0" name="letterdetails" type="letterdetails"/>
                             <xs:element maxOccurs="1" minOccurs="0" name="diagnostics">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -375,6 +349,32 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    
+    <xs:complexType name="letterdetails">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="1" name="letter" type="letter">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="letter">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="1" name="letterdate" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="lettertype">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs="1" minOccurs="1" name="lettercontent" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Letter content should be sent as a CDATA section to avoid parsing errors. E.g.<![CDATA[ and end with the string ]]>															</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
     
     <xs:complexType name="drugdetails">
         <xs:sequence>
