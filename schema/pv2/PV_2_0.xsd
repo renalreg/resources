@@ -367,7 +367,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="1" name="lettercontent" type="xs:string">
+            <xs:element maxOccurs="1" minOccurs="0" name="lettercontent" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
                         Letter content should be sent as a CDATA section to avoid parsing errors. E.g.<![CDATA[ and end with the string ]]>															</xs:documentation>
