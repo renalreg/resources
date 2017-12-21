@@ -13,7 +13,7 @@
 	<xs:complexType name="Patient">
 		<xs:sequence>
 			<xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="0"/>
-			<xs:element name="Names">
+			<xs:element name="Names" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="Name" type="Name" minOccurs="0" maxOccurs="unbounded">
