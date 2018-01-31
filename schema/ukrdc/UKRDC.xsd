@@ -62,8 +62,8 @@
 						<xs:sequence>
 							<xs:element maxOccurs="unbounded" minOccurs="0" name="Observation" type="Observation"/>
 						</xs:sequence>
-						<xs:attribute name="start" type="xs:date" use="required"/>
-						<xs:attribute name="stop" type="xs:date" use="required"/>
+						<xs:attribute name="start" type="xs:date"/>
+						<xs:attribute name="stop" type="xs:date"/>
 					</xs:complexType>
 				</xs:element>
 				<xs:element minOccurs="0" name="Allergies">
