@@ -361,7 +361,7 @@
         <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" name="letterdate" type="xs:dateTime"/>
             <xs:element maxOccurs="1" minOccurs="0" name="lettertitle" type="xs:string"/>
-            <xs:element maxOccurs="1" minOccurs="0" name="lettername" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="letterfilename" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="0" name="letterfiletype" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="lettertype">
                 <xs:simpleType>
