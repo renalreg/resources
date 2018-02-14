@@ -9,6 +9,7 @@
 			<xs:element name="EncounterNumber" type="xs:string" minOccurs="0"/>
 			<xs:element name="EncounterType">
 				<xs:annotation>
+                    <xs:appinfo>treatment.encountertype</xs:appinfo>
 					<xs:documentation>General Encounter Type (PV1-2)</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
