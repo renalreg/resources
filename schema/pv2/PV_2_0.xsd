@@ -349,14 +349,14 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:complexType name="letterdetails">
         <xs:sequence>
             <xs:element maxOccurs="unbounded" minOccurs="1" name="letter" type="letter">
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="letter">
         <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" name="letterdate" type="xs:dateTime"/>
@@ -385,13 +385,13 @@
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="drugdetails">
         <xs:sequence>
             <xs:element maxOccurs="unbounded" minOccurs="1" name="drug" type="drug"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="drug">
         <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" name="drugstartdate" type="xs:date"/>
@@ -413,13 +413,13 @@
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="testdetails">
         <xs:sequence>
             <xs:element maxOccurs="unbounded" minOccurs="1" name="test" type="test"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="test">
         <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" name="testname">
@@ -446,7 +446,7 @@
             <xs:element maxOccurs="unbounded" minOccurs="1" name="result" type="result"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="result">
         <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" name="datestamp" type="xs:dateTime"/>
@@ -475,7 +475,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    
+
 
     <xs:simpleType name="ibd_disease_extent">
         <xs:annotation>
@@ -492,7 +492,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    
+
 
     <xs:complexType name="ibd_disease_complications">
         <xs:simpleContent>
@@ -575,7 +575,7 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-    
+
     <xs:simpleType name="vaccination_record_description">
         <xs:restriction base="xs:string">
             <xs:maxLength value="60"/>
@@ -651,9 +651,9 @@
             <xs:enumeration value="transferrin"/>
             <xs:enumeration value="ironsat"/>
             <xs:enumeration value="urate"/>
-            
+
             <!-- Below here have been added since RPV 4.6 -->
-            
+
             <xs:enumeration value="ldl"/>
             <xs:enumeration value="hdl"/>
             <xs:enumeration value="magnesium"/>
@@ -677,10 +677,31 @@
             <xs:enumeration value="t4"/>
             <xs:enumeration value="tgn"/>
             <xs:enumeration value="tpmt"/>
-            <xs:enumeration value="vitb12"/>         
+            <xs:enumeration value="vitb12"/>
              <!-- UKRDC-314 -->
-            <xs:enumeration value="ldh"/> <!-- Lactate Dehydrogenase -->            
-                       
+            <xs:enumeration value="ldh"/> <!-- Lactate Dehydrogenase -->
+            <!-- PV Self-Entered Home HD Codes -->
+            <xs:enumeration value="BodyTemperature"/>
+            <xs:enumeration value="bps"/>
+            <xs:enumeration value="DialFlow"/>
+            <xs:enumeration value="eprex"/>
+            <xs:enumeration value="HdHours"/>
+            <xs:enumeration value="HdLocation"/>
+            <xs:enumeration value="hypotension"/>
+            <xs:enumeration value="LitresProcessed"/>
+            <xs:enumeration value="TargetWeight"/>
+            <xs:enumeration value="UfVolume"/>
+            <!-- PV Self-Entered Result Codes -->
+            <xs:enumeration value="resultcomment"/>
+            <!-- New Codes (27/02/2018) -->
+            <xs:enumeration value="neutrophils"/>
+            <xs:enumeration value="hbv"/>
+            <xs:enumeration value="hcv"/>
+            <xs:enumeration value="phepku"/>
+            <xs:enumeration value="ret-he"/>
+            <xs:enumeration value="ualbumin"/>
+            <xs:enumeration value="ucreatinine"/>
+            <xs:enumeration value="uproteint"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="prepost">
@@ -712,7 +733,7 @@
             <xs:enumeration value="LOST"/>
             <xs:enumeration value="PR"/>
             <xs:enumeration value="CK"/>
-            <xs:enumeration value="T/P Renal(c)"/>         
+            <xs:enumeration value="T/P Renal(c)"/>
             <xs:enumeration value="T/P Renal(l)"/>
             <xs:enumeration value="T/P Heart"/>
             <xs:enumeration value="Clinic"/>
@@ -730,7 +751,7 @@
             <xs:enumeration value="C"/>
             <xs:enumeration value="Diabetes"/>
             <xs:enumeration value="Deceased"/>
-            <xs:enumeration value="Medical"/> 
+            <xs:enumeration value="Medical"/>
             <xs:enumeration value="Transient"/>
             <xs:enumeration value="UNKNOWN"/>
         </xs:restriction>
