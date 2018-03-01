@@ -2,6 +2,15 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
 	<xs:include schemaLocation="../Types/Clinician.xsd"/>
 	<xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
+    
+    <xs:complexType name="Observations">
+        <xs:sequence>
+            <xs:element name="Observation" type="Observation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="start" type="xs:date"/>
+        <xs:attribute name="stop" type="xs:date"/>
+    </xs:complexType>  
+    
 	<xs:complexType name="Observation">
 		<xs:sequence>
 			<xs:element name="ObservationTime" type="xs:dateTime" minOccurs="0">
