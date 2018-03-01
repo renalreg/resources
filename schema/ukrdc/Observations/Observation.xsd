@@ -15,7 +15,8 @@
 		<xs:sequence>
 			<xs:element name="ObservationTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation/>
+                    <xs:appinfo>observation.observationtime</xs:appinfo>
+					<xs:documentation>When the Observation was made</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ObservationCode" minOccurs="0">
