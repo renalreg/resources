@@ -701,7 +701,7 @@
             <xs:enumeration value="ret-he"/>
             <xs:enumeration value="ualbumin"/>
             <xs:enumeration value="ucreatinine"/>
-            <xs:enumeration value="uproteint"/>
+            <xs:enumeration value="uprotein"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="prepost">
