@@ -223,7 +223,7 @@ def make_report(db_metadata, filepath):
 
 def main():
     xsd_path = 'schema/ukrdc/'
-    conn = Connection.create_psycopg2_connection(dbkey='ukrdc3')
+    conn = Connection.create_psycopg2_connection(dbkey='ukrdc3-tunnel')
     dbm = DBMetadata(conn.cursor(), xsd_path)
     dbm.run()
     make_report(
