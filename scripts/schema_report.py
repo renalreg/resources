@@ -167,6 +167,8 @@ class DBMetadata(object):
         db_metadata = self.db_metadata
         xml_md_keys = xml_metadata.keys()
         for table_name in db_metadata.keys():
+            if table_name not in xml_metadata:
+                continue
             xml_md_table_keys = xml_metadata[table_name].keys()
             for column_name in db_metadata[table_name].keys():
                 extra = all((
