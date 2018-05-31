@@ -10,11 +10,12 @@
 					3. We drop GIR 0AA as a valid postcode, we don't expect receiving files with such postcode.
 					4. We allow 0 - 3 spaces between parts.
 					5. We allow outward code, without second part.
+					6. On the last "or" part of the first part making number non-optional.
 					[*] https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Validation
 				</xs:documentation>
 			</xs:annotation>
 			<xs:maxLength value="8"/>
-			<xs:pattern value="((([A-Z][0-9]{1,2})|(([A-Z][A-HJ-Y][0-9]{1,2})|(([A-Z][0-9][A-Z])|([A-Z][A-HJ-Y][0-9]?[A-Z])))) {0,3}([0-9][A-Z]{2})?|ZZ99 {0,1}([0-9][A-Z]Z)?)"/>
+			<xs:pattern value="((([A-Z][0-9]{1,2})|(([A-Z][A-HJ-Y][0-9]{1,2})|(([A-Z][0-9][A-Z])|([A-Z][A-HJ-Y][0-9][A-Z])))) {0,3}([0-9][A-Z]{2})?|ZZ99 {0,1}([0-9][A-Z]Z)?)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Address">
