@@ -12,7 +12,7 @@
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:maxLength value="6" />
-                        <xs:pattern value="[A-HJ-NPWY][0-9LUE][0-9DER][0-9]{3}" />
+                        <xs:pattern value="([A-HJ-NPWY][0-9]{5})|((ALD|JER|GUE)[0-9]{3})" />
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
