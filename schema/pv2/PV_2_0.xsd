@@ -443,7 +443,7 @@
                     <xs:attribute name="stop" type="xs:date" use="required"/>
                 </xs:complexType>
             </xs:element>
-            <xs:element maxOccurs="unbounded" minOccurs="1" name="result" type="result"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="result" type="result"/>
         </xs:sequence>
     </xs:complexType>
 
