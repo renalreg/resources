@@ -12,11 +12,15 @@ import xlwt
 def get_db_table_list(cursor):
     sqlstring = """
     SELECT DISTINCT
-        table_name
+        A.table_name
     FROM
-        information_schema.columns
+        information_schema.columns A
+    LEFT JOIN information_schema.tables B
+        ON  A.table_name = B.table_name AND
+            A.table_schema = B.table_schema
     WHERE
-         information_schema.columns.table_schema = 'extract'
+         A.table_schema = 'extract' AND
+         B.table_type <> 'VIEW'
     """
 
     cursor.execute(sqlstring)
