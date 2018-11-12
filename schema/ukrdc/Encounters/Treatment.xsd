@@ -7,7 +7,7 @@
 	<xs:complexType name="Treatment">
 		<xs:sequence>
 			<xs:element name="EncounterNumber" type="xs:string" minOccurs="0"/>
-			<xs:element name="EncounterType">
+			<xs:element name="EncounterType" minOccurs="0">
 				<xs:annotation>
                     <xs:appinfo>treatment.encountertype</xs:appinfo>
 					<xs:documentation>General Encounter Type (PV1-2)</xs:documentation>
@@ -67,12 +67,12 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="FromTime" type="xs:dateTime">
+			<xs:element name="FromTime" type="xs:date">
 				<xs:annotation>
 					<xs:documentation>Start of Treatment (TXT00)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTime" type="xs:dateTime" minOccurs="0">
+			<xs:element name="ToTime" type="xs:date" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>End of Treatment (TXT01)</xs:documentation>
 				</xs:annotation>
