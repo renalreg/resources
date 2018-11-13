@@ -57,7 +57,7 @@
 					<xs:documentation>Start of Registration</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="ToTime" type="xs:dateTime">
+			<xs:element name="ToTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>End of Registration</xs:documentation>
 				</xs:annotation>
