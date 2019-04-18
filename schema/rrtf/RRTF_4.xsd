@@ -772,11 +772,6 @@ Date of last commit:        $Date: 2016-02-29 19:05:07 +0000 (Mon, 29 Feb 2016) 
                     <xs:documentation>ERF TReatment withdrawn for medical reasons</xs:documentation>
                 </xs:annotation>
             </xs:enumeration>
-            <xs:enumeration value="61">
-                <xs:annotation>
-                    <xs:documentation>Uremia caused by graph failure</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
             <xs:enumeration value="62">
                 <xs:annotation>
                     <xs:documentation>Pancreatitis</xs:documentation>
@@ -4239,7 +4234,7 @@ Date of last commit:        $Date: 2016-02-29 19:05:07 +0000 (Mon, 29 Feb 2016) 
                                                 <xs:documentation>EPO Dosage Per Week</xs:documentation>
                                             </xs:annotation>
                                             <xs:simpleType>
-                                                <xs:restriction base="xs:integer">
+                                                <xs:restriction base="xs:decimal">
                                                     <xs:minInclusive value="0"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
@@ -5846,9 +5841,9 @@ Date of last commit:        $Date: 2016-02-29 19:05:07 +0000 (Mon, 29 Feb 2016) 
                                         <xs:element name="QBLPN" type="xs:string" minOccurs="0"/>
                                         <xs:element name="QBLPP" type="xs:string" minOccurs="0"/>
                                         <xs:element name="QBLPQ" type="xs:string" minOccurs="0"/>
-                                        <xs:element name="QBLPR" type="RRDateType" minOccurs="0">
-                                            <xs:annotation>
-                                                <xs:documentation>Date of onset of Puberty</xs:documentation>
+                                        <xs:element name="QBLPR" type="xs:string" minOccurs="0">
+                                            <xs:annotation> 
+                                                <xs:documentation>Date of onset of Puberty (mm/yyyy)</xs:documentation>
                                             </xs:annotation>
                                         </xs:element>
                                         <xs:element name="QBLPT" type="xs:string" minOccurs="0"/>
