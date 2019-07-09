@@ -2,7 +2,7 @@
 the Repository Database"""
 
 import os
-from ukrdc_database.database import Connection
+from ukrdc.services.database import Connection
 from lxml import etree
 import xlwt
 
