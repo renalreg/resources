@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2019-07-09
+### Changed
+- STUDYNO has been added as a possible number source
+
 ## 1.2.0 - 2019-06-20
 ### Changed
 - Made TRA fields in Transplant Procedure non-Mandatory
