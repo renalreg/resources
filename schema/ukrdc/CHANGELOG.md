@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0 - 2019-07-12
+### Added
+- 3847 / 3852 have been added to the EDTA PRD Code List
+- 34 has been added to the EDTA COD List. This had been mistakenly omitted.
+
 ## 1.3.0 - 2019-07-09
 ### Changed
 - STUDYNO has been added as a possible number source
