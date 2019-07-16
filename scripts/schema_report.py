@@ -175,7 +175,9 @@ class DBMetadata(object):
                 continue
             xml_md_table_keys = xml_metadata[table_name].keys()
             for column_name in db_metadata[table_name].keys():
-                extra = all((table_name in xml_md_keys, column_name in xml_md_table_keys))
+                extra = all(
+                    (table_name in xml_md_keys, column_name in xml_md_table_keys)
+                )
                 if extra:
                     # Add the extra XML columns if there's a match
                     db_column_data = db_metadata[table_name][column_name]
