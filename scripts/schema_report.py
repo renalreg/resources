@@ -2,9 +2,11 @@
 the Repository Database"""
 
 import os
-from ukrdc.services.database import Connection
+
 from lxml import etree
 import xlwt
+
+from ukrdc.database import Connection
 
 # NOTE: This may assume a PostgreSQL DB
 
