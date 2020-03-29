@@ -55,7 +55,7 @@
 						<xs:element name="Code" minOccurs="0">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:maxLength value="5"/>
+									<xs:maxLength value="18"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:element>
