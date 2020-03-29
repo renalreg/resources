@@ -702,6 +702,9 @@
             <xs:enumeration value="ualbumin"/>
             <xs:enumeration value="ucreatinine"/>
             <xs:enumeration value="uprotein"/>
+            <!-- For INS App -->
+            <xs:enumeration value="updipstick"/>
+            <xs:enumeration value="odema"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="prepost">
