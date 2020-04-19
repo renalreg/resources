@@ -705,6 +705,9 @@
             <!-- For INS App -->
             <xs:enumeration value="updipstick"/>
             <xs:enumeration value="odema"/>
+            <!-- Covid-19 -->
+            <xs:enumeration value="covid19pcr"/>
+            <xs:enumeration value="covid19antibody"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="prepost">
