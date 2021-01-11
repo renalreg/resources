@@ -708,6 +708,8 @@
             <!-- Covid-19 -->
             <xs:enumeration value="covid19pcr"/>
             <xs:enumeration value="covid19antibody"/>
+			<!-- New Code (11/01/2021) -->
+			<xs:enumeration value="trop"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="prepost">
