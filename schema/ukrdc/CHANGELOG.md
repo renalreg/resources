@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0 - 2021-01-12
+### Changed
+- Set the length of DrugProduct/Generic to be 125 characters.
+
 ## 2.2.0 - 2020-02-06
 ### Changed
 - Increased size of Medication/Route/Code to 10 characters to support SNOMED

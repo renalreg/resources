@@ -402,7 +402,13 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="drugdose" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="drugdose">
+			    <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000"/>
+                    </xs:restriction>
+                </xs:simpleType>
+			</xs:element>
             <xs:element maxOccurs="1" minOccurs="0" name="code">
                 <xs:complexType>
                     <xs:sequence>
