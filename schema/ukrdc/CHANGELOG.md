@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0 - 2021-02-12
+### Changed
+- Split out the Procedure Elements to allow Start/End dates to be added to the Dialysis Sessions.
+
 ## 2.3.0 - 2021-01-12
 ### Changed
 - Set the length of DrugProduct/Generic to be 125 characters.
