@@ -18,7 +18,7 @@
 			<xs:element name="Names" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="Name" type="Name" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="Name" type="Name" minOccurs="1" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>1 instance of name must be present if an NHS Number or CHI Number is included.</xs:documentation>
 							</xs:annotation>
