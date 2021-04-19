@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.0 - 2021-04-19
+### Changed
+- Set the length of Medication/Comments to be 255 characters.
+
 ## 2.3.0 - 2021-01-12
 ### Changed
 - Set the length of DrugProduct/Generic to be 125 characters.
