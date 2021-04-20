@@ -377,7 +377,7 @@
                 </xs:annotation>
             </xs:element>
             <xs:element name="letterfilebody" maxOccurs="1" minOccurs="0" type="xs:base64Binary">
-				        <xs:annotation>
+                <xs:annotation>
                     <xs:documentation>
                         This property is used when the Note is binary data, e.g DOC, PDF, JPG
                     </xs:documentation>
@@ -403,12 +403,12 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element maxOccurs="1" minOccurs="0" name="drugdose">
-			    <xs:simpleType>
+                <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:maxLength value="1000"/>
                     </xs:restriction>
                 </xs:simpleType>
-			</xs:element>
+            </xs:element>
             <xs:element maxOccurs="1" minOccurs="0" name="code">
                 <xs:complexType>
                     <xs:sequence>
@@ -435,7 +435,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="1" name="testcode" type="testcode"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="testcode" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="0" name="units">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -611,113 +611,7 @@
             <xs:enumeration value="U"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:simpleType name="testcode">
-        <xs:annotation>
-            <xs:documentation>Test codes. Ciclosporin, tacrolimus and sirolimus are drug levels. PCR is protein-creatinine ratio. ACR is albumin creatinine ratio.</xs:documentation>
-        </xs:annotation>
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="hb"/>
-            <xs:enumeration value="wbc"/>
-            <xs:enumeration value="platelets"/>
-            <xs:enumeration value="urea"/>
-            <xs:enumeration value="creatinine"/>
-            <xs:enumeration value="potassium"/>
-            <xs:enumeration value="calcium"/>
-            <xs:enumeration value="adjustedcalcium"/>
-            <xs:enumeration value="phosphate"/>
-            <xs:enumeration value="albumin"/>
-            <xs:enumeration value="crp"/>
-            <xs:enumeration value="pth"/>
-            <xs:enumeration value="cholesterol"/>
-            <xs:enumeration value="tg"/>
-            <xs:enumeration value="glucose"/>
-            <xs:enumeration value="hba1c"/>
-            <xs:enumeration value="egfr"/>
-            <xs:enumeration value="hco3"/>
-            <xs:enumeration value="inr"/>
-            <xs:enumeration value="sodium"/>
-            <xs:enumeration value="pcr"/>
-            <xs:enumeration value="acr"/>
-            <xs:enumeration value="urr"/>
-            <xs:enumeration value="ktv"/>
-            <xs:enumeration value="ciclosporin"/>
-            <xs:enumeration value="tacrolimus"/>
-            <xs:enumeration value="sirolimus"/>
-            <xs:enumeration value="bpsys"/>
-            <xs:enumeration value="bpdia"/>
-            <xs:enumeration value="height"/>
-            <xs:enumeration value="weight"/>
-            <xs:enumeration value="bili"/>
-            <xs:enumeration value="ast"/>
-            <xs:enumeration value="alt"/>
-            <xs:enumeration value="alp"/>
-            <xs:enumeration value="ggt"/>
-            <xs:enumeration value="ferritin"/>
-            <xs:enumeration value="iron"/>
-            <xs:enumeration value="transferrin"/>
-            <xs:enumeration value="ironsat"/>
-            <xs:enumeration value="urate"/>
 
-            <!-- Below here have been added since RPV 4.6 -->
-
-            <xs:enumeration value="ldl"/>
-            <xs:enumeration value="hdl"/>
-            <xs:enumeration value="magnesium"/>
-            <xs:enumeration value="vitd"/>
-            <xs:enumeration value="testosterone"/>
-            <xs:enumeration value="psa"/>
-            <xs:enumeration value="lithium"/>
-            <xs:enumeration value="amy"/> <!-- Amylase -->
-            <xs:enumeration value="ft3"/>
-            <xs:enumeration value="ft4"/>
-            <xs:enumeration value="tsh"/>
-            <xs:enumeration value="lipase"/>
-            <xs:enumeration value="hct"/> <!-- Haematocrit -->
-            <!-- UKRDC-277 -->
-            <xs:enumeration value="bmi"/>
-            <xs:enumeration value="folate"/>
-            <xs:enumeration value="FaecalCalprotectin"/>
-            <xs:enumeration value="lhratio"/>
-            <xs:enumeration value="mmp"/>
-            <xs:enumeration value="pulse"/>
-            <xs:enumeration value="t4"/>
-            <xs:enumeration value="tgn"/>
-            <xs:enumeration value="tpmt"/>
-            <xs:enumeration value="vitb12"/>
-             <!-- UKRDC-314 -->
-            <xs:enumeration value="ldh"/> <!-- Lactate Dehydrogenase -->
-            <!-- PV Self-Entered Home HD Codes -->
-            <xs:enumeration value="BodyTemperature"/>
-            <xs:enumeration value="bps"/>
-            <xs:enumeration value="DialFlow"/>
-            <xs:enumeration value="eprex"/>
-            <xs:enumeration value="HdHours"/>
-            <xs:enumeration value="HdLocation"/>
-            <xs:enumeration value="hypotension"/>
-            <xs:enumeration value="LitresProcessed"/>
-            <xs:enumeration value="TargetWeight"/>
-            <xs:enumeration value="UfVolume"/>
-            <!-- PV Self-Entered Result Codes -->
-            <xs:enumeration value="resultcomment"/>
-            <!-- New Codes (27/02/2018) -->
-            <xs:enumeration value="neutrophils"/>
-            <xs:enumeration value="hbv"/>
-            <xs:enumeration value="hcv"/>
-            <xs:enumeration value="phepku"/>
-            <xs:enumeration value="ret-he"/>
-            <xs:enumeration value="ualbumin"/>
-            <xs:enumeration value="ucreatinine"/>
-            <xs:enumeration value="uprotein"/>
-            <!-- For INS App -->
-            <xs:enumeration value="updipstick"/>
-            <xs:enumeration value="odema"/>
-            <!-- Covid-19 -->
-            <xs:enumeration value="covid19pcr"/>
-            <xs:enumeration value="covid19antibody"/>
-			<!-- New Code (11/01/2021) -->
-			<xs:enumeration value="trop"/>
-        </xs:restriction>
-    </xs:simpleType>
     <xs:simpleType name="prepost">
         <xs:annotation>
             <xs:documentation>Pre or Post Dialysis Result</xs:documentation>
