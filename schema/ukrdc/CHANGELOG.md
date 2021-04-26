@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0 - 2021-02-12
+### Changed
+- Split out the Procedure Elements to allow Start/End dates to be added to the Dialysis Sessions.
+
 ## 2.4.0 - 2021-04-19
 ### Changed
 - Set the length of Medication/Comments to be 255 characters.
