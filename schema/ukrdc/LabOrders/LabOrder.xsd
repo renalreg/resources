@@ -19,17 +19,17 @@
         </xs:sequence>
     </xs:complexType>
 
-	<xs:complexType name="LabOrder">
-		<xs:sequence>
-			<xs:element name="ReceivingLocation" type="Location" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Location or Facility receiving/performing the order. Code must be entered using national coding e.g. RXF01</xs:documentation>
+    <xs:complexType name="LabOrder">
+        <xs:sequence>
+            <xs:element name="ReceivingLocation" type="Location" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Location or Facility receiving/performing the order.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PlacerId" minOccurs="1">
 				<xs:annotation>
                     <xs:appinfo>laborder.placerid</xs:appinfo>
-					<xs:documentation>ORC:2 Placers Order Id</xs:documentation>
+					<xs:documentation>ORC:2 Placer's Order Id</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -40,7 +40,7 @@
 			<xs:element name="FillerId" minOccurs="0">
 				<xs:annotation>
                     <xs:appinfo>laborder.fillerid</xs:appinfo>
-					<xs:documentation>ORC:3 Labs Order Id</xs:documentation>
+					<xs:documentation>ORC:3 Filler (Lab)'s Order Id</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -50,25 +50,25 @@
 			</xs:element>
 			<xs:element name="OrderedBy" type="Clinician" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ORC:12 Requesting Physician as a nationally coded person. Use the description if this is not coded. </xs:documentation>
+					<xs:documentation>ORC:12 Requesting Physician as a nationally coded person.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrderItem" type="CodedField" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>OBR:4 Service Id - the identity of the test ordered LOINC Code ???</xs:documentation>
+					<xs:documentation>OBR:4 Service Id - the identity of the test ordered.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrderCategory" type="CodedField" minOccurs="0"/>
 			<xs:element name="SpecimenCollectedTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
                     <xs:appinfo>laborder.specimencollectedtime</xs:appinfo>
-					<xs:documentation>CCYYMMDDhhmm Equivalent to OBR:22</xs:documentation>
+					<xs:documentation>OBR:22</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SpecimenReceivedTime" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
                     <xs:appinfo>laborder.specimenreceivedtime</xs:appinfo>
-					<xs:documentation>CCYYMMDDhhmm Equivalent to OBR:14</xs:documentation>
+					<xs:documentation>OBR:14</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" minOccurs="0">
@@ -185,7 +185,7 @@
 			<xs:element name="SubId" minOccurs="0">
 				<xs:annotation>
                     <xs:appinfo>resultitem.subid</xs:appinfo>
-					<xs:documentation>Sub-Test Code (OBX:4)</xs:documentation>
+					<xs:documentation>Sub-Test Id (OBX:4)</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -229,7 +229,7 @@
 			<xs:element name="InterpretationCodes" minOccurs="0">
 				<xs:annotation>
                     <xs:appinfo>resultitem.interpretationcodes</xs:appinfo>
-					<xs:documentation>OBX:8 Interpretation Codes</xs:documentation>
+					<xs:documentation>Interpretation Codes (OBX:8)</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">

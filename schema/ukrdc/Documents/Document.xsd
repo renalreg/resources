@@ -7,12 +7,12 @@
 		<xs:sequence>
 			<xs:element name="DocumentTime" type="xs:dateTime" minOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Document Creation as CCYYMMDDhhmm</xs:documentation>
+					<xs:documentation>Document Creation DateTime</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NoteText" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>The body of the document as free text,</xs:documentation>
+					<xs:documentation>The body of the document as free text</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DocumentType" type="CodedField" minOccurs="0">

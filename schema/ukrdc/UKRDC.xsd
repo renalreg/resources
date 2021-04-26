@@ -1,73 +1,34 @@
 <xs:schema targetNamespace="http://www.rixg.org.uk/" version="2.4.0" xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:include schemaLocation="Patient.xsd"/>
-    <xs:include schemaLocation="LabOrders/LabOrder.xsd"/>
-    <xs:include schemaLocation="SocialHistories/SocialHistory.xsd"/>
-    <xs:include schemaLocation="FamilyHistories/FamilyHistory.xsd"/>
-    <xs:include schemaLocation="Observations/Observation.xsd"/>
     <xs:include schemaLocation="Allergies/Allergy.xsd"/>
-    <xs:include schemaLocation="Procedures/Procedure.xsd"/>
-    <xs:include schemaLocation="Procedures/DialysisSession.xsd"/>
-    <xs:include schemaLocation="Procedures/Transplant.xsd"/>
-    <xs:include schemaLocation="Procedures/VascularAccess.xsd"/>
-    <xs:include schemaLocation="Diagnoses/Diagnosis.xsd"/>
+    <xs:include schemaLocation="ClinicalRelationships/ClinicalRelationship.xsd"/>
     <xs:include schemaLocation="Diagnoses/CauseOfDeath.xsd"/>
+    <xs:include schemaLocation="Diagnoses/Diagnosis.xsd"/>
     <xs:include schemaLocation="Diagnoses/RenalDiagnosis.xsd"/>
     <xs:include schemaLocation="Documents/Document.xsd"/>
     <xs:include schemaLocation="Encounters/Encounter.xsd"/>
-    <xs:include schemaLocation="Encounters/Treatment.xsd"/>
     <xs:include schemaLocation="Encounters/TransplantList.xsd"/>
-    <xs:include schemaLocation="ProgramMemberships/ProgramMembership.xsd"/>
-    <xs:include schemaLocation="OptOuts/OptOut.xsd"/>
-    <xs:include schemaLocation="ClinicalRelationships/ClinicalRelationship.xsd"/>
+    <xs:include schemaLocation="Encounters/Treatment.xsd"/>
+    <xs:include schemaLocation="FamilyHistories/FamilyHistory.xsd"/>
+    <xs:include schemaLocation="LabOrders/LabOrder.xsd"/>
     <xs:include schemaLocation="Medications/Medication.xsd"/>
+    <xs:include schemaLocation="Observations/Observation.xsd"/>
+    <xs:include schemaLocation="OptOuts/OptOut.xsd"/>
+    <xs:include schemaLocation="Procedures/DialysisSession.xsd"/>
+    <xs:include schemaLocation="Procedures/Procedure.xsd"/>
+    <xs:include schemaLocation="Procedures/Transplant.xsd"/>
+    <xs:include schemaLocation="Procedures/VascularAccess.xsd"/>
+    <xs:include schemaLocation="ProgramMemberships/ProgramMembership.xsd"/>
+    <xs:include schemaLocation="SocialHistories/SocialHistory.xsd"/>
     <xs:include schemaLocation="Surveys/Survey.xsd"/>
     <xs:include schemaLocation="Types/PVData.xsd"/>
+    <xs:include schemaLocation="Types/SendingExtract.xsd"/>
 
     <xs:simpleType name="SendingFacilityString">
         <xs:restriction base="xs:string">
             <xs:minLength value="1" />
             <xs:maxLength value="7" />
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:simpleType name="SendingExtract">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="SURVEY">
-                <xs:annotation>
-                    <xs:documentation>CSV files produced either by FormStorm scanning or send directly from the SharedHD project.</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="PVMIG">
-                <xs:annotation>
-                    <xs:documentation>Data taken from the PV2 Database</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="HSMIG">
-                <xs:annotation>
-                    <xs:documentation>Data taken from the HealthShare Database</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="PV">
-                <xs:annotation>
-                    <xs:documentation>Data sent from Units in PV XML Format</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="RADAR">
-                <xs:annotation>
-                    <xs:documentation>Data from the RADAR System</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="UKRDC">
-                <xs:annotation>
-                    <xs:documentation>Data supplied directly in RDA Format</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="MIRTH">
-                <xs:annotation>
-                    <xs:documentation>Data supplied in RDA Format which has been produced by our UKRDC Extract Tool.</xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
 
@@ -92,7 +53,11 @@
                     </xs:annotation>
                 </xs:element>
                 <xs:element minOccurs="1" name="Patient" type="Patient"/>
-                <xs:element minOccurs="0" name="LabOrders" type="LabOrders"/>
+                <xs:element minOccurs="0" name="LabOrders" type="LabOrders">
+                    <xs:annotation>
+                        <xs:documentation>Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory.</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
                 <xs:element minOccurs="0" name="SocialHistories">
                     <xs:complexType>
                         <xs:sequence>
@@ -107,7 +72,11 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element minOccurs="0" name="Observations" type="Observations"/>
+                <xs:element minOccurs="0" name="Observations" type="Observations">
+                    <xs:annotation>
+                        <xs:documentation>Observations. These are measurements taken about a patient that do not involve a Laboratory.</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
                 <xs:element minOccurs="0" name="Allergies">
                     <xs:complexType>
                         <xs:sequence>
@@ -118,13 +87,28 @@
                 <xs:element minOccurs="0" name="Diagnoses">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Diagnosis" type="Diagnosis"/>
-                            <xs:element maxOccurs="1" minOccurs="0" name="CauseOfDeath" type="CauseOfDeath"/>
-                            <xs:element maxOccurs="1" minOccurs="0" name="RenalDiagnosis" type="RenalDiagnosis"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Diagnosis" type="Diagnosis">
+                                <xs:annotation>
+                                    <xs:documentation>Co-Morbidities</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="1" minOccurs="0" name="CauseOfDeath" type="CauseOfDeath">
+                                <xs:annotation>
+                                    <xs:documentation>Cause of Death</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="1" minOccurs="0" name="RenalDiagnosis" type="RenalDiagnosis">
+                                <xs:annotation>
+                                    <xs:documentation>Primary Renal Diagnosis</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
                 <xs:element minOccurs="0" name="Medications">
+                    <xs:annotation>
+                        <xs:documentation>Medications</xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Medication" type="Medication"/>
@@ -135,9 +119,21 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedure" type="Procedure"/>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSession" type="DialysisSession"/>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Transplant" type="TransplantProcedure"/>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="VascularAccess" type="VascularAccess"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSession" type="DialysisSession">
+                            <xs:annotation>
+                                    <xs:documentation>Dialysis Sessions</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Transplant" type="TransplantProcedure">
+                                <xs:annotation>
+                                    <xs:documentation>Transplant Procedures</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="VascularAccess" type="VascularAccess">
+                                <xs:annotation>
+                                    <xs:documentation>Vascular Access Constructions</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -151,11 +147,21 @@
                 <xs:element minOccurs="0" name="Encounters">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Encounter" type="Encounter"/>
-                            <!-- SDA: Encounter -->
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Treatment" type="Treatment"/>
-                            <!-- SDA: Encounter -->
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="TransplantList" type="TransplantList"/>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Encounter" type="Encounter">
+                                <xs:annotation>
+                                    <xs:documentation>This is used to record the duration of something other than a Treatment. This element should not be submitted without prior discussion with the UKRR.</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Treatment" type="Treatment">
+                                <xs:annotation>
+                                    <xs:documentation>This is used to record the duration a Patient received a particular type of Care/Treatment at a particular Treatment Facility. It is similar in concept to the UKRR TXT records however at the end of the period it should be end-dated rather than an additional record being sent.</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="TransplantList" type="TransplantList">
+                                <xs:annotation>
+                                    <xs:documentation>This is only for NHSBT supplied Transplant Waiting List data.</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -174,6 +180,9 @@
                     </xs:complexType>
                 </xs:element>
                 <xs:element minOccurs="0" name="ClinicalRelationships">
+                    <xs:annotation>
+                        <xs:documentation>This is used to record the relationship between a Patient and a Clinician or Care Facility. This element should not be submitted without prior discussion with the UKRR.</xs:documentation>
+                    </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="ClinicalRelationship" type="ClinicalRelationship"/>
@@ -187,7 +196,11 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element minOccurs="0" name="PVData" type="PVData"/>
+                <xs:element minOccurs="0" name="PVData" type="PVData">
+                    <xs:annotation>
+                        <xs:documentation>This is used internally to hold data items sent in PV XML files and should not be sent by external parties.</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
