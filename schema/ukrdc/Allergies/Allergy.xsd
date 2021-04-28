@@ -32,12 +32,21 @@
                     <xs:documentation>Reported Date</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="ConfirmedTime" type="xs:dateTime" minOccurs="0"/>
-            <xs:element name="Comments" type="xs:string" minOccurs="0">
+            <xs:element name="ConfirmedTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:appinfo>allergy.confirmedtime</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Comments" minOccurs="0">
                 <xs:annotation>
                     <xs:appinfo>allergy.commenttext</xs:appinfo>
                     <xs:documentation>Advice given to the patient</xs:documentation>
                 </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="500"/>
+                    </xs:restriction>
+                </xs:simpleType>
             </xs:element>
             <xs:element name="InactiveTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
@@ -52,7 +61,7 @@
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:maxLength value="5000"/>
+                        <xs:maxLength value="500"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
@@ -63,7 +72,7 @@
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:maxLength value="32000"/>
+                        <xs:maxLength value="500"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
