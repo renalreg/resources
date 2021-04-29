@@ -177,7 +177,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="ServiceId" type="ServiceId" minOccurs="0">
+            <xs:element name="ServiceId" type="ServiceId">
                 <xs:annotation>
                     <xs:documentation>Test Code (OBX:3)</xs:documentation>
                 </xs:annotation>
