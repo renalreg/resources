@@ -16,13 +16,52 @@
                                         <xs:documentation>Failure Date</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="TRA65" type="xs:string" minOccurs="0">
+                                <xs:element name="TRA65" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra65</xs:appinfo>
-                                        <xs:documentation>Cause of Failure</xs:documentation>
+                                        <xs:documentation>Cause of Failure (RR10)</xs:documentation>
                                     </xs:annotation>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="10">
+                                                <xs:annotation>
+                                                    <xs:documentation>Hyperacute Rejection</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="11">
+                                                <xs:annotation>
+                                                    <xs:documentation>Non-Viable Transplant Kidney</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="12">
+                                                <xs:annotation>
+                                                    <xs:documentation>Primary Non-Function of Transplant Kidney</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="13">
+                                                <xs:annotation>
+                                                    <xs:documentation>Acute Rejection</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="14">
+                                                <xs:annotation>
+                                                    <xs:documentation>Chronic Allograft Nephropathy</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="15">
+                                                <xs:annotation>
+                                                    <xs:documentation>Rejection following withdrawal of immunosuppression - non Medical Reason</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="16">
+                                                <xs:annotation>
+                                                    <xs:documentation>Rejection following withdrawal of immunosuppression - Medical Reason</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                        </xs:restriction>
+                                    </xs:simpleType>
                                 </xs:element>
-                                <xs:element name="TRA66" type="xs:dateTime" minOccurs="0">
+                                <xs:element name="TRA66" type="xs:string" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra66</xs:appinfo>
                                         <xs:documentation>Description of Failure</xs:documentation>
@@ -37,28 +76,35 @@
                                 <xs:element name="TRA76" type="xs:string" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra76</xs:appinfo>
-                                        <xs:documentation>Graft Type</xs:documentation>
+                                        <xs:documentation>Graft Type (RR24)</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="TRA77" type="xs:string" minOccurs="0">
+                                <xs:element name="TRA77" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra77</xs:appinfo>
                                         <xs:documentation>NHSBT Type</xs:documentation>
                                     </xs:annotation>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="DBD"/>
+                                            <xs:enumeration value="DCD"/>
+                                            <xs:enumeration value="LIVE"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
                                 </xs:element>
                                 <xs:element name="TRA78" type="RRNegPosUk" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra78</xs:appinfo>
-                                        <xs:documentation>rCMV - Recipient CMV status at transplant </xs:documentation>
+                                        <xs:documentation>rCMV - Recipient CMV status at transplant</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
                                 <xs:element name="TRA79" type="RRNegPosUk" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra79</xs:appinfo>
-                                        <xs:documentation>rEBV - Recipient EBV status at transplant </xs:documentation>
+                                        <xs:documentation>rEBV - Recipient EBV status at transplant</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="TRA80" type="xs:string" minOccurs="0">
+                                <xs:element name="TRA80" type="xs:integer" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra80</xs:appinfo>
                                         <xs:documentation>Donor age</xs:documentation>
@@ -145,22 +191,22 @@
                                 <xs:element name="TRA93" type="xs:string" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra93</xs:appinfo>
-                                        <xs:documentation>Anticoagulation</xs:documentation>
+                                        <xs:documentation>Anticoagulation (RR15)</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
                                 <xs:element name="TRA94" type="xs:string" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra94</xs:appinfo>
-                                        <xs:documentation>CMV prophylaxis</xs:documentation>
+                                        <xs:documentation>CMV prophylaxis (RR16)</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
                                 <xs:element name="TRA95" type="xs:string" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra95</xs:appinfo>
-                                        <xs:documentation>Pneumocystis prophylaxis</xs:documentation>
+                                        <xs:documentation>Pneumocystis prophylaxis (RR17)</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="TRA96" type="xs:string" minOccurs="0">
+                                <xs:element name="TRA96" type="RRYesNo" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra96</xs:appinfo>
                                         <xs:documentation>Functioning</xs:documentation>
@@ -169,13 +215,13 @@
                                 <xs:element name="TRA97" type="NV_RR14" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra97</xs:appinfo>
-                                        <xs:documentation>Other organ transplanted simultaneously 1</xs:documentation>
+                                        <xs:documentation>Other organ transplanted simultaneously 1 (RR14)</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
                                 <xs:element name="TRA98" type="NV_RR14" minOccurs="0">
                                     <xs:annotation>
                                         <xs:appinfo>transplant.tra98</xs:appinfo>
-                                        <xs:documentation>Other organ transplanted simultaneously 2</xs:documentation>
+                                        <xs:documentation>Other organ transplanted simultaneously 2 (RR14)</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
                             </xs:sequence>

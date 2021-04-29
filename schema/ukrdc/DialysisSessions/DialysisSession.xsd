@@ -1,6 +1,15 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
     <xs:include schemaLocation="../Procedures/Procedure.xsd"/>
     <xs:include schemaLocation="../Types/RRTypes.xsd"/>
+    
+    <xs:complexType name="DialysisSessions">
+        <xs:sequence>
+            <xs:element name="DialysisSession" type="DialysisSession" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="start" type="xs:date"/>
+        <xs:attribute name="stop" type="xs:date"/>
+    </xs:complexType>
+
     <xs:complexType name="DialysisSession">
         <xs:complexContent>
             <xs:extension base="Procedure">
@@ -166,25 +175,44 @@
                                         <xs:documentation>Access in two sites simultaneously</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="QHD30" type="xs:string" minOccurs="0">
+                                <xs:element name="QHD30" type="xs:integer" minOccurs="0">
                                     <xs:annotation>
                                         <xs:documentation>Blood Flow Rate</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="QHD31" type="xs:string" minOccurs="0">
+                                <xs:element name="QHD31" type="xs:integer" minOccurs="0">
                                     <xs:annotation>
                                         <xs:documentation>Time Dialysed in Minutes</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="QHD32" type="xs:string" minOccurs="0">
+                                <xs:element name="QHD32" type="xs:integer" minOccurs="0">
                                     <xs:annotation>
                                         <xs:documentation>Sodium in Dialysate</xs:documentation>
                                     </xs:annotation>
                                 </xs:element>
-                                <xs:element name="QHD33" type="xs:string" minOccurs="0">
+                                <xs:element name="QHD33" minOccurs="0">
                                     <xs:annotation>
-                                        <xs:documentation>Needling Method</xs:documentation>
+                                        <xs:documentation>Needling Method (RR50)</xs:documentation>
                                     </xs:annotation>
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="L">
+                                                <xs:annotation>
+                                                    <xs:documentation>Rope Ladder</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="B">
+                                                <xs:annotation>
+                                                    <xs:documentation>Button Hole</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                            <xs:enumeration value="U">
+                                                <xs:annotation>
+                                                    <xs:documentation>Unknown</xs:documentation>
+                                                </xs:annotation>
+                                            </xs:enumeration>
+                                        </xs:restriction>
+                                    </xs:simpleType>
                                 </xs:element>
                             </xs:sequence>
                         </xs:complexType>

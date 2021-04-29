@@ -128,7 +128,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedure" type="Procedure"/>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSession" type="DialysisSession">
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSessions" type="DialysisSessions">
                             <xs:annotation>
                                     <xs:documentation>Dialysis Sessions</xs:documentation>
                                 </xs:annotation>

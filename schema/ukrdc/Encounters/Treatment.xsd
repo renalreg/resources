@@ -129,43 +129,62 @@
                 <xs:complexType>
                     <xs:sequence>
                         <!-- HD Dialysis Prescription Details -->
-                        <xs:element name="HDP01" type="xs:string" minOccurs="0">
+                        <xs:element name="HDP01" type="xs:integer" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.hdp01</xs:appinfo>
                                 <xs:documentation>Times Per Week</xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="HDP02" type="xs:string" minOccurs="0">
+                        <xs:element name="HDP02" type="xs:integer" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.hdp02</xs:appinfo>
                                 <xs:documentation>Time Dialysed in Minutes</xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="HDP03" type="xs:string" minOccurs="0">
+                        <xs:element name="HDP03" type="xs:integer" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.hdp03</xs:appinfo>
                                 <xs:documentation>Blood Flow Rate</xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="HDP04" type="xs:string" minOccurs="0">
+                        <xs:element name="HDP04" type="xs:integer" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.hdp04</xs:appinfo>
                                 <xs:documentation>Sodium in Dialysate</xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="QBL05" type="xs:string" minOccurs="0">
+                        <xs:element name="QBL05" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.qbl05</xs:appinfo>
-                                <xs:documentation>HD Treatment Location</xs:documentation>
+                                <xs:documentation>HD Treatment Location (RR8)</xs:documentation>
                             </xs:annotation>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="HOSP">
+                                        <xs:annotation>
+                                            <xs:documentation>Hospital Dialysis Unit</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="SATL">
+                                        <xs:annotation>
+                                            <xs:documentation>Satellite Dialysis Unit</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                    <xs:enumeration value="HOME">
+                                        <xs:annotation>
+                                            <xs:documentation>Home Dialysis</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:enumeration>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:element>
                         <xs:element name="QBL06" type="xs:string" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.qbl06</xs:appinfo>
-                                <xs:documentation>HD Shared Care</xs:documentation>
+                                <xs:documentation>HD Shared Care (RR21)</xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <xs:element name="QBL07" type="xs:string" minOccurs="0">
+                        <xs:element name="QBL07" type="RRYesNoUnk" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.qbl07</xs:appinfo>
                                 <xs:documentation>Patient Participation</xs:documentation>
@@ -175,7 +194,7 @@
                         <xs:element name="ERF61" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.erf61</xs:appinfo>
-                                <xs:documentation>Assessed for suitability for Transplant by start of Dialysis Date</xs:documentation>
+                                <xs:documentation>Assessed for suitability for Transplant by start of Dialysis Date (RR13)</xs:documentation>
                             </xs:annotation>
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
@@ -207,7 +226,7 @@
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
-                        <xs:element name="PAT35" type="xs:string" minOccurs="0">
+                        <xs:element name="PAT35" type="xs:dateTime" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.pat35</xs:appinfo>
                                 <xs:documentation>Date of referral to renal team (i.e. date letter received)</xs:documentation>

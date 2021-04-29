@@ -13,6 +13,7 @@
         <xs:attribute name="start" type="xs:date"/>
         <xs:attribute name="stop" type="xs:date"/>
     </xs:complexType>
+    
     <xs:complexType name="ResultItems">
         <xs:sequence>
             <xs:element name="ResultItem" type="ResultItem" minOccurs="0" maxOccurs="unbounded"/>
