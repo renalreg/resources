@@ -190,11 +190,10 @@
                                 <xs:documentation>Patient Participation</xs:documentation>
                             </xs:annotation>
                         </xs:element>
-                        <!-- Only for first RRT Treatment -->
                         <xs:element name="ERF61" minOccurs="0">
                             <xs:annotation>
                                 <xs:appinfo>treatment.erf61</xs:appinfo>
-                                <xs:documentation>Assessed for suitability for Transplant by start of Dialysis Date (RR13)</xs:documentation>
+                                <xs:documentation>Assessed for suitability for Transplant by start of Dialysis Date. This should only be supplied for the First RRT Treatment. (RR13)</xs:documentation>
                             </xs:annotation>
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">

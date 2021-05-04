@@ -16,7 +16,7 @@
         <xs:sequence>
             <xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Every Patient should have one MRN type PstientNumber. This should be the primary identifier for the Patient in the sending system and typically not change. If a National Identifier (such as NHS Number) is used as the MRN it should also be submitted as an NI type PatientNumber.
+                    <xs:documentation>Every Patient should have one MRN type PatientNumber. This should be the primary identifier for the Patient in the sending system and typically not change. If a National Identifier (such as NHS Number) is used as the MRN it should also be submitted as an NI type PatientNumber.
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
