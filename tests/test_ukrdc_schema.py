@@ -11,11 +11,6 @@ class TestUKRDCSchema(TestCase):
 
     def test_sample_file(self):
 
-        import os
-
-        print("XXX")
-        print(os.getcwd())
-        print("XXX")
         xml_doc = etree.parse(
             open("sample_files/ukrdc/ukrdc.xml", "r", encoding="utf-8")
         )
