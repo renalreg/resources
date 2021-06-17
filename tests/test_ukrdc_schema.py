@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-import lxml
+from lxml import etree
 
 
 class TestUKRDCSchema(TestCase):
