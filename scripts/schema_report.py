@@ -1,6 +1,7 @@
 """Produces an XLS Report comparing the UKRDC Schema to
 the Repository Database"""
 
+import csv
 import os
 
 from lxml import etree
@@ -66,7 +67,7 @@ def get_field_contents_stats(session, table_name, column_name):
     # We could add MAX/MIN/AVG here but it wouldn't make much sense
     # As ResultValue/ObservationValue will be across all tests
 
-    sqlstring = (
+    sql_string = (
         """
     SELECT
         COUNT(*) AS ROW_COUNT,
@@ -81,8 +82,56 @@ def get_field_contents_stats(session, table_name, column_name):
         + table_name
     )
 
-    result = session.execute(sqlstring)
+    result = session.execute(sql_string)
     return result.fetchone()
+    
+    
+def get_coded_fields(session):
+
+    sql_string = """
+    SELECT 
+        tab_columns.table_name,
+        tab_columns.column_name
+    FROM
+        information_schema.columns AS tab_columns
+    WHERE
+        tab_columns.column_name LIKE :column_name_like AND
+        tab_columns.table_schema = 'extract'
+    """
+    
+    results = session.execute(sql_string, {'column_name_like':'%codestd'})
+    return results
+    
+    
+def query_coded_fields(session, table_name, column_name):
+
+    # codestd
+    base_name = column_name[:-7]
+
+    code_std_field = column_name
+    desc_field = base_name + 'desc'
+    code_field = base_name + 'code'
+
+    sql_string = """
+    
+    SELECT
+        '""" + table_name + """',
+        '""" + code_std_field + """',
+        """ + code_std_field + """,
+        '""" + code_field + """',
+        """ + code_field + """,
+        '""" + desc_field + """',
+        """ + desc_field + """,
+        COUNT(*)
+    FROM
+        """ + table_name + """
+    GROUP BY
+        """ + code_std_field + """,
+        """ + code_field + """,
+        """ + desc_field
+        
+    results = session.execute(sql_string)
+    return results
 
 
 class DBMetadata(object):
@@ -222,16 +271,31 @@ def make_report(db_metadata, filepath):
                 row.write(x, value)
             y += 1
     work_book.save(filepath)
+    
+    
+def make_coded_field_report(session, filepath):
+
+    csvwriter = csv.writer(open(filepath, 'w', newline='', encoding='utf-8'))
+    
+    csvwriter.writerow(('Table Name', 'Coding Std Field', 'Coding Std Value', 'Code Field', 'Code Value', 'Desc Field', 'Desc'))
+
+    coded_fields = get_coded_fields(session)
+    
+    for table_name, column_name in coded_fields:
+        print(table_name, column_name)
+        results = query_coded_fields(session, table_name, column_name)
+        for row in results:
+            csvwriter.writerow(row)
 
 
 def main():
     xsd_path = "schema/ukrdc/"
-    sessionmaker = Connection.get_sessionmaker_from_file()
+    sessionmaker = Connection.get_sessionmaker_from_file(key='ukrdc_live')
     session = sessionmaker()
-    dbm = DBMetadata(session, xsd_path)
-    dbm.run()
-    session.commit()
-    make_report(dbm.db_metadata, "dataset_report.xls")
+    # dbm = DBMetadata(session, xsd_path)
+    # dbm.run()
+    # make_report(dbm.db_metadata, "dataset_report.xls")
+    make_coded_field_report(session, 'coded_field_report.csv')
 
 
 if __name__ == "__main__":
