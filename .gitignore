@@ -1,3 +1,14 @@
 Thumbs.db
+/.mypy_cache
+/.tox
+/htmlcov
+/resources.egg-info
+/test-reports
+/venv
+/.coverage
+/clover.xml
+/coverage.xml
+/flake8.txt
+/tests/__pycache__
 /*.csv
 /*.xls
