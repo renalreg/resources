@@ -292,9 +292,9 @@ def main():
     xsd_path = "schema/ukrdc/"
     sessionmaker = Connection.get_sessionmaker_from_file(key='ukrdc_live')
     session = sessionmaker()
-    # dbm = DBMetadata(session, xsd_path)
-    # dbm.run()
-    # make_report(dbm.db_metadata, "dataset_report.xls")
+    dbm = DBMetadata(session, xsd_path)
+    dbm.run()
+    make_report(dbm.db_metadata, "dataset_report.xls")
     make_coded_field_report(session, 'coded_field_report.csv')
 
 
