@@ -13,3 +13,4 @@ Thumbs.db
 /*.csv
 /*.xls
 .venv/
+schema_build/
