@@ -12,3 +12,4 @@ Thumbs.db
 /tests/__pycache__
 /*.csv
 /*.xls
+.venv/
