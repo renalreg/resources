@@ -1,13 +1,12 @@
-colorama==0.4.1
+colorama
 coverage2clover
 flake8-junit-report==2.0.1
-flake8==3.3.0
+flake8>=4.0.1
 mccabe==0.6.1
-mock==4.0.2
-pep8==1.5.7
-pyflakes==1.5.0
-pytest-cov==2.5.1
-pytest==6.1.2
+mock>=4.0.2
+pep8>=1.5.7
+pyflakes>=2.4.0
+pytest-cov>=2.5.1
+pytest>=6.1.2
 mypy
 lxml
--r requirements.txt

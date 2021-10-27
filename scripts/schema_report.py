@@ -84,12 +84,12 @@ def get_field_contents_stats(session, table_name, column_name):
 
     result = session.execute(sql_string)
     return result.fetchone()
-    
-    
+
+
 def get_coded_fields(session):
 
     sql_string = """
-    SELECT 
+    SELECT
         tab_columns.table_name,
         tab_columns.column_name
     FROM
@@ -98,38 +98,61 @@ def get_coded_fields(session):
         tab_columns.column_name LIKE :column_name_like AND
         tab_columns.table_schema = 'extract'
     """
-    
-    results = session.execute(sql_string, {'column_name_like':'%codestd'})
+
+    results = session.execute(sql_string, {"column_name_like": "%codestd"})
     return results
-    
-    
+
+
 def query_coded_fields(session, table_name, column_name):
 
     # codestd
     base_name = column_name[:-7]
 
     code_std_field = column_name
-    desc_field = base_name + 'desc'
-    code_field = base_name + 'code'
+    desc_field = base_name + "desc"
+    code_field = base_name + "code"
 
-    sql_string = """
-    
+    sql_string = (
+        """
+
     SELECT
-        '""" + table_name + """',
-        '""" + code_std_field + """',
-        """ + code_std_field + """,
-        '""" + code_field + """',
-        """ + code_field + """,
-        '""" + desc_field + """',
-        """ + desc_field + """,
+        '"""
+        + table_name
+        + """',
+        '"""
+        + code_std_field
+        + """',
+        """
+        + code_std_field
+        + """,
+        '"""
+        + code_field
+        + """',
+        """
+        + code_field
+        + """,
+        '"""
+        + desc_field
+        + """',
+        """
+        + desc_field
+        + """,
         COUNT(*)
     FROM
-        """ + table_name + """
+        """
+        + table_name
+        + """
     GROUP BY
-        """ + code_std_field + """,
-        """ + code_field + """,
-        """ + desc_field
-        
+        """
+        + code_std_field
+        + """,
+        """
+        + code_field
+        + """,
+        """
+        + desc_field
+    )
+
     results = session.execute(sql_string)
     return results
 
@@ -271,16 +294,26 @@ def make_report(db_metadata, filepath):
                 row.write(x, value)
             y += 1
     work_book.save(filepath)
-    
-    
+
+
 def make_coded_field_report(session, filepath):
 
-    csvwriter = csv.writer(open(filepath, 'w', newline='', encoding='utf-8'))
-    
-    csvwriter.writerow(('Table Name', 'Coding Std Field', 'Coding Std Value', 'Code Field', 'Code Value', 'Desc Field', 'Desc'))
+    csvwriter = csv.writer(open(filepath, "w", newline="", encoding="utf-8"))
+
+    csvwriter.writerow(
+        (
+            "Table Name",
+            "Coding Std Field",
+            "Coding Std Value",
+            "Code Field",
+            "Code Value",
+            "Desc Field",
+            "Desc",
+        )
+    )
 
     coded_fields = get_coded_fields(session)
-    
+
     for table_name, column_name in coded_fields:
         print(table_name, column_name)
         results = query_coded_fields(session, table_name, column_name)
@@ -290,12 +323,12 @@ def make_coded_field_report(session, filepath):
 
 def main():
     xsd_path = "schema/ukrdc/"
-    sessionmaker = Connection.get_sessionmaker_from_file(key='ukrdc_live')
+    sessionmaker = Connection.get_sessionmaker_from_file(key="ukrdc_live")
     session = sessionmaker()
     dbm = DBMetadata(session, xsd_path)
     dbm.run()
     make_report(dbm.db_metadata, "dataset_report.xls")
-    make_coded_field_report(session, 'coded_field_report.csv')
+    make_coded_field_report(session, "coded_field_report.csv")
 
 
 if __name__ == "__main__":
