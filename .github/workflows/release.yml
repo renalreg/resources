@@ -37,3 +37,11 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: schema_build/dist/*.whl
+
+      - name: Publish
+        uses: pypa/gh-action-pypi-publish@release/v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          packages_dir: schema_build/dist
