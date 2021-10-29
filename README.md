@@ -1,6 +1,6 @@
 # UKRDC Schema
 
-This package contains copies of schemas which are used to generate pyxb models.
+This package generates pyxb models as a Python library, and contains copies of schemas used for this.
 
 * schema/pv2
 * schema/rrtf - The reference copy of this is in https://bitbucket.renalregistry.nhs.uk/projects/RR/repos/rr_resources/browse/rr/resources/schema
