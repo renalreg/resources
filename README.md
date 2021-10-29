@@ -8,6 +8,14 @@ This package generates pyxb models as a Python library, and contains copies of s
 
 There is a Bamboo job to copy the UKRDC schema to github ( https://github.com/renalreg/ukrdc ).
 
+## Installing the built schema module
+
+`pip install ukrdc-schema`
+
+It is **strongly** suggested you specify a version wherever possible, e.g.
+
+`pip install ukrdc-schema==2.4.0`
+
 ## schema_build
 
 This is the code to build the pyxb packages which then form the ukrdc_schema package.
