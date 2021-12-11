@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.0 - 2021-12-11
+### Changed
+- UKRR Added to SendingExtract Types
+
 ## 3.1.0 - 2021-06-03
 ### Changed
 - SNOMED Codes added to the PRD Enumeration.
