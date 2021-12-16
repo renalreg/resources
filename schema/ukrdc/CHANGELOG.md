@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0 - 2021-12-16
+### Changed
+- Add to Clinician/Location Enumeration to support PV 
+
 ## 3.2.0 - 2021-12-11
 ### Changed
 - UKRR Added to SendingExtract Types
