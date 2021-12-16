@@ -60,6 +60,11 @@
             </xs:annotation>
             <xs:simpleType>
                 <xs:restriction base="xs:string">
+                    <xs:enumeration value="A">
+                        <xs:annotation>
+                            <xs:documentation>Alias Name</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
                     <xs:enumeration value="B">
                         <xs:annotation>
                             <xs:documentation>Birth Name</xs:documentation>
