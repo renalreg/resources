@@ -44,7 +44,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install wheel pyxb
 
-      - name: Build schemas
+      - name: Build PyXB models
         run: |
           pyxbgen -m schema_build/ukrdc_schema/pv_2_0_schema -u "file:////${PWD}/schema/pv2/PV_2_0.xsd"
           pyxbgen -m schema_build/ukrdc_schema/ukrdc_schema -u "file:////${PWD}/schema/ukrdc/UKRDC.xsd"
@@ -90,7 +90,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install wheel xsdata[cli,lxml,soap]
 
-      - name: Build schemas
+      - name: Build XSData models
         run: |
           cd xsdata_build
           ./build.sh
@@ -98,7 +98,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: ukrdc_schema_wheel
+          name: ukrdc_xsdata_wheel
           path: xsdata_build/dist/*.whl
 
       - name: Release
