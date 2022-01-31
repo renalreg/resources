@@ -1,6 +1,6 @@
-# UKRDC Schema
+# UKRDC Resources
 
-This package generates pyxb models as a Python library, and contains copies of schemas used for this.
+XSD schemas, Python binding libraries, and schema analysis scripts for the UKRDC and related projects.
 
 ## `schema`
 
