@@ -151,6 +151,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+.notebooks/
+
 test-reports/
 
 schema_build/build/

@@ -1,31 +1,40 @@
-# UKRDC Schema
+# UKRDC Resources
 
-This package generates pyxb models as a Python library, and contains copies of schemas used for this.
+XSD schemas, Python binding libraries, and schema analysis scripts for the UKRDC and related projects.
 
-* schema/pv2
-* schema/rrtf - The reference copy of this is in https://bitbucket.renalregistry.nhs.uk/projects/RR/repos/rr_resources/browse/rr/resources/schema
-* schema/ukrdc - This is the reference copy.
+## `schema`
 
-There is a Bamboo job to copy the UKRDC schema to github ( https://github.com/renalreg/ukrdc ).
+Contains XSD schemas for UKRDC, PV, and RRTF files.
 
-## Installing the built schema module
+## `sample_files`
 
-`pip install ukrdc-schema`
+Contains sample UKRDC XML files used for schema testing.
 
-It is **strongly** suggested you specify a version wherever possible, e.g.
+## `tests`
 
-`pip install ukrdc-schema==2.4.0`
+Uses PyTest to ensure that the current schema correctly matches a sample file.
 
-## schema_build
+### Usage
 
-This is the code to build the pyxb packages which then form the ukrdc_schema package.
+* Install Tox (`pip install tox`)
+* Run tox from the repository root (`tox`)
 
-## schema_build/ukrdc_schema/transforms/RR_XML_to_TXT.xsl
+## `xsdata_build` (PyXB Schemas)
 
-This turns an XML in the format defined by schema/rrtf to the "RR" format most UKRR Quarterly files are submitted in. This is also a copy of a file from the rr_resources repo.
+This is the code to build the `ukrdc-xsdata` models library.
 
-This is included in the ukrdc_schema package so it can be referenced by the UKRDC UKRR Export.
+See [xsdata_build/README.md](./xsdata_build/README.md) for details
 
-## scripts
+## `schema_build` (PyXB Schemas)
 
-This is a script to produce an Excel document which compares the UKRDC XML schema to the UKRDC database with the idea of identifying where there is a mismatch between the field size and the restriction on the XML element etc.. It is published as an Artifact in Bamboo. It is not currently used.
+This is the code to build the PyXB packages which then form the ukrdc_schema package.
+
+See [schema_build/README.md](./schema_build/README.md) for details
+
+## `scripts`
+
+This contains a script to produce an Excel document which compares the UKRDC XML schema to the UKRDC database with the idea of identifying where there is a mismatch between the field size and the restriction on the XML element etc.
+
+It is not currently used.
+
+See [scripts/README.md](./scripts/README.md) for details.
