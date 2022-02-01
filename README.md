@@ -19,7 +19,7 @@ Uses PyTest to ensure that the current schema correctly matches a sample file.
 * Install Tox (`pip install tox`)
 * Run tox from the repository root (`tox`)
 
-## `xsdata_build` (PyXB Schemas)
+## `xsdata_build` (XSData Schemas)
 
 This is the code to build the `ukrdc-xsdata` models library.
 
