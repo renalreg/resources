@@ -1,0 +1,157 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#Medication">Medication</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="Medication">Medication</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">PrescriptionNumber</td>
+        <td><div class="documentation">Prescription Id</div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>FromTime</strong>
+        </td>
+        <td><div class="documentation">Start Time of the prescription</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">ToTime</td>
+        <td><div class="documentation">End Time of the prescription</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">OrderedBy</td>
+        <td><div class="documentation">Prescriber - National Id</div>Clinician</td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteringOrganization</td>
+        <td><div class="documentation">Where the Medicine was Prescribed</div>Location</td>
+      </tr>
+      <tr>
+        <td colspan="2">Route</td>
+        <td>
+          <div class="documentation">Medication Route</div>
+          <table border="1" cellspacing="0" cellpadding="4">
+            <tr>
+              <td colspan="2">CodingStandard</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>SNOMED ()</li><li>RR22 ()</li></ul></div></td>
+            </tr>
+            <tr>
+              <td colspan="2">Code</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                18</div></td>
+            </tr>
+            <tr>
+              <td colspan="2">Description</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>DrugProduct</strong>
+        </td>
+        <td>DrugProduct</td>
+      </tr>
+      <tr>
+        <td colspan="2">Frequency</td>
+        <td><div class="documentation">Frequency</div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                255</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Comments</td>
+        <td><div class="documentation">Other instructions</div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                255</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">DoseQuantity</td>
+        <td><div class="documentation">Dose</div>xs:decimal</td>
+      </tr>
+      <tr>
+        <td colspan="2">DoseUoM</td>
+        <td>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">Indication</td>
+        <td><div class="documentation">The condition or problem for which the drug is being prescribed</div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">EncounterNumber</td>
+        <td><div class="documentation">This is used to associate the prescribing of a Medication with the activity in a particular Encounter record. This element should not be submitted without prior discussion with the UKRR.
+                    </div>xs:string</td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>
