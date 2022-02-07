@@ -1,0 +1,80 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#CF_RR1">CF_RR1</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="CF_RR1">CF_RR1</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">CodingStandard</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>CF_RR1 ()</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Code</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>11023 (Royal Belfast Hospital For Sick Children)</li><li>2020 (Belfast City Hospital)</li><li>24027 (Antrim Hospital)</li><li>33020 (Daisy Hill Hospital)</li><li>45020 (Western Trust - Old)</li><li>45021 (Western Trust)</li><li>48021 (Dummy)</li><li>7021 (Ulster Hospital)</li><li>99RCSLB (Nottingham City Hospital - Paediatric)</li><li>99RHM01 (Southampton Childrens Hospital)</li><li>99RQR13 (St James'S University Hospital - Paediatric)</li><li>99RTD01 (Great North Childrens Hospital)</li><li>RA723 (Bristol Royal Hospital For Children)</li><li>RAE05 (St Lukes Hospital)</li><li>RAJ01 (Southend Hospital)</li><li>RAL01 (Royal Free and Middlesex Hospital)</li><li>RAQ01 (Lister Hospital)</li><li>RAZ (St Helier Hospital)</li><li>RBD01 (Dorset County Hospital)</li><li>RBL14 (Arrowe Park Hospital)</li><li>RBS25 (Royal Liverpool Childrens Hospital)</li><li>RCB55 (York District General Hospital)</li><li>RCJAT (James Cook University Hospital)</li><li>RCSLB (Nottingham City Hospital)</li><li>RDDH0 (Basildon Hospital)</li><li>RDEE4 (Colchester General Hospital)</li><li>REE01 (Southmead Hospital)</li><li>REF12 (Royal Cornwall Hospital (Treliske))</li><li>RF201 (Hull Royal Infirmary)</li><li>RFBAK (Leicester General Hospital)</li><li>RFPFG (Royal Derby Hospital)</li><li>RGQ02 (Ipswich Hospital)</li><li>RGT01 (Addenbrookes Hospital)</li><li>RGU01 (Royal Sussex County Hospital)</li><li>RH641 (Gloucester Royal Hospital)</li><li>RH8 (Royal Devon And Exeter Hospital (Wonford))</li><li>RHM02 (Southampton General Hospital - Paediatric)</li><li>RHU02 (Queen Alexandra Hospital)</li><li>RHW01 (Royal Berkshire Hospital)</li><li>RJ121 (Guy'S And St Thomas'S Hospital)</li><li>RJ122 (Evelina Childrens Hospital (Guys))</li><li>RJ701 (St George'S Hospital)</li><li>RJE01 (University Hospital Of North Staffordshire)</li><li>RJZ (King'S College Hospital)</li><li>RK7CC (Northern General Hospital)</li><li>RK950 (Derriford Hospital)</li><li>RKB01 (Walsgrave Hospital)</li><li>RKGA1 (Ysbyty Glan Clwyd)</li><li>RKHA4 (Wrexham Maelor Hospital)</li><li>RL403 (New Cross Hospital)</li><li>RL7 (Heartlands Hospital)</li><li>RLGAY (Cumberland Infirmary)</li><li>RLNGH (Sunderland Royal Hospital)</li><li>RLZ01 (Royal Shrewsbury Hospital)</li><li>RM102 (Norfolk and Norwich University Hospital)</li><li>RM301 (Salford Royal)</li><li>RM574 (Royal Infirmary  Manchester)</li><li>RMF01 (Royal Preston Hospital)</li><li>RNA03 (Russells Hall Hospital)</li><li>RNJ00 (Barts And The London Hospital)</li><li>RNX02 (Oxford Radcliffe Hospital)</li><li>RP4 (Great Ormond Street Hospital For Children)</li><li>RP5 (Doncaster Royal Infirmary)</li><li>RQ3 (Birmingham Childrens Hospital)</li><li>RQ617 (Royal Liverpool University Hospital)</li><li>RQ8L0 (Broomfield Hospital)</li><li>RQBAU (Ysbyty Gwynedd)</li><li>RQHC7 (Morriston Hospital)</li><li>RQN02 (Hammersmith and Charing Cross Hospital)</li><li>RQR13 (St James'S University Hospital)</li><li>RQS01 (Dummy)</li><li>RRBBV (University Hospital Of Wales)</li><li>RRK02 (Queen Elizabeth Hospital)</li><li>RTD01 (Freeman Hospital and Royal Victoria Infirmary)</li><li>RTD02 (Royal Victoria Infirmary - Paediatric)</li><li>RVVKC (Kent and Canterbury Hospital)</li><li>RW3RM (Royal Manchester Children'S Hospital)</li><li>RW402 (University Hospital Aintree)</li><li>RWM51 (Children'S Kidney Centre - Uhw)</li><li>SAC02 (Crosshouse Hospital)</li><li>SFC01 (Queen Margaret'S Hospital)</li><li>SGC02 (Royal Hospital For Sick Children)</li><li>SGC04 (Western Infirmary Glasgow)</li><li>SGC05 (Glasgow Royal Infirmary and Western Infirmary)</li><li>SHC01 (Raigmore Hospital)</li><li>SLC01 (Monklands Hospital)</li><li>SNC01 (Aberdeen Royal Infirmary)</li><li>SSC02 (Royal Infirmary Of Edinburgh (New Royal))</li><li>STC01 (Ninewells Hospital)</li><li>SYC02 (Dumfries and Galloway Royal Infirmary)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Description</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                32000</div></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>
