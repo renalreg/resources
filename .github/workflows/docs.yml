@@ -16,7 +16,7 @@ jobs:
           python-version: 3.9
 
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r docs_build/requirements.txt
 
       - name: Export API docs
         run: python docs_build/main.py ./schema/ukrdc ./docs
