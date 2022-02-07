@@ -30,7 +30,7 @@ jobs:
         run: |
           wget http://xsdvi.sourceforge.net/xsdvi-20080430-1405.zip
           unzip xsdvi-20080430-1405.zip -d xsdvi
-          java -jar xsdvi/lib/xsdvi.jar ../schema/ukrdc/UKRDC.xsd
+          java -jar xsdvi/lib/xsdvi.jar ./schema/ukrdc/UKRDC.xsd
           patch -p0 < docs_build/collapse-nodes.patch
           mv UKRDC.svg ./docs/diagram.svg
 
