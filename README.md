@@ -2,6 +2,10 @@
 
 XSD schemas, Python binding libraries, and schema analysis scripts for the UKRDC and related projects.
 
+[Current schema documentation](https://renalreg.github.io/resources/master/)
+
+[Current schema diagram](https://renalreg.github.io/resources/master/diagram.svg)
+
 ## `schema`
 
 Contains XSD schemas for UKRDC, PV, and RRTF files.
@@ -18,6 +22,12 @@ Uses PyTest to ensure that the current schema correctly matches a sample file.
 
 * Install Tox (`pip install tox`)
 * Run tox from the repository root (`tox`)
+
+## `docs_build`
+
+Builds HTML and SVG schema documentation, and deploys to GitHub Pages.
+
+Each branch and tag gets it's own documentation subdirectory, so old schema versions will still have documentation available, and in-development changes can be viewed.
 
 ## `xsdata_build` (XSData Schemas)
 
