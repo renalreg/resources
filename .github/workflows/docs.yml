@@ -6,9 +6,6 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: docs_build
 
     steps:
       - uses: actions/checkout@v1
@@ -22,7 +19,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Export API docs
-        run: python main.py ../schema/ukrdc ./docs
+        run: python docs_build/main.py ./schema/ukrdc ./docs
 
       - uses: actions/setup-java@v2
         with:
@@ -34,13 +31,13 @@ jobs:
           wget http://xsdvi.sourceforge.net/xsdvi-20080430-1405.zip
           unzip xsdvi-20080430-1405.zip -d xsdvi
           java -jar xsdvi/lib/xsdvi.jar ../schema/ukrdc/UKRDC.xsd
-          patch -p0 < collapse-nodes.patch
-          mv UKRDC.svg docs/diagram.svg
+          patch -p0 < docs_build/collapse-nodes.patch
+          mv UKRDC.svg ./docs/diagram.svg
 
       - name: Deploy API docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          destination_dir: ./${{ env.GITHUB_REF_NAME }}
+          destination_dir: ./${{ GITHUB_REF_NAME }}
           keep_files: true

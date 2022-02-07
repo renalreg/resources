@@ -6,7 +6,7 @@ from pathlib import Path
 
 in_path = Path(sys.argv[1])
 out_path = Path(sys.argv[2])
-xsl_path = Path("stylesheet.xsl")
+xsl_path = Path(__file__).parent.joinpath("stylesheet.xsl")
 
 out_path.mkdir(exist_ok=True)
 
