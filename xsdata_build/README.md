@@ -12,14 +12,14 @@ XSData models for the UKRDC.
 
 ```python
 import datetime
-from xsdata.models.datatype import XmlDateTime
+from xsdata.models.datatype import XmlDate
 from ukrdc_xsdata.ukrdc import PatientRecord, Patient, types
 
 record = PatientRecord(
     sending_facility = "RFBAK",
     sending_extract = "PV",
     patient = Patient(
-        birth_time = XmlDateTime.from_datetime(datetime.datetime(year=1950, month=10, day=1)),
+        birth_time = XmlDate.from_datetime(datetime.datetime(year=1950, month=10, day=1)),
         gender = types.gender.Gender.VALUE_9,
         names = Patient.Names(
             name = [
