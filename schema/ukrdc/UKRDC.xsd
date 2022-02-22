@@ -1,11 +1,11 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/" version="3.3.0">
-
     <xs:include schemaLocation="Allergies/Allergy.xsd"/>
     <xs:include schemaLocation="ClinicalRelationships/ClinicalRelationship.xsd"/>
     <xs:include schemaLocation="Diagnoses/CauseOfDeath.xsd"/>
     <xs:include schemaLocation="Diagnoses/Diagnosis.xsd"/>
     <xs:include schemaLocation="Diagnoses/RenalDiagnosis.xsd"/>
     <xs:include schemaLocation="DialysisSessions/DialysisSession.xsd"/>
+    <xs:include schemaLocation="DialysisPrescriptions/DialysisPrescription.xsd"/>
     <xs:include schemaLocation="Documents/Document.xsd"/>
     <xs:include schemaLocation="Encounters/Encounter.xsd"/>
     <xs:include schemaLocation="Encounters/TransplantList.xsd"/>
@@ -24,14 +24,12 @@
     <xs:include schemaLocation="Types/PVData.xsd"/>
     <xs:include schemaLocation="Types/SendingExtract.xsd"/>
     <xs:include schemaLocation="VascularAccesses/VascularAccess.xsd"/>
-
     <xs:simpleType name="SendingFacility">
         <xs:restriction base="xs:string">
-            <xs:minLength value="1" />
-            <xs:maxLength value="7" />
+            <xs:minLength value="1"/>
+            <xs:maxLength value="7"/>
         </xs:restriction>
     </xs:simpleType>
-
     <xs:element name="PatientRecord">
         <xs:complexType>
             <xs:sequence>
@@ -109,7 +107,7 @@
                             <xs:element maxOccurs="1" minOccurs="0" name="RenalDiagnosis" type="RenalDiagnosis">
                                 <xs:annotation>
                                     <xs:documentation>Primary Renal Diagnosis. These should be used to record the Primary Renal Disease (defined in the ERA-EDTA PRD spreadsheet, notes for users, sections: 'Description of PRD' and 'Selection of the most appropriate PRD' http://www.era-edta-reg.org/prd.jsp ) for analysis by the UKRR, SRR and ERA. In order for the data to be comparable across countries it needs to be coded in using the EDTA code lists. Consequently we expect that some conditions may appear both as PRD objects and as generic diagnoses coded in SNOMED. Patients who started RRT after 01/01/2014 should be coded using the 2012 "EDTA2" code list. Patients who started before then can continue to be submitted using the older EDTA list. Systems should not automatically convert the older codes to the newer ones as this results in a loss of accuracy.
-</xs:documentation>
+                                    </xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                         </xs:sequence>
@@ -125,6 +123,18 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+                <xs:element minOccurs="0" name="DialysisPrescriptions">
+                    <xs:annotation>
+                        <xs:documentation>Dialysis Prescriptions</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisPrescription" type="DialysisPrescription"/>
+                        </xs:sequence>
+                        <xs:attribute name="start" type="xs:date"/>
+                        <xs:attribute name="stop" type="xs:date"/>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element minOccurs="0" name="Procedures">
                     <xs:annotation>
                         <xs:documentation>Procedures</xs:documentation>
@@ -133,7 +143,7 @@
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedure" type="Procedure"/>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSessions" type="DialysisSessions">
-                            <xs:annotation>
+                                <xs:annotation>
                                     <xs:documentation>Dialysis Sessions</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
