@@ -1,5 +1,8 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
     <xs:complexType name="DialysisPrescription">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
@@ -8,17 +11,17 @@
             </xs:element>
             <xs:element name="FromTime" type="xs:dateTime">
                 <xs:annotation>
-                    <xs:documentation>Time the Period the Prescription Applies To Starts</xs:documentation>
+                    <xs:documentation>Time the Period the Dialysis Prescription Applies To Starts</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ToTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation>Time the Period the Prescription Applies To Ends</xs:documentation>
+                    <xs:documentation>Time the Period the Dialysis Prescription Applies To Ends</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="SessionType" type="xs:string">
+            <xs:element name="SessionType" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation>SessionType (Same as QHD41)</xs:documentation>
+                    <xs:documentation>Session Type (Same as QHD41)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="SessionsPerWeek" type="xs:integer">
@@ -33,7 +36,7 @@
             </xs:element>
             <xs:element name="VascularAccess" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>Vascular Access to USe (QHD20)</xs:documentation>
+                    <xs:documentation>Vascular Access to Use (QHD20)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             </xs:sequence>
