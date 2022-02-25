@@ -7,7 +7,7 @@ long_description = (Path(__file__).parent / "README.md").read_text()
 
 setup(
     name="ukrdc-xsdata",
-    version="3.3.0.post1",
+    version="3.3.1",
     long_description=long_description,
     long_description_content_type='text/markdown',
     author="UK Renal Registry",
