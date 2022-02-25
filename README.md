@@ -48,3 +48,15 @@ This contains a script to produce an Excel document which compares the UKRDC XML
 It is not currently used.
 
 See [scripts/README.md](./scripts/README.md) for details.
+
+## Developer Notes
+
+### Setting library versions
+
+To set both library versions (PyXB and XSData) to the same version, run:
+
+`./setversions.sh ${VERSION_TO_SET}`
+
+replacing `${VERSION_TO_SET}` with the version you want to set.
+
+Alternatively, you can omit the version number and the script will set the version to the latest git tag, if it is a valid semantic version number.
