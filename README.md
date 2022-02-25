@@ -51,7 +51,7 @@ See [scripts/README.md](./scripts/README.md) for details.
 
 ## Developer Notes
 
-### Setting library versions
+### Setting versions
 
 To set the XSD schema version *and* both library versions (PyXB and XSData), run:
 
