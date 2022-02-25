@@ -53,7 +53,7 @@ See [scripts/README.md](./scripts/README.md) for details.
 
 ### Setting library versions
 
-To set both library versions (PyXB and XSData) to the same version, run:
+To set the XSD schema version *and* both library versions (PyXB and XSData), run:
 
 `./setversions.sh ${VERSION_TO_SET}`
 
