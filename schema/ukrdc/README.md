@@ -1,9 +1,15 @@
 # UK Renal Data Collaboration (UKRDC) Schema
 
-## Documentation
+## Implementers Documentation
 
-Project Website (https://renalregistry.atlassian.net/wiki/spaces/UKRDC/overview)
+[Project Overview](https://renalregistry.atlassian.net/wiki/spaces/UKRDC/overview)
 
-Schema Documentation (https://renalregistry.atlassian.net/wiki/spaces/UD/overview)
+[Schema Documentation](https://renalregistry.atlassian.net/wiki/spaces/UD/overview)
 
-Instructions (https://renalregistry.atlassian.net/wiki/spaces/UD/pages/2044133823/UKRDC+File+Transmission)
+[File Transfer Instructions](https://renalregistry.atlassian.net/wiki/spaces/UD/pages/2044133823/UKRDC+File+Transmission)
+
+## Technical References
+
+[XSD Schema Documentation](https://renalreg.github.io/resources/master/)
+
+[XSD Schema Diagram](https://renalreg.github.io/resources/master/diagram.svg)
