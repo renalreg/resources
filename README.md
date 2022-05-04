@@ -6,6 +6,14 @@ XSD schemas, Python binding libraries, and schema analysis scripts for the UKRDC
 
 [Current schema diagram](https://renalreg.github.io/resources/master/diagram.svg)
 
+## Versions and branches
+
+The `master` branch of this repository should contain the currently accepted version of all schemas.
+
+All in-development versions will be within other branches.
+
+Old versions will be tagged.
+
 ## `schema`
 
 Contains XSD schemas for UKRDC, PV, and RRTF files.
