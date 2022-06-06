@@ -35,6 +35,7 @@
             <xs:element name="ConfirmedTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
                     <xs:appinfo>allergy.confirmedtime</xs:appinfo>
+                    <xs:documentation>Confirmed Time</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Comments" minOccurs="0">
