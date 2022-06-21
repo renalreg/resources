@@ -166,3 +166,5 @@ xsdata_build/dist/
 xsdata_build/ukrdc_xsdata/
 
 docs/
+/dataset_report.xls
+/coded_field_report.csv
