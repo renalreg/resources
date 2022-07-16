@@ -1,4 +1,4 @@
-name: Test and Publish Schema
+name: Test and Publish Schema Libraries
 
 on:
   push:

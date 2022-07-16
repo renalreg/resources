@@ -1,7 +1,5 @@
-<ns0:PatientRecord xmlns:ns0="http://www.rixg.org.uk/"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.rixg.org.uk/ file:/C:/Temp/UKRDC/resources/schema/ukrdc/UKRDC.xsd">
-    <SendingFacility channelName="UKRRSystemExtract" schemaVersion="3.0.0">ABC123</SendingFacility>
+<ukrdc:PatientRecord xmlns:ukrdc="http://www.rixg.org.uk/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rixg.org.uk/ https://raw.githubusercontent.com/renalreg/resources/v3.3.0/schema/ukrdc/UKRDC.xsd">
+    <SendingFacility>ABC123</SendingFacility>
     <SendingExtract>UKRDC</SendingExtract>
     <Patient>
         <PatientNumbers>
@@ -19,8 +17,8 @@
         <Names>
             <Name use="L">
                 <Prefix>Mr</Prefix>
-                <Family>Surname</Family>
-                <Given>Forename</Given>
+                <Family>Sample</Family>
+                <Given>John</Given>
             </Name>
         </Names>
         <BirthTime>2006-05-04T18:13:51.0</BirthTime>
@@ -62,6 +60,7 @@
         <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
         <ExternalId>1122334455</ExternalId>
     </Patient>
+
     <LabOrders start="2021-01-01" stop="2021-04-01">
         <LabOrder>
             <ReceivingLocation>
@@ -84,6 +83,7 @@
             <SpecimenCollectedTime>2006-05-04T18:13:51.0</SpecimenCollectedTime>
             <SpecimenReceivedTime>2006-05-04T18:13:51.0</SpecimenReceivedTime>
             <SpecimenSource>BLOOD</SpecimenSource>
+
             <ResultItems>
                 <ResultItem>
                     <EnteredOn>2006-05-04T18:13:51.0</EnteredOn>
@@ -112,6 +112,7 @@
                     <ObservationTime>2006-05-04T18:13:51.0</ObservationTime>
                 </ResultItem>
             </ResultItems>
+
             <EnteredOn>2006-05-04T18:13:51.0</EnteredOn>
             <EnteredAt>
                 <CodingStandard>RR1+</CodingStandard>
@@ -127,6 +128,7 @@
             <ExternalId>9999999999</ExternalId>
         </LabOrder>
     </LabOrders>
+
     <Observations start="2021-01-01" stop="2021-04-01">
         <Observation>
             <ObservationTime>2006-05-04T18:13:51.0</ObservationTime>
@@ -175,6 +177,7 @@
             <ExternalId>7777777777</ExternalId>
         </Observation>
     </Observations>
+
     <Diagnoses>
         <Diagnosis>
             <Diagnosis>
@@ -235,6 +238,7 @@
             <ExternalId>433444333222</ExternalId>
         </RenalDiagnosis>
     </Diagnoses>
+
     <Medications>
         <Medication>
             <FromTime>2006-05-04T18:13:51.0</FromTime>
@@ -272,6 +276,7 @@
             <ExternalId>ExternalId15</ExternalId>
         </Medication>
     </Medications>
+
     <Procedures>
         <DialysisSessions>
             <DialysisSession>
@@ -418,8 +423,8 @@
                 <ACC40>300</ACC40>
             </Attributes>
         </VascularAccess>
-         
     </Procedures>
+
     <Documents>
         <Document>
             <DocumentTime>2006-05-04T18:13:51.0</DocumentTime>
@@ -431,6 +436,7 @@
             <ExternalId>1111111111</ExternalId>
         </Document>
     </Documents>
+
     <Encounters>
         <Treatment>
             <FromTime>2006-05-04</FromTime>
@@ -475,4 +481,5 @@
             <ExternalId>3343433432234</ExternalId>
         </Treatment>
     </Encounters>
-</ns0:PatientRecord>
+
+</ukrdc:PatientRecord>
