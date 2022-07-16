@@ -20,7 +20,7 @@ Contains XSD schemas for UKRDC, PV, and RRTF files.
 
 ## `sample_files`
 
-Contains sample UKRDC XML files used for schema testing.
+Contains sample UKRDC XML data files used for schema testing and documentation.
 
 ## `tests`
 
