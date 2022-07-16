@@ -44,7 +44,7 @@ echo "Setting versions to $semver"
 
 # Set paths to files to be changed
 xsdatapath="xsdata_build/setup.py"
-pyxbpath="schema_build/ukrdc_schema/__init__.py"
+pyxbpath="pyxb_build/ukrdc_schema/__init__.py"
 schemapath="schema/ukrdc/UKRDC.xsd"
 
 # Set version in files

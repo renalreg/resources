@@ -155,11 +155,11 @@ cython_debug/
 
 test-reports/
 
-schema_build/build/
-schema_build/dist/
-schema_build/ukrdc_schema/pv_2_0_schema.py
-schema_build/ukrdc_schema/rrtf_schema.py
-schema_build/ukrdc_schema/ukrdc_schema.py
+pyxb_build/build/
+pyxb_build/dist/
+pyxb_build/ukrdc_schema/pv_2_0_schema.py
+pyxb_build/ukrdc_schema/rrtf_schema.py
+pyxb_build/ukrdc_schema/ukrdc_schema.py
 
 xsdata_build/build/
 xsdata_build/dist/

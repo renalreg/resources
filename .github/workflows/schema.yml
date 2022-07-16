@@ -43,16 +43,16 @@ jobs:
 
       - name: Build PyXB models
         run: |
-          pyxbgen -m schema_build/ukrdc_schema/pv_2_0_schema -u "file:////${PWD}/schema/pv2/PV_2_0.xsd"
-          pyxbgen -m schema_build/ukrdc_schema/ukrdc_schema -u "file:////${PWD}/schema/ukrdc/UKRDC.xsd"
-          pyxbgen -m schema_build/ukrdc_schema/rrtf_schema -u "file:////${PWD}/schema/rrtf/RRTF_4.xsd"
-          cd schema_build
+          pyxbgen -m pyxb_build/ukrdc_schema/pv_2_0_schema -u "file:////${PWD}/schema/pv2/PV_2_0.xsd"
+          pyxbgen -m pyxb_build/ukrdc_schema/ukrdc_schema -u "file:////${PWD}/schema/ukrdc/UKRDC.xsd"
+          pyxbgen -m pyxb_build/ukrdc_schema/rrtf_schema -u "file:////${PWD}/schema/rrtf/RRTF_4.xsd"
+          cd pyxb_build
           python setup.py bdist_wheel
 
       - uses: actions/upload-artifact@v2
         with:
           name: ukrdc_schema_wheel
-          path: schema_build/dist/*.whl
+          path: pyxb_build/dist/*.whl
 
       - name: Publish
         uses: pypa/gh-action-pypi-publish@release/v1
@@ -60,7 +60,7 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
-          packages_dir: schema_build/dist
+          packages_dir: pyxb_build/dist
 
 
   build-xsdata:

@@ -43,11 +43,11 @@ This is the code to build the `ukrdc-xsdata` models library.
 
 See [xsdata_build/README.md](./xsdata_build/README.md) for details
 
-## `schema_build` (PyXB Schemas)
+## `pyxb_build` (PyXB Schemas)
 
 This is the code to build the PyXB packages which then form the ukrdc_schema package.
 
-See [schema_build/README.md](./schema_build/README.md) for details
+See [pyxb_build/README.md](./pyxb_build/README.md) for details
 
 ## `scripts`
 
