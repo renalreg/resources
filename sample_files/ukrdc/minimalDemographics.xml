@@ -1,4 +1,4 @@
-<ukrdc:PatientRecord xmlns:ukrdc="http://www.rixg.org.uk/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rixg.org.uk/ https://raw.githubusercontent.com/renalreg/resources/v3.3.0/schema/ukrdc/UKRDC.xsd">
+<ukrdc:PatientRecord xmlns:ukrdc="http://www.rixg.org.uk/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <SendingFacility>ABC123</SendingFacility>
     <SendingExtract>UKRDC</SendingExtract>
     <Patient>
