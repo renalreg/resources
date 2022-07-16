@@ -196,9 +196,9 @@ class DBMetadata(object):
 
             try:
                 documentation_node = appinfo_node.xpath(
-                "following-sibling::xs:documentation", namespaces={"xs": ns}
+                    "following-sibling::xs:documentation", namespaces={"xs": ns}
                 )[-1]
-            except:
+            except:  # noqa: E722
                 print("Error with", table_name, column_name)
                 continue
 
