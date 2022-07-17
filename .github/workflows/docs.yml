@@ -1,0 +1,43 @@
+name: Publish UKRDC Schema Documentation
+
+on:
+  push:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+
+      - name: Install Dependencies
+        run: pip install -r docs_build/requirements.txt
+
+      - name: Export API docs
+        run: python docs_build/main.py ./schema/ukrdc ./docs
+
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Build Schema Map
+        run: |
+          wget http://xsdvi.sourceforge.net/xsdvi-20080430-1405.zip
+          unzip xsdvi-20080430-1405.zip -d xsdvi
+          java -jar xsdvi/lib/xsdvi.jar ./schema/ukrdc/UKRDC.xsd
+          patch -p0 < docs_build/collapse-nodes.patch
+          mv UKRDC.svg ./docs/diagram.svg
+
+      - name: Deploy API docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          destination_dir: ./${{ github.ref_name }}
+          keep_files: true

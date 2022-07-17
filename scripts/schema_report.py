@@ -194,9 +194,14 @@ class DBMetadata(object):
             table_name = split_appinfo_text[0]
             column_name = split_appinfo_text[1]
 
-            documentation_node = appinfo_node.xpath(
+            try:
+                documentation_node = appinfo_node.xpath(
                 "following-sibling::xs:documentation", namespaces={"xs": ns}
-            )[-1]
+                )[-1]
+            except:
+                print("Error with", table_name, column_name)
+                continue
+
             documentation_text = documentation_node.text
 
             # NOTE: Here we go "up" from the documentation tag looking
