@@ -12,7 +12,13 @@ The `master` branch of this repository should contain the currently accepted ver
 
 All in-development versions will be within other branches.
 
-Old versions will be tagged.
+All releases will be tagged and available from [the Releases page](https://github.com/renalreg/resources/releases).
+
+### A note on version numbers
+
+We implement semantic versioning on these schemas. Major releases will introduce potentially breaking changes, minor releases will introduce additional non-breaking functionality, and patch releases will introduce ug fixes with no change to functionality.
+
+Note that while the UKRDC schema *relates* to the the UKRR Dataset, their versions are not synchronised. E.g. UKRR Dataset V5 maps to UKRDC schema version 4.x.y.
 
 ## `schema`
 
