@@ -9,7 +9,7 @@ class ValidationError(Exception):
 
 
 class TestSampleFileValidation(TestCase):
-    def test_sample_files(self):
+    def test_ukrdc_sample_files(self):
         # For each sample file
         for sample_path in glob.glob("sample_files/ukrdc/*.xml"):
             # Run as a subtest
