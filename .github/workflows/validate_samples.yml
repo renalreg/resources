@@ -17,4 +17,4 @@ jobs:
         env:
           SAMPLE_BASE: ./sample_files/ukrdc
           SCHEMA: ./schema/ukrdc/UKRDC.xsd
-        run: for in_file in $SAMPLE_BASE/*.xml; do xmllint --schema "$SCHEMA" "$in_file" --noout; done
+        run: for in_file in $SAMPLE_BASE/*.xml; do xmllint --schema "$SCHEMA" "$in_file"; done
