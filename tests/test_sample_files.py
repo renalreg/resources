@@ -31,13 +31,22 @@ class TestSampleFileValidation(TestCase):
 
                     # Try validating the sample file against the schema
                     try:
-                        xml_schema.assertValid(etree.parse(sample_file, None))
+                        xml_doc = etree.parse(sample_file, None)
+                        xml_schema.assertValid(xml_doc)
                     # Initially catch errors to allow reporting multiple issues in one file
                     except etree.DocumentInvalid as e:
+                        tree = etree.ElementTree(xml_doc.getroot())
                         # Print all errors
                         print("Validation error(s):")
                         for error in xml_schema.error_log:
                             print("  Line {}: {}".format(error.line, error.message))
+
+                            for e in tree.xpath(".//*"):
+                                if error.line == e.sourceline:
+                                    xml_path = tree.getpath(e)
+                                    print(xml_path)
+                                    break
+
                         # Raise an exception to fail the test and report the full error list
                         raise ValidationError(
                             f"{len(xml_schema.error_log)} validation error(s) in {sample_path}. See full output above for details."
