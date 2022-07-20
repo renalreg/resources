@@ -10,8 +10,8 @@
             </PatientNumber>
             <PatientNumber>
                 <Number>1111111111</Number>
-                <Organization>NHS</Organization>
-                <NumberType>NI</NumberType>
+                <Organization>BANANA</Organization>
+                <NumberType>APPLE</NumberType>
             </PatientNumber>
         </PatientNumbers>
 
