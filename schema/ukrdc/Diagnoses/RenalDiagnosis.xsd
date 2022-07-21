@@ -20,6 +20,11 @@
                     <xs:documentation>Coded Primary Renal Diagnosis</xs:documentation>
                 </xs:annotation>
             </xs:element>
+            <xs:element name="BiopsyPerformed" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Was a biopsy performed to arrive at this Diagnosis</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="Comments" type="xs:string" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Free text about the Diagnosis</xs:documentation>
@@ -36,6 +41,45 @@
                     <xs:appinfo>renaldiagnosis.onsettime</xs:appinfo>
                     <xs:documentation>Date condition began.</xs:documentation>
                 </xs:annotation>
+            </xs:element>
+            <xs:element name="VerificationStatus" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>The verification status to support or decline the clinical status of the condition or diagnosis.</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="unconfirmed">
+                            <xs:annotation>
+                                <xs:documentation>Unconfirmed</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="provisional">
+                            <xs:annotation>
+                                <xs:documentation>Provisional</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="differential">
+                            <xs:annotation>
+                                <xs:documentation>Differential</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="confirmed">
+                            <xs:annotation>
+                                <xs:documentation>Confirmed</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="refuted">
+                            <xs:annotation>
+                                <xs:documentation>Refuted</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="entered-in-error">
+                            <xs:annotation>
+                                <xs:documentation>Entered in Error</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
             </xs:element>
             <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
