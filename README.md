@@ -12,7 +12,13 @@ The `master` branch of this repository should contain the currently accepted ver
 
 All in-development versions will be within other branches.
 
-Old versions will be tagged.
+All releases will be tagged and available from [the Releases page](https://github.com/renalreg/resources/releases).
+
+### A note on version numbers
+
+We implement semantic versioning on these schemas. Major releases will introduce potentially breaking changes, minor releases will introduce additional non-breaking functionality, and patch releases will introduce ug fixes with no change to functionality.
+
+Note that while the UKRDC schema *relates* to the the UKRR Dataset, their versions are not synchronised. E.g. UKRR Dataset V5 maps to UKRDC schema version 4.x.y.
 
 ## `schema`
 
@@ -20,7 +26,7 @@ Contains XSD schemas for UKRDC, PV, and RRTF files.
 
 ## `sample_files`
 
-Contains sample UKRDC XML files used for schema testing.
+Contains sample UKRDC XML data files used for schema testing and documentation.
 
 ## `tests`
 
@@ -43,11 +49,11 @@ This is the code to build the `ukrdc-xsdata` models library.
 
 See [xsdata_build/README.md](./xsdata_build/README.md) for details
 
-## `schema_build` (PyXB Schemas)
+## `pyxb_build` (PyXB Schemas)
 
 This is the code to build the PyXB packages which then form the ukrdc_schema package.
 
-See [schema_build/README.md](./schema_build/README.md) for details
+See [pyxb_build/README.md](./pyxb_build/README.md) for details
 
 ## `scripts`
 
