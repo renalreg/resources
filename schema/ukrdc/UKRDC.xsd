@@ -40,7 +40,6 @@
                         <xs:simpleContent>
                             <xs:extension base="SendingFacility">
                                 <xs:attribute name="channelName"/>
-                                <xs:attribute name="channelId"/>
                                 <xs:attribute name="time"/>
                                 <xs:attribute name="schemaVersion"/>
                             </xs:extension>

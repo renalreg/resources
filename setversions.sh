@@ -44,12 +44,16 @@ echo "Setting versions to $semver"
 
 # Set paths to files to be changed
 xsdatapath="xsdata_build/setup.py"
-pyxbpath="schema_build/ukrdc_schema/__init__.py"
+pyxbpath="pyxb_build/ukrdc_schema/__init__.py"
 schemapath="schema/ukrdc/UKRDC.xsd"
+
+samplesdir="sample_files/ukrdc"
 
 # Set version in files
 sed -i "s/__version__ = \"[^\"]*\"/__version__ = \"${semver}\"/g" "$pyxbpath"
 sed -i "s/version=\"[^\"]*\"/version=\"${semver}\"/g" "$xsdatapath"
 sed -i "s/version=\"[^\"]*\"/version=\"${semver}\"/g" "$schemapath"
+
+for sample_file in $samplesdir/*.xml; do sed -i "s/schemaVersion=\"[^\"]*\"/schemaVersion=\"${semver}\"/g" "$sample_file"; done
 
 echo "Done"
