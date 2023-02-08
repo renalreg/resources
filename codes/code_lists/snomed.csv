@@ -1,287 +1,232 @@
-SNOMED,274945004,AA amyloidosis 
-SNOMED,722078002,Obstructive nephropathy due to neurogenic bladder
-SNOMED,86249007,Obstructive nephropathy
-SNOMED,444794000,Acute cortical necrosis 
-SNOMED,14669001,Acute kidney injury
-SNOMED,1048481000000109,Acute kidney injury due to acute tubular necrosis due to circulatory failure
-SNOMED,1048451000000103,Acute kidney injury due to acute tubular necrosis due to hypovolaemia
-SNOMED,236428007,Acute kidney injury due to nephrotoxicity
-SNOMED,23697004,Acute kidney injury due to rhabdomyolysis
-SNOMED,1048491000000106,Acute kidney injury due to acute tubular necrosis due to sepsis
-SNOMED,36689008,Acute pyelonephritis 
-SNOMED,236496000,Acute urate nephropathy - histologically proven
-SNOMED,236496000,Acute urate nephropathy 
-SNOMED,52254009,Nephrotic syndrome 
-SNOMED,445108007,Age related reduction of renal function 
-SNOMED,23132008,AL amyloidosis 
-SNOMED,31742004,Alagille syndrome
-SNOMED,770414008,Alport syndrome - histologically proven
-SNOMED,770414008,Alport syndrome
-SNOMED,50581000,Goodpasture syndrome - histologically proven
-SNOMED,50581000,Goodpasture syndrome
-SNOMED,237770005,Syndrome of apparent mineralocorticoid excess 
-SNOMED,717770008,Aristolochic acid nephropathy - histologically proven
-SNOMED,717770008,Aristolochic acid nephropathy
-SNOMED,51677000,Atheroembolism of renal arteries - histologically proven
-SNOMED,51677000,Atheroembolism of renal arteries 
-SNOMED,373422007,Atypical haemolytic uraemic syndrome
-SNOMED,765330003,Autosomal dominant polycystic kidney disease
-SNOMED,253878003,Autosomal dominant polycystic kidney disease type 1
-SNOMED,253879006,Autosomal dominant polycystic kidney disease type 2
-SNOMED,28770003,Autosomal recessive polycystic kidney disease
-SNOMED,707742001,Bartter syndrome
-SNOMED,236418003,Benign familial hematuria 
-SNOMED,61758007,Exstrophy of bladder sequence 
-SNOMED,290006,Branchio-oto-renal syndrome
-SNOMED,444717006,Calcium oxalate urolithiasis 
-SNOMED,95566004,Urolithiasis 
-SNOMED,445236007,Cardiorenal syndrome 
-SNOMED,38481006,Hypertensive renal disease - histologically proven
-SNOMED,38481006,Hypertensive renal disease 
-SNOMED,709044004,Chronic kidney disease - aetiology uncertain / unknown - histologically proven
-SNOMED,709044004,Chronic kidney disease - aetiology uncertain / unknown 
-SNOMED,722149000,Chronic kidney disease (CKD) caused by tumour nephrectomy
-SNOMED,722098007,Chronic kidney disease after donor nephrectomy
-SNOMED,722467000,Chronic kidney disease due to traumatic loss of kidney
-SNOMED,90688005,Chronic renal failure syndrome 
-SNOMED,722150000,Chronic kidney disease due to systemic infection
-SNOMED,190829000,Chronic urate nephropathy - histologically proven
-SNOMED,190829000,Chronic urate nephropathy 
-SNOMED,82275008,EGPA - eosinophilic granulomatosis with polyangiitis - histologically proven
-SNOMED,82275008,EGPA - eosinophilic granulomatosis with polyangiitis
-SNOMED,204949001,Renal dysplasia 
-SNOMED,444976001,Congenital hemolytic uremic syndrome 
-SNOMED,722118005,Congenital nephrotic syndrome 
-SNOMED,722369003,Congenital nephrotic syndrome 
-SNOMED,197601003,Finnish congenital nephrotic syndrome 
-SNOMED,197601003,Finnish congenital nephrotic syndrome 
-SNOMED,236384008,Congenital nephrotic syndrome with focal glomerulosclerosis 
-SNOMED,48796009,Congenital nephrotic syndrome 
-SNOMED,445387007,Congenital neurogenic urinary bladder
-SNOMED,373584008,Congenital pelviureteric junction obstruction 
-SNOMED,373585009,Congenital ureterovesical obstruction 
-SNOMED,128971000119101,Cryoglobulinemia due to chronic hepatitis C - histologically proven
-SNOMED,128971000119101,Cryoglobulinemia due to chronic hepatitis C
-SNOMED,30911005,Cryoglobulinemia- histologically proven
-SNOMED,30911005,Cryoglobulinemia 
-SNOMED, 722223000,Cystic kidney disease
-SNOMED,190681003,Cystinosis 
-SNOMED,85020001,Cystinuria 
-SNOMED,444645005,Dent's disease 
-SNOMED,236385009,Drash syndrome
-SNOMED,96441000119101,Renal disorder associated with type I diabetes mellitus - histologically proven
-SNOMED,96441000119101,Chronic kidney disease due to type 1 diabetes mellitus
-SNOMED,771000119108,Chronic kidney disease due to type 2 diabetes mellitus - histologically proven
-SNOMED,771000119108,Chronic kidney disease due to type 2 diabetes mellitus
-SNOMED,3704008,Diffuse endocapillary proliferative glomerulonephritis 
-SNOMED,236461000,Distal renal tubular acidosis 
-SNOMED,722468005,Distal renal tubular acidosis with sensorineural hearing loss (SNHL)
-SNOMED,: 439990003,Drug-induced tubulointerstitial nephritis
-SNOMED,439990003,Acute drug-induced tubulointerstitial nephritis - histologically proven
-SNOMED,439990003,Acute drug-induced tubulointerstitial nephritis
-SNOMED,710571007,Renal dysplasia due to fetus affected by maternal use of angiotensin converting enzyme inhibitor
-SNOMED,37497004,Enteric hyperoxaluria 
-SNOMED,239947001,Essential mixed cryoglobulinemia - histologically proven
-SNOMED,239947001,Essential mixed cryoglobulinemia 
-SNOMED,16652001,Fabry's disease - histologically proven
-SNOMED,16652001,Fabry's disease 
-SNOMED,367528006,Amyloid of familial Mediterranean fever - histologically proven 
-SNOMED,367528006,Amyloid of familial Mediterranean fever 
-SNOMED,66451004,Familial renal amyloidosis - histologically proven
-SNOMED,66451004,Familial renal amyloidosis
-SNOMED,444977005,Autosomal dominant focal segmental glomerulosclerosis - histologically proven
-SNOMED,444977005,Autosomal dominant focal segmental glomerulosclerosis 
-SNOMED,445388002,Autosomal recessive focal segmental glomerulosclerosis - histologically proven
-SNOMED,445388002,Autosomal recessive focal segmental glomerulosclerosis 
-SNOMED,722721004,Familial haemolytic-uraemic syndrome
-SNOMED,711152006,Familial hypercalciuric hypocalcaemia
-SNOMED,237885008,Familial hypocalciuric hypercalcemia 
-SNOMED,48655003,Isolated familial renal hypomagnesaemia
-SNOMED,445404003,Familial immunoglobulin A nephropathy - histologically proven 
-SNOMED,445404003,Familial immunoglobulin A nephropathy 
-SNOMED,83923004,Familial interstitial nephritis - histologically proven
-SNOMED,83923004,Familial interstitial nephritis
-SNOMED,236419006,Familial nephropathy
-SNOMED,707208009,Familial non-obstructive reflux-associated chronic pyelonephritis 
-SNOMED,373420004,Upshaw-Schulman syndrome 
-SNOMED,783730009,Fibromuscular dysplasia of renal artery
-SNOMED,83866005,Focal AND segmental proliferative glomerulonephritis 
-SNOMED, 713887002,Focal segmental glomerulosclerosis co-occurrent with human immunodeficiency virus infection
-SNOMED, 722139003,Focal segmental glomerulosclerosis caused by lithium
-SNOMED,1269761000000101,Focal segmental glomerulosclerosis (FSGS) secondary to obesity - histologically proven
-SNOMED,1269761000000101,Focal segmental glomerulosclerosis (FSGS) secondary to obesity
-SNOMED,722147003,Focal segmental glomerulosclerosis due to sickle cell disease 
-SNOMED,445431000,Frasier syndrome 
-SNOMED,707756004,Gitelman syndrome
-SNOMED,253864004,"Familial hypoplastic, glomerulocystic kidney"
-SNOMED, 36171008,Glomerulonephritis
-SNOMED,36171008,Glomerulonephritis 
-SNOMED,36171008,Glomerulonephritis - secondary to other systemic disease
-SNOMED, 36171008,Glomerulonephritis
-SNOMED,237743003,Glucocorticoid-suppressible hyperaldosteronism 
-SNOMED,195353004,Granulomatosis with polyangiitis - histologically proven
-SNOMED,195353004,Granulomatosis with polyangiitis
-SNOMED,,Hematuria syndrome AND Proteinuria 
-SNOMED,373421000,Diarrhea-associated hemolytic uremic syndrome 
-SNOMED, 111407006,Hemolytic uremic syndrome
-SNOMED,716864001,Haemorrhagic fever with renal syndrome
-SNOMED,191306005,Henoch-Schönlein purpura - histologically proven
-SNOMED,191306005,Henoch-Schönlein purpura 
-SNOMED,51292008,Hepatorenal syndrome 
-SNOMED,41729002,Horseshoe kidney 
-SNOMED,33763006,Hypercalcemic nephropathy 
-SNOMED,726080006,Autosomal recessive hypophosphatemic vitamin D refractory rickets 
-SNOMED,82236004,Familial x-linked hypophosphatemic vitamin D refractory rickets 
-SNOMED,197697005,
-SNOMED,197808006,Idiopathic retroperitoneal fibrosis 
-SNOMED,236407003,IgA nephropathy - histologically proven
-SNOMED,236407003,IgA nephropathy 
-SNOMED,282364005,IgA nephropathy associated with liver disease - histologically proven
-SNOMED,282364005,IgA nephropathy associated with liver disease 
-SNOMED,236411009,IgM nephropathy 
-SNOMED,73305009,Fibrillary glomerulonephritis 
-SNOMED,118600007,Malignant lymphoma 
-SNOMED,237604008,Diabetes mellitus autosomal dominant type II
-SNOMED,698953004,Inherited aminoaciduria 
-SNOMED,226309007,Familial renal glucosuria 
-SNOMED,710565001,Ischaemic nephropathy 
-SNOMED,710565001,Ischaemic nephropathy - histologically proven
-SNOMED,53298000,Hematuria syndrome
-SNOMED,12491000132101,Proteinuria 
-SNOMED, 95570007,Kidney stone
-SNOMED,126880001,Neoplasm of kidney 
-SNOMED,5619004,Laurence-Moon syndrome 
-SNOMED,704204003,Nephropathy induced by lead - histologically proven
-SNOMED,704204003,Nephropathy induced by lead 
-SNOMED,77377001,Leptospirosis 
-SNOMED,10406007,Lesch-Nyhan syndrome 
-SNOMED,707747007,Liddle syndrome
-SNOMED,373604002,Light chain deposition disease 
-SNOMED,79385002,Lowe syndrome 
-SNOMED,444690001,Magnesium ammonium phosphate urolithiasis 
-SNOMED,65443008,Malignant hypertensive renal disease - histologically proven
-SNOMED,65443008,Malignant hypertensive renal disease 
-SNOMED,726017001,Medullary cystic kidney disease type 1 
-SNOMED,723373006,Medullary cystic kidney disease type 2 
-SNOMED,236443009,Medullary sponge kidney 
-SNOMED,253904001,Megacystis-megaureter syndrome 
-SNOMED,722120008,Drug-induced membranous glomerulonephritis
-SNOMED,722119002,Idiopathic membranous glomerulonephritis
-SNOMED,722168002,Membranous glomerulonephritis with infectious disease
-SNOMED,722086002,Membranous glomerulonephritis due to malignant neoplastic disease
-SNOMED,35546006,Mesangial proliferative glomerulonephritis 
-SNOMED,75888001,"Mesangiocapillary glomerulonephritis, type I "
-SNOMED,722760002,"Mesangiocapillary glomerulonephritis, type II "
-SNOMED,236409000,Mesangiocapillary glomerulonephritis type III 
-SNOMED,307604008,Mesoblastic nephroma 
-SNOMED,1144805008,Microscopic polyarteritis nodosa 
-SNOMED,44785005,Minimal change disease - histologically proven
-SNOMED,44785005,Minimal change disease 
-SNOMED,240096000,Mitochondrial cytopathy 
-SNOMED,737562008,Multicystic dysplastic kidney
-SNOMED,32278006,Myeloma kidney - histologically proven
-SNOMED,32278006,Myeloma kidney 
-SNOMED,22199006,Nail patella-like renal disease 
-SNOMED,111395007,Nephrogenic diabetes insipidus 
-SNOMED,204958008,Nephronophthisis 
-SNOMED,444830001,Familial juvenile nephronophthisis
-SNOMED,444558002,Infantile nephronophthisis
-SNOMED,444749006,Adolescent nephronophthisis 
-SNOMED,446989009,Juvenile nephronophthisis 
-SNOMED,446991001,Nephronophthisis type 5
-SNOMED,447335007,Nephronophthisis type 6
-SNOMED,704206001,Nephropathy induced by aminoglycosides - histologically proven
-SNOMED,704206001,Nephropathy induced by aminoglycosides 
-SNOMED,704055002,Nephropathy induced by amphotericin - histologically proven
-SNOMED,704055002,Nephropathy induced by amphotericin 
-SNOMED,59400006,Analgesic nephropathy - histologically proven
-SNOMED,59400006,Analgesic nephropathy 
-SNOMED,704203009,Nephropathy induced by ciclosporin - histologically proven
-SNOMED,704203009,Nephropathy induced by ciclosporin 
-SNOMED,53556002,Cis-platinum nephropathy - histologically proven
-SNOMED,53556002,Cis-platinum nephropathy 
-SNOMED,4390004,Lithium nephropathy - histologically proven
-SNOMED,4390004,Lithium nephropathy 
-SNOMED,736993008,Nephropathy following eclampsia
-SNOMED,736992003,Nephropathy following pre-eclampsia
-SNOMED,704205002,Nephropathy induced by tacrolimus - histologically proven
-SNOMED,704205002,Nephropathy induced by tacrolimus 
-SNOMED,713504001,HIV-associated nephropathy - histologically proven
-SNOMED,713504001,HIV-associated nephropathy
-SNOMED,705065000,Childhood nephrotic syndrome
-SNOMED,449820008,Steroid resistant nephrotic syndrome of childhood 
-SNOMED,445119005,Steroid sensitive nephrotic syndrome of childhood 
-SNOMED,722089009,Obstructive nephropathy due to bladder cancer
-SNOMED,722088001,Obstructive nephropathy due to malignancy
-SNOMED,722081007,Obstructive nephropathy due to carcinoma of prostate
-SNOMED,722082000,Obstructive nephropathy due to benign prostatic hyperplasia
-SNOMED,18417009,Oligomeganephronic hypoplasia of kidney 
-SNOMED,40733004,Infectious disease 
-SNOMED,35759001,Phosphoribosyl pyrophosphate synthase superactivity
-SNOMED,155441006,Polyarteritis nodosa 
-SNOMED,253900005,Congenital posterior urethral valves 
-SNOMED,236466005,Congenital Fanconi syndrome 
-SNOMED,236404005,Classical focal segmental glomerulosclerosis
-SNOMED,17901006,Primary hyperoxaluria 
-SNOMED,65520001,Primary hyperoxaluria type I 
-SNOMED,40951006,"Primary hyperoxaluria, type II "
-SNOMED,734990008,"Primary hyperoxaluria, type III "
-SNOMED,197764002,Non-obstructive reflux-associated chronic pyelonephritis 
-SNOMED,1776003,Renal tubular acidosis 
-SNOMED,24790002,Proximal renal tubular acidosis 
-SNOMED,43941006,"Pseudohypoaldosteronism, type 1 "
-SNOMED,15689008,"Pseudohypoaldosteronism, type 2 "
-SNOMED,7725007,Radiation nephritis 
-SNOMED,197772000,Renal abscess OR Perirenal abscess 
-SNOMED,48713002,Renal amyloidosis
-SNOMED,236488005,Renal artery occlusion 
-SNOMED,302233006,Renal artery stenosis 
-SNOMED,702391001,Renal cell carcinoma
-SNOMED,446449009,Renal coloboma syndrome 
-SNOMED,609572000,Renal cysts and diabetes syndrome 
-SNOMED,710571007,Renal dysplasia due to fetal exposure to angiotensin converting enzyme inhibitor
-SNOMED,42399005,Renal failure syndrome 
-SNOMED,90241004,Papillary necrosis
-SNOMED,722077007,Renal papillary necrosis caused by analgesic drug
-SNOMED,723074006,Renal papillary necrosis due to diabetes mellitus
-SNOMED, 722085003,Renal papillary necrosis due to sickle cell disease
-SNOMED,37061001,Granulomatous sarcoid nephropathy - histologically proven
-SNOMED,37061001,Granulomatous sarcoid nephropathy 
-SNOMED,236502006,Renal involvement in scleroderma - histologically proven
-SNOMED,236502006,Renal involvement in scleroderma 
-SNOMED,44323002,Tuberculosis of kidney 
-SNOMED,15842009,Thrombosis of renal vein 
-SNOMED,236015007,Drug-induced retroperitoneal fibrosis 
-SNOMED,236017004,Malignant retroperitoneal fibrosis 
-SNOMED,49120005,Retroperitoneal fibrosis 
-SNOMED,45582004,Rubinstein-Taybi syndrome 
-SNOMED,236706006,Urinary schistosomiasis 
-SNOMED,13886001,Sickle cell nephropathy - histologically proven
-SNOMED,13886001,Sickle cell nephropathy 
-SNOMED,824131000000108,Solitary kidney
-SNOMED,5187006,Prune belly syndrome 
-SNOMED,68815009,Lupus nephritis - Histologically proven
-SNOMED,68815009,Lupus nephritis
-SNOMED, 724599009,Systemic vasculitis - histologically proven
-SNOMED,6956008,Systemic Vasculitis
-SNOMED,6956008,Systemic Vasculitis
-SNOMED,722191003,Antineutrophil cytoplasmic antibody positive vasculitis
-SNOMED,236418003,Thin basement membrane disease 
-SNOMED,78129009,Thrombotic thrombocytopenic purpura 
-SNOMED,24750000,Townes-Brocks syndrome 
-SNOMED,408642003,Transitional cell carcinoma of kidney 
-SNOMED,7199000,Tuberous sclerosis syndrome 
-SNOMED,197744007,Renal tubulo-interstitial disorders in metabolic diseases 
-SNOMED,428255004,Tubulointerstitial nephritis - histologically proven
-SNOMED,428255004,Tubulointerstitial nephritis 
-SNOMED,45927004,Immunologic mediated tubulointerstitial nephritis - histologically proven
-SNOMED,45927004,Immunologic mediated tubulointerstitial nephritis
-SNOMED,418839003,Tubulointerstitial nephritis with uveitis syndrome - histologically proven
-SNOMED,418839003,Tubulointerstitial nephritis with uveitis syndrome
-SNOMED,267441009,Uric acid urolithiasis 
-SNOMED,46785007,Familial juvenile hyperuricaemia nephropathy
-SNOMED,46659004,Von Hippel-Lindau syndrome 
-SNOMED,63247009,Williams syndrome 
-SNOMED,302849000,Nephroblastoma 
-SNOMED,190919008,Xanthinuria 
-SNOMED,38898003,Xanthogranulomatous pyelonephritis 
+ï»¿SNOMED,Nephrotic syndrome ,52254009
+SNOMED,Steroid sensitive nephrotic syndrome of childhood ,445119005
+SNOMED,Congenital nephrotic syndrome ,48796009
+SNOMED,Finnish congenital nephrotic syndrome ,197601003
+SNOMED,Congenital nephrotic syndrome ,722369003
+SNOMED,Congenital nephrotic syndrome with focal glomerulosclerosis ,236384008
+SNOMED,Drash syndrome,236385009
+SNOMED,Congenital nephrotic syndrome ,722118005
+SNOMED,Minimal change disease ,44785005
+SNOMED,IgA nephropathy ,236407003
+SNOMED,Familial immunoglobulin A nephropathy ,445404003
+SNOMED,IgA nephropathy associated with liver disease ,282364005
+SNOMED,IgM nephropathy ,236411009
+SNOMED,Idiopathic membranous glomerulonephritis,722119002
+SNOMED,Membranous glomerulonephritis due to malignant neoplastic disease,722086002
+SNOMED,Drug-induced membranous glomerulonephritis,722120008
+SNOMED,Membranous glomerulonephritis with infectious disease,722168002
+SNOMED,"Mesangiocapillary glomerulonephritis, type I ",75888001
+SNOMED,"Mesangiocapillary glomerulonephritis, type II ",722760002
+SNOMED,Mesangiocapillary glomerulonephritis type III ,236409000
+SNOMED,Classical focal segmental glomerulosclerosis,236404005
+SNOMED,Autosomal recessive focal segmental glomerulosclerosis ,445388002
+SNOMED,Autosomal dominant focal segmental glomerulosclerosis ,444977005
+SNOMED,Focal segmental glomerulosclerosis (FSGS) secondary to obesity,1269761000000101
+SNOMED,Diffuse endocapillary proliferative glomerulonephritis ,3704008
+SNOMED,Mesangial proliferative glomerulonephritis ,35546006
+SNOMED,Focal AND segmental proliferative glomerulonephritis ,83866005
+SNOMED,Glomerulonephritis,Â 36171008
+SNOMED,Systemic vasculitis - histologically proven, 724599009
+SNOMED,Antineutrophil cytoplasmic antibody positive vasculitis,722191003
+SNOMED,Granulomatosis with polyangiitis,195353004
+SNOMED,Microscopic polyarteritis nodosa ,1144805008
+SNOMED,EGPA - eosinophilic granulomatosis with polyangiitis,82275008
+SNOMED,Polyarteritis nodosa ,155441006
+SNOMED,Goodpasture syndrome,50581000
+SNOMED,Lupus nephritis,68815009
+SNOMED,Henoch-SchÃ¶nlein purpura ,191306005
+SNOMED,Renal involvement in scleroderma ,236502006
+SNOMED,Essential mixed cryoglobulinemia ,239947001
+SNOMED,Cryoglobulinemia due to chronic hepatitis C,128971000119101
+SNOMED,Cryoglobulinemia ,30911005
+SNOMED,Non-obstructive reflux-associated chronic pyelonephritis ,197764002
+SNOMED,Familial non-obstructive reflux-associated chronic pyelonephritis ,707208009
+SNOMED,Renal dysplasia ,204949001
+SNOMED,Multicystic dysplastic kidney,737562008
+SNOMED,Renal dysplasia due to fetal exposure to angiotensin converting enzyme inhibitor,710571007
+SNOMED,"Familial hypoplastic, glomerulocystic kidney",253864004
+SNOMED,Congenital pelviureteric junction obstruction ,373584008
+SNOMED,Congenital ureterovesical obstruction ,373585009
+SNOMED,Congenital posterior urethral valves ,253900005
+SNOMED,Prune belly syndrome ,5187006
+SNOMED,Congenital neurogenic urinary bladder,445387007
+SNOMED,Exstrophy of bladder sequence ,61758007
+SNOMED,Megacystis-megaureter syndrome ,253904001
+SNOMED,Oligomeganephronic hypoplasia of kidney ,18417009
+SNOMED,Papillary necrosis,90241004
+SNOMED,Obstructive nephropathy,86249007
+SNOMED,Obstructive nephropathy due to neurogenic bladder,722078002
+SNOMED,Obstructive nephropathy due to benign prostatic hyperplasia,722082000
+SNOMED,Obstructive nephropathy due to carcinoma of prostate,722081007
+SNOMED,Obstructive nephropathy due to bladder cancer,722089009
+SNOMED,Obstructive nephropathy due to malignancy,722088001
+SNOMED,Idiopathic retroperitoneal fibrosis ,197808006
+SNOMED,Malignant retroperitoneal fibrosis ,236017004
+SNOMED,Urolithiasis ,95566004
+SNOMED,Calcium oxalate urolithiasis ,444717006
+SNOMED,Enteric hyperoxaluria ,37497004
+SNOMED,Magnesium ammonium phosphate urolithiasis ,444690001
+SNOMED,Uric acid urolithiasis ,267441009
+SNOMED,Tubulointerstitial nephritis ,428255004
+SNOMED,Familial interstitial nephritis,83923004
+SNOMED,Immunologic mediated tubulointerstitial nephritis,45927004
+SNOMED,Tubulointerstitial nephritis with uveitis syndrome,418839003
+SNOMED,Granulomatous sarcoid nephropathy ,37061001
+SNOMED,Aristolochic acid nephropathy,717770008
+SNOMED,Drug-induced tubulointerstitial nephritis,439990003
+SNOMED,Analgesic nephropathy ,59400006
+SNOMED,Nephropathy induced by ciclosporin ,704203009
+SNOMED,Nephropathy induced by tacrolimus ,704205002
+SNOMED,Nephropathy induced by aminoglycosides ,704206001
+SNOMED,Nephropathy induced by amphotericin ,704055002
+SNOMED,Cis-platinum nephropathy ,53556002
+SNOMED,Lithium nephropathy ,4390004
+SNOMED,Nephropathy induced by lead ,704204003
+SNOMED,Acute urate nephropathy ,236496000
+SNOMED,Radiation nephritis ,7725007
+SNOMED,Renal abscess OR Perirenal abscess ,197772000
+SNOMED,Tuberculosis of kidney ,44323002
+SNOMED,Leptospirosis ,77377001
+SNOMED,Haemorrhagic fever with renal syndrome,716864001
+SNOMED,Xanthogranulomatous pyelonephritis ,38898003
+SNOMED,HIV-associated nephropathy,713504001
+SNOMED,Urinary schistosomiasis ,236706006
+SNOMED,Infectious disease ,40733004
+SNOMED,Chronic kidney disease due to type 1 diabetes mellitus,96441000119101
+SNOMED,Chronic kidney disease due to type 2 diabetes mellitus,771000119108
+SNOMED,Hypertensive renal disease ,38481006
+SNOMED,Malignant hypertensive renal disease ,65443008
+SNOMED,Age related reduction of renal function ,445108007
+SNOMED,Ischaemic nephropathy ,710565001
+SNOMED,Renal artery stenosis ,302233006
+SNOMED,Atheroembolism of renal arteries ,51677000
+SNOMED,Fibromuscular dysplasia of renal artery,783730009
+SNOMED,Renal artery occlusion ,236488005
+SNOMED,Thrombosis of renal vein ,15842009
+SNOMED,Cardiorenal syndrome ,445236007
+SNOMED,Hepatorenal syndrome ,51292008
+SNOMED,Renal amyloidosis,48713002
+SNOMED,AA amyloidosis ,274945004
+SNOMED,AL amyloidosis ,23132008
+SNOMED,Familial renal amyloidosis,66451004
+SNOMED,Amyloid of familial Mediterranean fever ,367528006
+SNOMED,Myeloma kidney ,32278006
+SNOMED,Light chain deposition disease ,373604002
+SNOMED,Fibrillary glomerulonephritis ,73305009
+SNOMED,Diarrhea-associated hemolytic uremic syndrome ,373421000
+SNOMED,Atypical haemolytic uraemic syndrome,373422007
+SNOMED,Thrombotic thrombocytopenic purpura ,78129009
+SNOMED,Hemolytic uremic syndrome,Â 111407006
+SNOMED,Congenital hemolytic uremic syndrome ,444976001
+SNOMED,Familial haemolytic-uraemic syndrome,722721004
+SNOMED,Upshaw-Schulman syndrome ,373420004
+SNOMED,Nephropathy following eclampsia,736993008
+SNOMED,Sickle cell nephropathy ,13886001
+SNOMED,Autosomal dominant polycystic kidney disease,765330003
+SNOMED,Autosomal dominant polycystic kidney disease type 1,253878003
+SNOMED,Autosomal dominant polycystic kidney disease type 2,253879006
+SNOMED,Autosomal recessive polycystic kidney disease,28770003
+SNOMED,Alport syndrome,770414008
+SNOMED,Benign familial hematuria ,236418003
+SNOMED,Cystic kidney disease,Â 722223000
+SNOMED,Medullary cystic kidney disease type 1 ,726017001
+SNOMED,Medullary cystic kidney disease type 2 ,723373006
+SNOMED,Familial juvenile hyperuricaemia nephropathy,46785007
+SNOMED,Nephronophthisis ,204958008
+SNOMED,Familial juvenile nephronophthisis,444830001
+SNOMED,Infantile nephronophthisis,444558002
+SNOMED,Adolescent nephronophthisis ,444749006
+SNOMED,Juvenile nephronophthisis ,446989009
+SNOMED,Nephronophthisis type 5,446991001
+SNOMED,Nephronophthisis type 6,447335007
+SNOMED,Congenital Fanconi syndrome ,236466005
+SNOMED,Renal tubulo-interstitial disorders in metabolic diseases ,197744007
+SNOMED,Dent's disease ,444645005
+SNOMED,Lowe syndrome ,79385002
+SNOMED,Inherited aminoaciduria ,698953004
+SNOMED,Cystinuria ,85020001
+SNOMED,Cystinosis ,190681003
+SNOMED,Familial renal glucosuria ,226309007
+SNOMED,Familial x-linked hypophosphatemic vitamin D refractory rickets ,82236004
+SNOMED,Autosomal recessive hypophosphatemic vitamin D refractory rickets ,726080006
+SNOMED,Renal tubular acidosis ,1776003
+SNOMED,Proximal renal tubular acidosis ,24790002
+SNOMED,Distal renal tubular acidosis ,236461000
+SNOMED,Distal renal tubular acidosis with sensorineural hearing loss (SNHL),722468005
+SNOMED,Nephrogenic diabetes insipidus ,111395007
+SNOMED,Lesch-Nyhan syndrome ,10406007
+SNOMED,Phosphoribosyl pyrophosphate synthase superactivity,35759001
+SNOMED,Alagille syndrome,31742004
+SNOMED,Bartter syndrome,707742001
+SNOMED,Gitelman syndrome,707756004
+SNOMED,Liddle syndrome,707747007
+SNOMED,Syndrome of apparent mineralocorticoid excess ,237770005
+SNOMED,Glucocorticoid-suppressible hyperaldosteronism ,237743003
+SNOMED,Diabetes mellitus autosomal dominant type II,237604008
+SNOMED,"Pseudohypoaldosteronism, type 1 ",43941006
+SNOMED,"Pseudohypoaldosteronism, type 2 ",15689008
+SNOMED,Familial hypocalciuric hypercalcemia ,237885008
+SNOMED,Familial hypercalciuric hypocalcaemia,711152006
+SNOMED,Isolated familial renal hypomagnesaemia,48655003
+SNOMED,Primary hyperoxaluria ,17901006
+SNOMED,Primary hyperoxaluria type I ,65520001
+SNOMED,"Primary hyperoxaluria, type II ",40951006
+SNOMED,Fabry's disease ,16652001
+SNOMED,Xanthinuria ,190919008
+SNOMED,Nail patella-like renal disease ,22199006
+SNOMED,Rubinstein-Taybi syndrome ,45582004
+SNOMED,Tuberous sclerosis syndrome ,7199000
+SNOMED,Von Hippel-Lindau syndrome ,46659004
+SNOMED,Medullary sponge kidney ,236443009
+SNOMED,Horseshoe kidney ,41729002
+SNOMED,Frasier syndrome ,445431000
+SNOMED,Branchio-oto-renal syndrome,290006
+SNOMED,Williams syndrome ,63247009
+SNOMED,Townes-Brocks syndrome ,24750000
+SNOMED,Laurence-Moon syndrome ,5619004
+SNOMED,Mitochondrial cytopathy ,240096000
+SNOMED,Familial nephropathy,236419006
+SNOMED,Acute kidney injury,14669001
+SNOMED,Acute kidney injury due to acute tubular necrosis due to hypovolaemia,1048451000000103
+SNOMED,Acute kidney injury due to acute tubular necrosis due to circulatory failure,1048481000000109
+SNOMED,Acute kidney injury due to acute tubular necrosis due to sepsis,1048491000000106
+SNOMED,Acute kidney injury due to rhabdomyolysis,23697004
+SNOMED,Acute kidney injury due to nephrotoxicity,236428007
+SNOMED,Acute cortical necrosis ,444794000
+SNOMED,Acute pyelonephritis ,36689008
+SNOMED,Neoplasm of kidney ,126880001
+SNOMED,Renal cell carcinoma,702391001
+SNOMED,Transitional cell carcinoma of kidney ,408642003
+SNOMED,Nephroblastoma ,302849000
+SNOMED,Mesoblastic nephroma ,307604008
+SNOMED,Solitary kidney,824131000000108
+SNOMED,Chronic kidney disease (CKD) caused by tumour nephrectomy,722149000
+SNOMED,Chronic kidney disease due to traumatic loss of kidney,722467000
+SNOMED,Chronic kidney disease after donor nephrectomy,722098007
+SNOMED,Chronic kidney disease - aetiology uncertain / unknown ,709044004
+SNOMED,Hematuria syndrome AND Proteinuria ,
+SNOMED,Steroid resistant nephrotic syndrome of childhood ,449820008
+SNOMED,Childhood nephrotic syndrome,705065000
+SNOMED,Renal cysts and diabetes syndrome ,609572000
+SNOMED,Chronic urate nephropathy ,190829000
+SNOMED,Chronic kidney disease due to systemic infection,722150000
+SNOMED,Renal coloboma syndrome ,446449009
+SNOMED,Hypercalcemic nephropathy ,33763006
+SNOMED,Retroperitoneal fibrosis ,49120005
+SNOMED,Drug-induced retroperitoneal fibrosis ,236015007
+SNOMED,Renal failure syndrome ,42399005
+SNOMED,Chronic renal failure syndrome ,90688005
+SNOMED,Hematuria syndrome,53298000
+SNOMED,Proteinuria ,12491000132101
+SNOMED,"Primary hyperoxaluria, type III ",734990008
+SNOMED,Glomerulonephritis ,36171008
+SNOMED,Focal segmental glomerulosclerosis co-occurrent with human immunodeficiency virus infection,Â 713887002
+SNOMED,Focal segmental glomerulosclerosis caused by lithium,Â 722139003
+SNOMED,Focal segmental glomerulosclerosis due to sickle cell disease ,722147003
+SNOMED,Renal papillary necrosis due to diabetes mellitus,723074006
+SNOMED,Renal papillary necrosis caused by analgesic drug,722077007
+SNOMED,Renal papillary necrosis due to sickle cell disease,Â 722085003
+SNOMED,Kidney stone,Â 95570007
+SNOMED,Malignant lymphomaÂ ,118600007
+SNOMED,Nephropathy following pre-eclampsia,736992003
+SNOMED,Systemic Vasculitis,6956008
