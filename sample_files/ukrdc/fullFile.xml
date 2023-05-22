@@ -467,14 +467,7 @@
                 <Description>Another Hospital</Description>
             </DischargeLocation>
             <Attributes>
-                <HDP01>100</HDP01>
-                <HDP02>200</HDP02>
-                <HDP03>300</HDP03>
-                <HDP04>400</HDP04>
                 <QBL05>HOSP</QBL05>
-                <QBL06>1</QBL06>
-                <QBL07>Y</QBL07>
-                <ERF61>1</ERF61>
                 <PAT35>2006-05-04T18:13:51.0</PAT35>
             </Attributes>
             <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
