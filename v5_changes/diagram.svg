@@ -4031,7 +4031,7 @@ onmouseover='makeVisible("_1_1_1_9_1_1_1_2_1_3")' onmouseout='makeHidden("_1_1_1
 onmouseover='makeVisible("_1_1_1_9_1_1_1_3")' onmouseout='makeHidden("_1_1_1_9_1_1_1_3")'/>
 <text class='hidden' visibility='hidden' x='5' y='13'>nillable: 0</text>
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
-<text class='strong' x='5' y='27'>Diagnosis</text>
+<text class='strong' x='5' y='27'>DiagnosisNOT</text>
 <text class='visible' x='5' y='41'>type: CF_SNOMED</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 <use x='104' y='17' xlink:href='#minus' id='s_1_1_1_9_1_1_1_3' onclick='show("_1_1_1_9_1_1_1_3")'/>
