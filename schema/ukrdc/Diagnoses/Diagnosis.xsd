@@ -15,7 +15,7 @@
                     <xs:documentation>National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="DiagnosisNOT" type="CF_SNOMED" minOccurs="1">
+            <xs:element name="Diagnosis" type="CF_SNOMED" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation>SNOMED CT coded diagnoses. This should also include any diagnosis that has been submitted elsewhere as a Primary Renal Diagnosis.</xs:documentation>
                 </xs:annotation>
@@ -88,12 +88,6 @@
                 <xs:annotation>
                     <xs:documentation>This is used to associate a Diagnosis with the activity in a particular Encounter record. This element should not be submitted without prior discussion with the UKRR.
                     </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
-                <xs:annotation>
-                    <xs:appinfo>renaldiagnosis.enteredon</xs:appinfo>
-                    <xs:documentation>The date the diagnosis was recorded in the medical record.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:group ref="CommonMetadata"/>
