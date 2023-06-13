@@ -188,11 +188,6 @@
             <IdentificationTime>2006-05-04T18:13:51.0</IdentificationTime>
             <OnsetTime>2006-05-04T18:13:51.0</OnsetTime>
             <EnteredOn>2006-05-04T18:13:51.0</EnteredOn>
-            <EnteredAt>
-                <CodingStandard>RR1+</CodingStandard>
-                <Code>ABC123</Code>
-                <Description>Test Hospital</Description>
-            </EnteredAt>
             <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
             <ExternalId>5555555555</ExternalId>
         </Diagnosis>
@@ -205,15 +200,11 @@
             <IdentificationTime>2006-05-04T18:13:51.0</IdentificationTime>
             <OnsetTime>2006-05-04T18:13:51.0</OnsetTime>
             <EnteredOn>2006-05-04T18:13:51.0</EnteredOn>
-            <EnteredAt>
-                <CodingStandard>RR1+</CodingStandard>
-                <Code>ABC123</Code>
-                <Description>Test Hospital 1</Description>
-            </EnteredAt>
             <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
             <ExternalId>778787876878</ExternalId>
         </Diagnosis>
         <CauseOfDeath>
+            <DiagnosisType>PRIMARY</DiagnosisType>
             <Diagnosis>
                 <CodingStandard>EDTA_COD</CodingStandard>
                 <Code>14</Code>
@@ -225,6 +216,7 @@
             <ExternalId>211111221</ExternalId>
         </CauseOfDeath>
         <RenalDiagnosis>
+            <DiagnosisType>PRIMARY</DiagnosisType>
             <Diagnosis>
                 <CodingStandard>EDTA2</CodingStandard>
                 <Code>13</Code>
@@ -298,16 +290,6 @@
                 </EnteredAt>
                 <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
                 <ExternalId>787878787</ExternalId>
-                <Attributes>
-                    <QHD19>Y</QHD19>
-                    <QHD20>NLN</QHD20>
-                    <QHD21>BB</QHD21>
-                    <QHD22>Y</QHD22>
-                    <QHD30>100</QHD30>
-                    <QHD31>200</QHD31>
-                    <QHD32>300</QHD32>
-                    <QHD33>U</QHD33>
-                </Attributes>
             </DialysisSession>
             <DialysisSession>
                 <ProcedureType>
@@ -333,16 +315,6 @@
                 </EnteredAt>
                 <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
                 <ExternalId>ExternalId20</ExternalId>
-                <Attributes>
-                    <QHD19>Y</QHD19>
-                    <QHD20>NLN</QHD20>
-                    <QHD21>BB</QHD21>
-                    <QHD22>Y</QHD22>
-                    <QHD30>100</QHD30>
-                    <QHD31>200</QHD31>
-                    <QHD32>300</QHD32>
-                    <QHD33>L</QHD33>
-                </Attributes>
             </DialysisSession>
         </DialysisSessions>
         <Transplant>
