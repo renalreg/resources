@@ -15,7 +15,7 @@
                     <xs:documentation>National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Diagnosis" type="CF_SNOMED" minOccurs="1">
+            <xs:element name="DiagnosisNOT" type="CF_SNOMED" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation>SNOMED CT coded diagnoses. This should also include any diagnosis that has been submitted elsewhere as a Primary Renal Diagnosis.</xs:documentation>
                 </xs:annotation>
