@@ -85,55 +85,20 @@
         </TD>
       </TR>
       <tr>
-        <td colspan="2">Attributes</td>
-        <td>
-          <table border="1" cellspacing="0" cellpadding="4">
-            <tr>
-              <td colspan="2">QHD19</td>
-              <td><div class="documentation">Symptomatic hypotension</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD20</td>
-              <td><div class="documentation">Vascular Access Used (RR02)</div>xs:string
-        (restricted)
-        <div class="restriction">
-                Enumeration:
-                <ul><li>NLN (Non-Tunneled Line)</li><li>TLN (Tunneled Line)</li><li>AVF (Arteriovenous Fistula)</li><li>AVG (Arteriovenous Graft)</li><li>VLP (Vein Loop)</li><li>PDC (PD Catherer)</li><li>PDE (PD Embedded Catherer)</li><li>PDT (PD Catherer Temp)</li><li>HER (HeRO Graft)</li></ul></div></td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD21</td>
-              <td><div class="documentation">Vascular Access Site (RR41)</div>xs:string
-        (restricted)
-        <div class="restriction">
-                Enumeration:
-                <ul><li>BB (Brachio-Basilic)</li><li>BC (Brachio-Cephalic)</li><li>LA (Axillary Vein Line)</li><li>LF (Femoral Vein Line)</li><li>LJ (Intenal Jugular Line)</li><li>LS (Subclavian Line)</li><li>PS (Popliteal-Long Saphenous)</li><li>RC (Radio-Cephalic Wrist)</li><li>RU (Radio-Ulnar)</li><li>SB (Radio-Cephalic Snuff Box)</li><li>TB (Brachio-Basilic and Transposition)</li><li>TS (Popliteal-Long Saphenous and Transposition)</li><li>UA (Ankle)</li><li>UC (Ulna-Cephalic)</li><li>UF (Forearm NOS)</li><li>UO (Other)</li><li>UT (Thigh NOS)</li></ul></div></td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD22</td>
-              <td><div class="documentation">Access in two sites simultaneously</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD30</td>
-              <td><div class="documentation">Blood Flow Rate</div>xs:integer</td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD31</td>
-              <td><div class="documentation">Time Dialysed in Minutes</div>xs:integer</td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD32</td>
-              <td><div class="documentation">Sodium in Dialysate</div>xs:integer</td>
-            </tr>
-            <tr>
-              <td colspan="2">QHD33</td>
-              <td><div class="documentation">Needling Method (RR50)</div>xs:string
-        (restricted)
-        <div class="restriction">
-                Enumeration:
-                <ul><li>L (Rope Ladder)</li><li>B (Button Hole)</li><li>U (Unknown)</li></ul></div></td>
-            </tr>
-          </table>
-        </td>
+        <td colspan="2">SymtomaticHypotension</td>
+        <td><div class="documentation">Symptomatic hypotension (QHD19)</div>RRYesNo</td>
+      </tr>
+      <tr>
+        <td colspan="2">VascularAccess</td>
+        <td><div class="documentation">Vascular Access Used (QHD20)</div>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">VascularAccessSite</td>
+        <td><div class="documentation">Vascular Access Site (QHD21)</div>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">TimeDialysed</td>
+        <td><div class="documentation">Time Dialysed in Minutes (QHD31)</div>xs:integer</td>
       </tr>
     </table>
     <br/>

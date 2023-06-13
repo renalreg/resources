@@ -59,12 +59,14 @@
         <td><div class="documentation">National Clinicial code where possible or other local code if not.</div>Clinician</td>
       </tr>
       <tr>
-        <td colspan="2">Diagnosis</td>
+        <td colspan="2">
+          <strong>Diagnosis</strong>
+        </td>
         <td><div class="documentation">SNOMED CT coded diagnoses. This should also include any diagnosis that has been submitted elsewhere as a Primary Renal Diagnosis.</div>CF_SNOMED</td>
       </tr>
       <tr>
         <td colspan="2">BiopsyPerformed</td>
-        <td><div class="documentation">Was a biopsy performed to arrive at this Diagnosis</div>xs:string</td>
+        <td><div class="documentation">Was a biopsy performed to arrive at this Diagnosis</div>RRYesNo</td>
       </tr>
       <tr>
         <td colspan="2">Comments</td>
@@ -96,8 +98,8 @@
                     </div>xs:string</td>
       </tr>
       <tr>
-        <td colspan="2">EnteredAt</td>
-        <td><div class="documentation">National code for the hospital providing care - e.g. RXF01</div>Location</td>
+        <td colspan="2">EnteredOn</td>
+        <td><div class="documentation">The date the diagnosis was recorded in the medical record.</div>xs:dateTime</td>
       </tr>
     </table>
     <br/>
