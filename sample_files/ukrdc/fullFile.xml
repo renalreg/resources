@@ -467,7 +467,7 @@
                 <Description>Another Hospital</Description>
             </DischargeLocation>
             <Attributes>
-                <QBL05>HOSP</QBL05>
+                <QBL05>INCENTRE</QBL05>
             </Attributes>
             <UpdatedOn>2006-05-04T18:13:51.0</UpdatedOn>
             <ExternalId>3343433432234</ExternalId>
