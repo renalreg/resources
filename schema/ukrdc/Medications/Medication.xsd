@@ -9,7 +9,7 @@
             <xs:element name="PrescriptionNumber" minOccurs="0">
                 <xs:annotation>
                     <xs:appinfo>medication.prescriptionnumber</xs:appinfo>
-                    <xs:documentation>Prescription Id</xs:documentation>
+                    <xs:documentation>Prescription ID</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">

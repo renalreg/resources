@@ -42,7 +42,7 @@
                     <xs:sequence>
                         <xs:element name="ContactDetail" type="ContactDetail" maxOccurs="4">
                             <xs:annotation>
-                                <xs:documentation>Only 1 of each type should be sent. This must only be used for the Patient's own Contact Details and not those of third parties.</xs:documentation>
+                                <xs:documentation>Only 1 of each type should be sent. This must only be used for the Patient's own Contact Details and not those of third parties. This should not be submitted for patients who are only being sent as part of the UKRR data collection.</xs:documentation>
                             </xs:annotation>
                         </xs:element>
                     </xs:sequence>

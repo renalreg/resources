@@ -39,7 +39,7 @@
                         <xs:simpleContent>
                             <xs:extension base="SendingFacility">
                                 <xs:attribute name="channelName" use="required" />
-                                <xs:attribute name="time" use="required" />
+                                <xs:attribute name="time" type="xs:dateTime" use="required" />
                                 <xs:attribute name="schemaVersion" use="required" />
                             </xs:extension>
                         </xs:simpleContent>

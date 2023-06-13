@@ -4,18 +4,37 @@
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="CauseOfDeath">
         <xs:sequence>
-            <xs:element name="DiagnosisType" type="xs:string" minOccurs="0">
+            <xs:element name="DiagnosisType" minOccurs="1">
                 <xs:annotation>
                     <xs:appinfo>causeofdeath.diagnosistype</xs:appinfo>
                     <xs:documentation></xs:documentation>
                 </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="PRIMARY">
+                            <xs:annotation>
+                                <xs:documentation>Primary</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="SECONDARY">
+                            <xs:annotation>
+                                <xs:documentation>Secondary</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="OTHER">
+                            <xs:annotation>
+                                <xs:documentation>Other</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        </xs:restriction>
+                </xs:simpleType>
             </xs:element>
             <xs:element name="DiagnosingClinician" type="Clinician" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Clinician Coding Death</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Diagnosis" type="CF_EDTA_COD" minOccurs="0">
+            <xs:element name="Diagnosis" type="CF_EDTA_COD" minOccurs="1">
                 <xs:annotation>
                     <xs:documentation>Coded Caused of Death (EDTA)</xs:documentation>
                 </xs:annotation>
