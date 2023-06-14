@@ -12,10 +12,15 @@
     </xs:complexType>
 
     <xs:complexType name="Observation">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="ObservationTime" type="xs:dateTime">
                 <xs:annotation>
-                    <xs:appinfo>observation.observationtime</xs:appinfo>
+                    <xs:appinfo infotype="database">observation.observationtime</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                     <xs:documentation>When the Observation was made</xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -27,7 +32,8 @@
                     <xs:sequence>
                         <xs:element name="CodingStandard" minOccurs="0">
                             <xs:annotation>
-                                <xs:appinfo>observation.observationcodestd</xs:appinfo>
+                                <xs:appinfo infotype="database">observation.observationcodestd</xs:appinfo>
+                                <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                                 <xs:documentation/>
                             </xs:annotation>
                             <xs:simpleType>
@@ -38,7 +44,8 @@
                         </xs:element>
                         <xs:element name="Code" minOccurs="0">
                             <xs:annotation>
-                                <xs:appinfo>observation.observationcode</xs:appinfo>
+                                <xs:appinfo infotype="database">observation.observationcode</xs:appinfo>
+                                <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                                 <xs:documentation/>
                             </xs:annotation>
                             <xs:simpleType>
@@ -49,7 +56,8 @@
                         </xs:element>
                         <xs:element name="Description" minOccurs="0">
                             <xs:annotation>
-                                <xs:appinfo>observation.observationdesc</xs:appinfo>
+                                <xs:appinfo infotype="database">observation.observationdesc</xs:appinfo>
+                                <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                                 <xs:documentation/>
                             </xs:annotation>
                             <xs:simpleType>
@@ -63,7 +71,8 @@
             </xs:element>
             <xs:element name="ObservationValue" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>observation.observationvalue</xs:appinfo>
+                    <xs:appinfo infotype="database">observation.observationvalue</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
@@ -74,7 +83,8 @@
             </xs:element>
             <xs:element name="ObservationUnits" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>observation.observationunits</xs:appinfo>
+                    <xs:appinfo infotype="database">observation.observationunits</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
@@ -85,7 +95,8 @@
             </xs:element>
             <xs:element name="PrePost" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>observation.prepost</xs:appinfo>
+                    <xs:appinfo infotype="database">observation.prepost</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                     <xs:documentation>Was the Observation made PRE or POST dialysis</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -115,7 +126,8 @@
             </xs:element>
             <xs:element name="Comments" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>observation.commenttext</xs:appinfo>
+                    <xs:appinfo infotype="database">observation.commenttext</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
@@ -123,11 +135,6 @@
                         <xs:maxLength value="1000"/>
                     </xs:restriction>
                 </xs:simpleType>
-            </xs:element>
-            <xs:element name="Clinician" type="Clinician" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>Requesting Physician as a nationally coded person. Use the description if this is not coded.</xs:documentation>
-                </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>

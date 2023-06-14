@@ -11,26 +11,34 @@
     </xs:complexType>
 
     <xs:complexType name="DialysisSession">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5</xs:appinfo>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
         <xs:complexContent>
             <xs:extension base="Procedure">
                 <xs:sequence>
                     <xs:element name="SymtomaticHypotension" type="RRYesNo" minOccurs="0">
                         <xs:annotation>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5</xs:appinfo>
                             <xs:documentation>Symptomatic hypotension (QHD19)</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="VascularAccess" type="CodedField" minOccurs="0">
                         <xs:annotation>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5</xs:appinfo>
                             <xs:documentation>Vascular Access Used (QHD20)</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="VascularAccessSite" type="CodedField" minOccurs="0">
                         <xs:annotation>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5</xs:appinfo>
                             <xs:documentation>Vascular Access Site (QHD21)</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="TimeDialysed" type="xs:integer" minOccurs="0">
                         <xs:annotation>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5</xs:appinfo>
                             <xs:documentation>Time Dialysed in Minutes (QHD31)</xs:documentation>
                         </xs:annotation>
                     </xs:element>

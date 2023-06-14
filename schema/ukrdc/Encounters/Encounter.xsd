@@ -4,10 +4,15 @@
     <xs:include schemaLocation="../Types/CodedField.xsd"/>
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="Encounter">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="EncounterNumber" type="xs:string" minOccurs='0'/>
             <xs:element name="EncounterType">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>General Encounter Type (PV1-2)</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -67,51 +72,61 @@
             </xs:element>
             <xs:element name="FromTime" type="xs:dateTime">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Time that encounter starts</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ToTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Time that encounter ends</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AdmittingClinician" type="Clinician" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Responsible Clinician as a National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="HealthCareFacility" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Parent renal unit as national ODS code (e.g. RXF01)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AdmitReason" type="CodedField" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Reason for change of care</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AdmissionSource" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Parent renal unit as national ODS code (e.g. RXF01)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DischargeReason" type="CodedField" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Reason for Discharge (Transplant, Removed from List etc.)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DischargeLocation" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Parent renal unit as national ODS code (e.g. RXF01)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>National code for the hospital providing care - e.g. RXF01</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VisitDescription" type="xs:string" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">INSApp</xs:appinfo>
                     <xs:documentation>Details of validation e.g. Date Done, by whom, who provided the info</xs:documentation>
                 </xs:annotation>
             </xs:element>

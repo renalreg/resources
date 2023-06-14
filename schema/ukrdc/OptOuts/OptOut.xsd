@@ -3,24 +3,32 @@
     <xs:include schemaLocation="../Types/Location.xsd"/>
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="OptOut">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,UKRDC</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="EnteredBy" type="Clinician" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRDC</xs:appinfo>
                     <xs:documentation>Person entering the consent as a National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,UKRDC</xs:appinfo>
                     <xs:documentation>National code for the trust recording the opt-out - e.g. RXF01</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ProgramName" type="xs:string">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,UKRDC</xs:appinfo>
                     <xs:documentation>Name of RDG or study</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ProgramDescription" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,UKRDC</xs:appinfo>
                     <xs:documentation>Free text</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -31,11 +39,13 @@
             </xs:element>
             <xs:element name="FromTime" type="xs:date">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,UKRDC</xs:appinfo>
                     <xs:documentation>Date of Withdrawal</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ToTime" type="xs:date" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,UKRDC</xs:appinfo>
                     <xs:documentation>Date Withdrawal Ended</xs:documentation>
                 </xs:annotation>
             </xs:element>

@@ -6,44 +6,52 @@
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="Allergy">
         <xs:annotation>
+            <xs:appinfo infotype="dataset">NONE</xs:appinfo>
             <xs:documentation>Allergies. This item should not be submitted without checking with the UKRR.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="Allergy" type="CF_SNOMED">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Substance to which the patient is allergic. (SNOMED)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AllergyCategory" type="CF_HL7_00204" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Type of Allergy (HL7 00204)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Severity" type="CF_HL7_00206" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Severity (HL7 00206)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Clinician" type="Clinician" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Diagnosing Clinician</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DiscoveryTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>allergy.discoverytime</xs:appinfo>
+                    <xs:appinfo infotype="database">allergy.discoverytime</xs:appinfo>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Reported Date</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ConfirmedTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>allergy.confirmedtime</xs:appinfo>
+                    <xs:appinfo infotype="database">allergy.confirmedtime</xs:appinfo>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Confirmed Time</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Comments" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>allergy.commenttext</xs:appinfo>
+                    <xs:appinfo infotype="database">allergy.commenttext</xs:appinfo>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Advice given to the patient</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -54,13 +62,15 @@
             </xs:element>
             <xs:element name="InactiveTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>allergy.inactivetime</xs:appinfo>
+                    <xs:appinfo infotype="database">allergy.inactivetime</xs:appinfo>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Resolved Time</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="FreeTextAllergy" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>allergy.freetextallergy</xs:appinfo>
+                    <xs:appinfo infotype="database">allergy.freetextallergy</xs:appinfo>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>AL1-5 Free text definition of what happened</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -71,7 +81,8 @@
             </xs:element>
             <xs:element name="QualifyingDetails" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>allergy.qualifyingdetails</xs:appinfo>
+                    <xs:appinfo infotype="database">allergy.qualifyingdetails</xs:appinfo>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Details if patient or family reported</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>

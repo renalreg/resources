@@ -1,44 +1,52 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
     <xs:complexType name="DialysisPrescription">
         <xs:annotation>
-            <xs:documentation></xs:documentation>
+            <xs:appinfo infotype="dataset">UKRRv5</xs:appinfo>
+            <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>The date the Dialysis Prescription was created.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="FromTime" type="xs:dateTime">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Time the Period the Dialysis Prescription Applies To Starts</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ToTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Time the Period the Dialysis Prescription Applies To Ends</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="SessionType" type="xs:string" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Session Type (Same as QHD41)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="SessionsPerWeek" type="xs:integer">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Number of Dialysis Sessions per Week</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="TimeDialysed" type="xs:integer">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Time Dialysed (Minutes)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VascularAccess" type="xs:string">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Vascular Access to Use (QHD20)</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            </xs:sequence>
-        </xs:complexType>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

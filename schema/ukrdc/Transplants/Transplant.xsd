@@ -2,13 +2,19 @@
     <xs:include schemaLocation="../Procedures/Procedure.xsd"/>
     <xs:include schemaLocation="../Types/Gender.xsd"/>
     <xs:include schemaLocation="../Types/NV_RR14.xsd"/>
+
     <xs:complexType name="TransplantProcedure">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
         <xs:complexContent>
             <xs:extension base="Procedure">
                 <xs:sequence>
                     <xs:element name="DonorType" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra77</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra77</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>NHSBT Type</xs:documentation>
                         </xs:annotation>
                         <xs:simpleType>
@@ -21,37 +27,43 @@
                     </xs:element>
                     <xs:element name="DateRegistered" type="xs:date" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra72</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra72</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>Date Registered for Transplantation</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="FailureDate" type="xs:date" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra64</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra64</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>Failure Date</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="ColdIschaemicTime" type="xs:string" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra91</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra91</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>Cold ischaemic time in Minutes</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="HLAMismatchA" type="xs:string" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra83</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra83</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>Mismatch A</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="HLAMismatchB" type="xs:string" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra84</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra84</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>Mismatch B</xs:documentation>
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="HLAMismatchC" type="xs:string" minOccurs="0">
                         <xs:annotation>
-                            <xs:appinfo>transplant.tra85</xs:appinfo>
+                            <xs:appinfo infotype="database">transplant.tra85</xs:appinfo>
+                            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,NHSBT,RADAR</xs:appinfo>
                             <xs:documentation>Mismatch DR</xs:documentation>
                         </xs:annotation>
                     </xs:element>

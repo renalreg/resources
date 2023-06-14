@@ -13,7 +13,7 @@
         <xs:attribute name="start" type="xs:date"/>
         <xs:attribute name="stop" type="xs:date"/>
     </xs:complexType>
-    
+
     <xs:complexType name="ResultItems">
         <xs:sequence>
             <xs:element name="ResultItem" type="ResultItem" minOccurs="0" maxOccurs="unbounded"/>
@@ -21,15 +21,21 @@
     </xs:complexType>
 
     <xs:complexType name="LabOrder">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="ReceivingLocation" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Location or Facility receiving/performing the order.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="PlacerId" minOccurs="1">
                 <xs:annotation>
-                    <xs:appinfo>laborder.placerid</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.placerid</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>ORC:2 Placer's Order Id</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -40,7 +46,8 @@
             </xs:element>
             <xs:element name="FillerId" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.fillerid</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.fillerid</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>ORC:3 Filler (Lab)'s Order Id</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -49,33 +56,32 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="OrderedBy" type="Clinician" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>ORC:12 Requesting Physician as a nationally coded person. Use the description if this is not coded.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
             <xs:element name="OrderItem" type="CodedField" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>OBR:4 Service Id - the identity of the test ordered.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="OrderCategory" type="CodedField" minOccurs="0"/>
             <xs:element name="SpecimenCollectedTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.specimencollectedtime</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.specimencollectedtime</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>OBR:22</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="SpecimenReceivedTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.specimenreceivedtime</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.specimenreceivedtime</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>OBR:14</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Status" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.status</xs:appinfo>
-                    <xs:documentation></xs:documentation>
+                    <xs:appinfo infotype="database">laborder.status</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -86,7 +92,8 @@
             <xs:element name="Priority" type="CodedField" minOccurs="0"/>
             <xs:element name="SpecimenSource" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.specimensource</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.specimensource</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>OBR:15.1 e.g. serum, blood</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -97,42 +104,50 @@
             </xs:element>
             <xs:element name="Duration" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.duration</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.duration</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>OBR:27.3</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ResultItems" type="ResultItems"/>
             <xs:element name="PatientClass" type="CF_HL7_0004" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>In patient / out patient - equivalent to PV1:2 Patient Class</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>laborder.enteredon</xs:appinfo>
+                    <xs:appinfo infotype="database">laborder.enteredon</xs:appinfo>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Date Order entered</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation></xs:documentation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:documentation/>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteringOrganization" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:documentation></xs:documentation>
+                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:documentation/>
                 </xs:annotation>
             </xs:element>
             <xs:group ref="CommonMetadata"/>
         </xs:sequence>
     </xs:complexType>
 
-
     <xs:complexType name="ResultItem">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="ResultType" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.resulttype</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.resulttype</xs:appinfo>
                     <xs:documentation>AT</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -143,13 +158,13 @@
             </xs:element>
             <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.enteredon</xs:appinfo>
-                    <xs:documentation></xs:documentation>
+                    <xs:appinfo infotype="database">resultitem.enteredon</xs:appinfo>
+                    <xs:documentation/>
                 </xs:annotation>
             </xs:element>
             <xs:element name="PrePost" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.prepost</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.prepost</xs:appinfo>
                     <xs:documentation>Was the sample taken PRE or POST dialysis</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -184,7 +199,7 @@
             </xs:element>
             <xs:element name="SubId" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.subid</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.subid</xs:appinfo>
                     <xs:documentation>Sub-Test Id (OBX:4)</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -195,7 +210,7 @@
             </xs:element>
             <xs:element name="ResultValue" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.resultvalue</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.resultvalue</xs:appinfo>
                     <xs:documentation>OBX:5</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -206,7 +221,7 @@
             </xs:element>
             <xs:element name="ResultValueUnits" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.resultvalueunits</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.resultvalueunits</xs:appinfo>
                     <xs:documentation>OBX:6</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -217,7 +232,7 @@
             </xs:element>
             <xs:element name="ReferenceRange" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.referencerange</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.referencerange</xs:appinfo>
                     <xs:documentation>OBX:7</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -228,7 +243,7 @@
             </xs:element>
             <xs:element name="InterpretationCodes" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.interpretationcodes</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.interpretationcodes</xs:appinfo>
                     <xs:documentation>Interpretation Codes (OBX:8)</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -253,7 +268,7 @@
             </xs:element>
             <xs:element name="Status" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.status</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.status</xs:appinfo>
                     <xs:documentation>OBX:11</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -278,13 +293,13 @@
             </xs:element>
             <xs:element name="ObservationTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.observationtime</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.observationtime</xs:appinfo>
                     <xs:documentation>OBX:14</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Comments" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.commenttext</xs:appinfo>
+                    <xs:appinfo infotype="database">resultitem.commenttext</xs:appinfo>
                     <xs:documentation>From NTE:3</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -295,8 +310,8 @@
             </xs:element>
             <xs:element name="ReferenceComment" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo>resultitem.referencecomment</xs:appinfo>
-                    <xs:documentation></xs:documentation>
+                    <xs:appinfo infotype="database">resultitem.referencecomment</xs:appinfo>
+                    <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">

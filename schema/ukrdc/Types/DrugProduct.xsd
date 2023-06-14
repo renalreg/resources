@@ -13,7 +13,7 @@
 			</xs:element>
 			<xs:element name="Generic">
 				<xs:annotation>
-                    <xs:appinfo>medication.drugproductgeneric</xs:appinfo>
+                    <xs:appinfo infotype="database">medication.drugproductgeneric</xs:appinfo>
 					<xs:documentation>Generic name</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
@@ -24,7 +24,7 @@
 			</xs:element>
 			<xs:element name="LabelName" minOccurs="0">
 				<xs:annotation>
-                    <xs:appinfo>medication.drugproductlabelname</xs:appinfo>
+                    <xs:appinfo infotype="database">medication.drugproductlabelname</xs:appinfo>
 					<xs:documentation>Brand Name</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>

@@ -1,14 +1,19 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
-	<xs:include schemaLocation="../Types/CodedField.xsd"/>
-	<xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
-	<xs:complexType name="SocialHistory">
-		<xs:sequence>
-			<xs:element name="SocialHabit" type="CodedField">
-				<xs:annotation>
-					<xs:documentation>Social Habits</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:group ref="CommonMetadata"/>
-		</xs:sequence>
-	</xs:complexType>
+    <xs:include schemaLocation="../Types/CodedField.xsd"/>
+    <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
+    <xs:complexType name="SocialHistory">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">NONE</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="SocialHabit" type="CodedField">
+                <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
+                    <xs:documentation>Social Habits</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:group ref="CommonMetadata"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

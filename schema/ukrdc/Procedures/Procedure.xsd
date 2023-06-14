@@ -4,29 +4,32 @@
     <xs:include schemaLocation="../Types/CF_SNOMED.xsd"/>
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="Procedure">
+        <xs:annotation>
+            <xs:appinfo infotype="dataset">NONE</xs:appinfo>
+            <xs:documentation/>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="ProcedureType" type="CF_SNOMED">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>At least code must be entered</xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="Clinician" type="Clinician" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ProcedureTime" type="xs:dateTime">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>The time the Procedure started.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredBy" type="Clinician" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Person entering the diagnosis as a National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo infotype="dataset">NONE</xs:appinfo>
                     <xs:documentation>Location the procedure was performed at. Use National coding e.g. RXF01</xs:documentation>
                 </xs:annotation>
             </xs:element>
