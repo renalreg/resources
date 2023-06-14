@@ -36,6 +36,11 @@
                                 <xs:documentation>Miligrams</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
+                        <xs:enumeration value="ug">
+                            <xs:annotation>
+                                <xs:documentation>Micrograms</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
                         <!-- Note: Mu isn't ASCII which requires this file to be UTF-8 encoded -->
                         <xs:enumeration value="μg">
                             <xs:annotation>

@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.4.0 - 2023-06-14
+### Changed
+- Add ug to the RR23 enumeration.
+
 ## 3.3.0 - 2021-12-16
 ### Changed
 - Add to Clinician/Location Enumeration to support PV 
