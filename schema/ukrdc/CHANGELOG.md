@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.4.4 - 2023-06-14
+### 3.4.5 - 2023-06-14
 ### Changed
 - Version increment for package build.
 
