@@ -4,14 +4,14 @@
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="CauseOfDeath">
         <xs:annotation>
-            <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+            <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
             <xs:documentation></xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="DiagnosisType" minOccurs="1">
                 <xs:annotation>
-                    <xs:appinfo >causeofdeath.diagnosistype</xs:appinfo>
-                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+                    <xs:appinfo >causeofdeath.diagnosistype</xs:appinfo> -->
+                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
                     <xs:documentation></xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -36,26 +36,26 @@
             </xs:element>
             <xs:element name="DiagnosingClinician" type="Clinician" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
                     <xs:documentation>Clinician Coding Death</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Diagnosis" type="CF_EDTA_COD" minOccurs="1">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
                     <xs:documentation>Coded Caused of Death (EDTA)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Comments" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo >causeofdeath.comments</xs:appinfo>
-                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+                    <xs:appinfo >causeofdeath.comments</xs:appinfo> -->
+                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
                     <xs:documentation>Free text about the Diagnosis</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VerificationStatus" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
                     <xs:documentation>The verification status to support or decline the clinical status of the condition or diagnosis.</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -95,8 +95,8 @@
             </xs:element>
             <xs:element name="EnteredOn" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo >causeofdeath.enteredon</xs:appinfo>
-                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo>
+                    <xs:appinfo >causeofdeath.enteredon</xs:appinfo> -->
+                    <xs:appinfo >UKRRv4,UKRRv5,RADAR</xs:appinfo> -->
                     <xs:documentation>The date the COD was recorded in the medical record.</xs:documentation>
                 </xs:annotation>
             </xs:element>

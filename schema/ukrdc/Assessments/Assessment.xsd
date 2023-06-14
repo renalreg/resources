@@ -1,25 +1,25 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
     <xs:complexType name="Assessment">
         <xs:annotation>
-            <xs:appinfo >UKRRv5</xs:appinfo>
+            <xs:appinfo >UKRRv5</xs:appinfo> -->
             <xs:documentation></xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="AssessmentStart" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv5</xs:appinfo>
+                    <xs:appinfo >UKRRv5</xs:appinfo> -->
                     <xs:documentation>The Date the Assessment Started</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AssessmentEnd" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv5</xs:appinfo>
+                    <xs:appinfo >UKRRv5</xs:appinfo> -->
                     <xs:documentation>The Date the Assessment Ended</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AssessmentType">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv5</xs:appinfo>
+                    <xs:appinfo >UKRRv5</xs:appinfo> -->
                     <xs:documentation>Assessment Type</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
@@ -50,7 +50,7 @@
             </xs:element>
             <xs:element name="AssessmentOutcome">
                 <xs:annotation>
-                    <xs:appinfo >UKRRv5</xs:appinfo>
+                    <xs:appinfo >UKRRv5</xs:appinfo> -->
                     <xs:documentation>Assessment Outcome</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
