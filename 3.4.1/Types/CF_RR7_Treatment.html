@@ -1,0 +1,80 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#CF_RR7_TREATMENT">CF_RR7_TREATMENT</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="CF_RR7_TREATMENT">CF_RR7_TREATMENT</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">CodingStandard</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>CF_RR7_TREATMENT ()</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Code</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>1 (Haemodialysis)</li><li>2 (Haemofiltration)</li><li>3 (Haemodiafiltration)</li><li>4 (Haemodialysis &gt; 4 days per week / daily)</li><li>5 (Ultrafiltration)</li><li>9 (Haemodialysis - type unknown)</li><li>10 (CAPD Connect)</li><li>11 (CAPD Disconnect)</li><li>12 (Cycling PD &gt;= 6 Nights/Week Dry)</li><li>13 (Cycling PD &lt; 6 Nights/Week Dry)</li><li>14 (Cycling PD &gt;= 6 Nights/Week Wet (Day Dwell))</li><li>15 (Cycling PD &lt; 6 Nights/Week Wet (Day Dwell))</li><li>16 (Assisted Cycling PD &gt;= 6 nights/week dry)</li><li>17 (Assisted Cycling PD &gt;= 6 nights/week wet (day dwell))</li><li>19 (Peritoneal Dialysis - Type Unknown)</li><li>20 (Transplant; Cadaver Donor)</li><li>21 (Transplant; Live Related - Sibling)</li><li>22 (Transplant; Live Related - Parent or Child)</li><li>23 (Transplant; Live Related - Other)</li><li>24 (Transplant; Live Genetically Unrelated)</li><li>25 (Transplant; Cadaver + Transp Other Organ)</li><li>26 (Transplant; Live Donor + Transp Other Organ)</li><li>27 (Transplant; Live donor Non-UK Transplant)</li><li>28 (Transplant; Non-Heart-beating Donor)</li><li>29 (Transplant; Type Unknown)</li><li>31 (Graft acute rejection episode - biopsy proven)</li><li>32 (Graft acute rejection episode - no biopsy)</li><li>74 (Transplant : Live related - father)</li><li>75 (Transplant : Live related - mother)</li><li>77 (Transplant : Live related - child)</li><li>80 (Acute Renal Failure not dialysed)</li><li>81 (Acute Haemodialysis - ARF)</li><li>82 (Acute Haemofiltration - ARF)</li><li>83 (Acute Peritoneal Dialysis - ARF)</li><li>93 (Conservative Management - Mutual decision not to offer RRT)</li><li>94 (Conservative Management - Clinical decision not to offer RRT)</li><li>110 (Plasmapharesis / Plasma Exchange)</li><li>111 (Assisted CAPD)</li><li>121 (Assisted APD)</li><li>201 (Hybrid CAPD with HD)</li><li>202 (Hybrid APD with HD)</li><li>203 (Hybrid APD with CAPD)</li><li>900 (CKD (Not on RRT))</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Description</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                32000</div></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>

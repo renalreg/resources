@@ -1,0 +1,80 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#CF_RR7_DISCHARGE">CF_RR7_DISCHARGE</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="CF_RR7_DISCHARGE">CF_RR7_DISCHARGE</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">CodingStandard</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>CF_RR7_DISCHARGE ()</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Code</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>30 (Graft Failure)</li><li>38 (Patient transferred Out)</li><li>84 (ARF - Recovered)</li><li>85 (ARF - Stopped Dialysis (without recovery of function))</li><li>86 (ARF - Transferred Out)</li><li>90 (Patient - Renal Function Recovered)</li><li>91 (Patient - Treatment Stopped (Without Recovery of Function))</li><li>92 (Conservative Management - Treatment stopped without recovery)</li><li>95 (Patient - Lost to follow-up)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Description</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                32000</div></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>
