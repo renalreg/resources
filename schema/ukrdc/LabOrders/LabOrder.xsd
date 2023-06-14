@@ -34,8 +34,10 @@
             </xs:element>
             <xs:element name="PlacerId" minOccurs="1">
                 <xs:annotation>
-                    <!-- <xs:appinfo>laborder.placerid</xs:appinfo> -->
-                    <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+                    <xs:appinfo>
+                        <database>laborder.placerid</database>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>ORC:2 Placer's Order Id</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
