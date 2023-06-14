@@ -5,35 +5,35 @@
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
     <xs:complexType name="Document">
         <xs:annotation>
-            <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+            <xs:appinfo >PKB</xs:appinfo>
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="DocumentTime" type="xs:dateTime" minOccurs="1">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>Document Creation</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="NoteText" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>The body of the document as plain text</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DocumentType" type="CodedField" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>For future use.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Clinician" type="Clinician" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>The person responsibile for the content of the document</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+            <xs:appinfo >PKB</xs:appinfo>
             <xs:element name="DocumentName" minOccurs="0">
                 <xs:annotation>
                     <xs:documentation>Document title</xs:documentation>
@@ -46,43 +46,43 @@
             </xs:element>
             <xs:element name="Status" type="CodedField" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>ACTIVE or INACTIVE</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredBy" type="Clinician" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>Person entering the document as a National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>Location the document was created at. Use National coding e.g. RXF01</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="FileType" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>The MIME type of the data if supplied as a stream.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="FileName" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>The filename of the document</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Stream" type="xs:base64Binary" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>This property is used when the Document is binary data, e.g DOC, PDF, JPG</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DocumentURL" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">PKB</xs:appinfo>
+                    <xs:appinfo >PKB</xs:appinfo>
                     <xs:documentation>URL to the document if notetext/stream is not supplied.</xs:documentation>
                 </xs:annotation>
             </xs:element>

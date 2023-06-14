@@ -8,77 +8,77 @@
 
     <xs:complexType name="Treatment">
         <xs:annotation>
-            <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+            <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
             <xs:documentation></xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="EncounterNumber" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">treatment.encounternumber</xs:appinfo>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >treatment.encounternumber</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation></xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="FromTime" type="xs:date">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">treatment.fromtime</xs:appinfo>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >treatment.fromtime</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Start of Treatment (TXT00)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="ToTime" type="xs:date" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">treatment.totime</xs:appinfo>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >treatment.totime</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>End of Treatment (TXT01)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AdmittingClinician" type="Clinician" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Responsible Clinician as a National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="HealthCareFacility" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Treatment Centre (TXT20)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AdmitReason" type="CF_RR7_TREATMENT" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Modality</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AdmissionSource" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Prior Main Renal Unit</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DischargeReason" type="CF_RR7_DISCHARGE" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Reason for Discharge</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="DischargeLocation" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Destination Main Renal Unit</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>National code for the hospital providing care - e.g. RXF01</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VisitDescription" type="xs:string" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">treatment.visitdescription</xs:appinfo>
-                    <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                    <xs:appinfo >treatment.visitdescription</xs:appinfo>
+                    <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                     <xs:documentation>Free text about the Treatment record.</xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -87,8 +87,8 @@
                     <xs:sequence>
                         <xs:element name="QBL05" minOccurs="0">
                             <xs:annotation>
-                                <xs:appinfo infotype="database">treatment.qbl05</xs:appinfo>
-                                <xs:appinfo infotype="dataset">UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
+                                <xs:appinfo >treatment.qbl05</xs:appinfo>
+                                <xs:appinfo >UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo>
                                 <xs:documentation>HD Treatment Location (RR8) AKA TXT21</xs:documentation>
                             </xs:annotation>
                             <xs:simpleType>

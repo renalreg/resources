@@ -4,7 +4,7 @@
         <xs:sequence>
             <xs:element name="rrtstatus" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">pvdata.rrtstatus</xs:appinfo>
+                    <xs:appinfo >pvdata.rrtstatus</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
@@ -15,7 +15,7 @@
             </xs:element>
             <xs:element name="tpstatus" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">pvdata.tpstatus</xs:appinfo>
+                    <xs:appinfo >pvdata.tpstatus</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
@@ -26,13 +26,13 @@
             </xs:element>
             <xs:element name="diagnosisdate" type="xs:date" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">pvdata.diagnosisdate</xs:appinfo>
+                    <xs:appinfo >pvdata.diagnosisdate</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
             </xs:element>
             <xs:element name="bloodgroup" minOccurs="0">
                 <xs:annotation>
-                    <xs:appinfo infotype="database">pvdata.bloodgroup</xs:appinfo>
+                    <xs:appinfo >pvdata.bloodgroup</xs:appinfo>
                     <xs:documentation/>
                 </xs:annotation>
                 <xs:simpleType>
