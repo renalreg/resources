@@ -5,7 +5,7 @@
 
     <xs:complexType name="Question">
         <xs:annotation>
-            <xs:appinfo >UKRDC,RADAR</xs:appinfo> -->
+            <!-- <xs:appinfo>UKRDC,RADAR</xs:appinfo> -->
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
@@ -21,7 +21,7 @@
 
     <xs:complexType name="Score">
         <xs:annotation>
-            <xs:appinfo >UKRDC,RADAR</xs:appinfo> -->
+            <!-- <xs:appinfo>UKRDC,RADAR</xs:appinfo> -->
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
@@ -36,7 +36,7 @@
 
     <xs:complexType name="Level">
         <xs:annotation>
-            <xs:appinfo >UKRDC,RADAR</xs:appinfo> -->
+            <!-- <xs:appinfo>UKRDC,RADAR</xs:appinfo> -->
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
@@ -51,7 +51,7 @@
 
     <xs:complexType name="Survey">
         <xs:annotation>
-            <xs:appinfo >UKRDC,RADAR</xs:appinfo> -->
+            <!-- <xs:appinfo>UKRDC,RADAR</xs:appinfo> -->
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
