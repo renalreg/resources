@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.4.4 - 2023-06-14
+### Changed
+- Version increment for package build.
+
 ### 3.4.0 - 2023-06-14
 ### Changed
 - Add ug to the RR23 enumeration.
