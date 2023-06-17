@@ -1,6 +1,6 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
 
-<xs:simpleType name="SendingFacility"
+<xs:simpleType name="SendingFacility">
     <xs:restriction base="xs:string">
         <xs:minLength value="1" />
         <xs:maxLength value="7" />

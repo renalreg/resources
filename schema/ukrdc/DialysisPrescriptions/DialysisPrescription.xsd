@@ -1,7 +1,9 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
     <xs:complexType name="DialysisPrescription">
         <xs:annotation>
-            <!-- <xs:appinfo>UKRRv5</xs:appinfo> -->
+                <xs:appinfo>
+                    <dataset>UKRRv5</dataset>
+                </xs:appinfo>
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
