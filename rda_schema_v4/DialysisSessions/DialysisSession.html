@@ -1,0 +1,109 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#DialysisSession">DialysisSession</a>
+      </li>
+      <li>
+        <a href="#DialysisSessions">DialysisSessions</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="DialysisSessions">DialysisSessions</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+                        @
+                        start</td>
+        <td>xs:date</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+                        @
+                        stop</td>
+        <td>xs:date</td>
+      </tr>
+      <tr>
+        <td colspan="2">DialysisSession*</td>
+        <td>DialysisSession</td>
+      </tr>
+    </table>
+    <br/>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="DialysisSession">DialysisSession</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <TR class="parentref">
+        <TD colspan="3">
+          <em>
+                    extends
+                    <a href="#Procedure">Procedure</a></em>
+        </TD>
+      </TR>
+      <tr>
+        <td colspan="2">SymtomaticHypotension</td>
+        <td><div class="documentation">Symptomatic hypotension (QHD19)</div>RRYesNo</td>
+      </tr>
+      <tr>
+        <td colspan="2">VascularAccess</td>
+        <td><div class="documentation">Vascular Access Used (QHD20)</div>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">VascularAccessSite</td>
+        <td><div class="documentation">Vascular Access Site (QHD21)</div>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">TimeDialysed</td>
+        <td><div class="documentation">Time Dialysed in Minutes (QHD31)</div>xs:integer</td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>

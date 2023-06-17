@@ -1,0 +1,115 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#Encounter">Encounter</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="Encounter">Encounter</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <tr>
+        <td colspan="2">EncounterNumber</td>
+        <td>xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>EncounterType</strong>
+        </td>
+        <td><div class="documentation">General Encounter Type (PV1-2)</div>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>E (Emergency)</li><li>I (Inpatient)</li><li>N (N/A)</li><li>G (?)</li><li>P (Pre-Admit)</li><li>S (?)</li><li>R (Reoccuring Patient)</li><li>B (Obstetrics)</li><li>C (Commercial Account)</li><li>U (Unknown)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>FromTime</strong>
+        </td>
+        <td><div class="documentation">Time that encounter starts</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">ToTime</td>
+        <td><div class="documentation">Time that encounter ends</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">AdmittingClinician</td>
+        <td><div class="documentation">Responsible Clinician as a National Clinicial code where possible or other local code if not.</div>Clinician</td>
+      </tr>
+      <tr>
+        <td colspan="2">HealthCareFacility</td>
+        <td><div class="documentation">Parent renal unit as national ODS code (e.g. RXF01)</div>Location</td>
+      </tr>
+      <tr>
+        <td colspan="2">AdmitReason</td>
+        <td><div class="documentation">Reason for change of care</div>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">AdmissionSource</td>
+        <td><div class="documentation">Parent renal unit as national ODS code (e.g. RXF01)</div>Location</td>
+      </tr>
+      <tr>
+        <td colspan="2">DischargeReason</td>
+        <td><div class="documentation">Reason for Discharge (Transplant, Removed from List etc.)</div>CodedField</td>
+      </tr>
+      <tr>
+        <td colspan="2">DischargeLocation</td>
+        <td><div class="documentation">Parent renal unit as national ODS code (e.g. RXF01)</div>Location</td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteredAt</td>
+        <td><div class="documentation">National code for the hospital providing care - e.g. RXF01</div>Location</td>
+      </tr>
+      <tr>
+        <td colspan="2">VisitDescription</td>
+        <td><div class="documentation">Details of validation e.g. Date Done, by whom, who provided the info</div>xs:string</td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>
