@@ -58,6 +58,11 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
+            <xs:element name="OrderedBy" type="Location" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Requesting Location (as in Hospital, GP, etc.)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="OrderItem" type="CodedField" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->

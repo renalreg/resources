@@ -297,11 +297,6 @@
                     <Code>Code82</Code>
                     <Description>Description82</Description>
                 </ProcedureType>
-                <Clinician>
-                    <CodingStandard>ODS</CodingStandard>
-                    <Code>Code83</Code>
-                    <Description>Description83</Description>
-                </Clinician>
                 <ProcedureTime>2006-05-04T18:13:51.0</ProcedureTime>
                 <EnteredBy>
                     <CodingStandard>ODS</CodingStandard>
