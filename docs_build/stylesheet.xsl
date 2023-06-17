@@ -90,7 +90,7 @@
     </xsl:template>
 
     <!-- Found under xs:complexType, xs:element, xs:attribute -->
-    <xsl:template match="xs:annotation/xs:documentation/dataset">
+    <xsl:template match="xs:annotation/xs:appinfo/dataset">
         <div class="dataset">
             <xsl:value-of select="." />
         </div>
@@ -169,7 +169,7 @@
                 </xsl:choose>
             </td>
             <td>
-                <xsl:apply-templates select="xs:annotation/xs:appinfo/" />
+                <xsl:apply-templates select="xs:annotation/xs:appinfo" />
                 <xsl:apply-templates select="xs:annotation/xs:documentation" />
                 <xsl:choose>
                     <xsl:when test="@type">
