@@ -169,7 +169,7 @@
                 </xsl:choose>
             </td>
             <td>
-                <xsl:apply-templates select="xs:annotation/xs:appinfo" />
+                <xsl:apply-templates select="xs:annotation/xs:appinfo/dataset" />
                 <xsl:apply-templates select="xs:annotation/xs:documentation" />
                 <xsl:choose>
                     <xsl:when test="@type">
