@@ -93,14 +93,14 @@
     <xsl:template match="xs:annotation/xs:appinfo">
         <div class="dataset">
             Should be submitted for:  <xsl:value-of select="." />
-
+            <br/>
         </div>
     </xsl:template>
 
     <xsl:template match="xs:annotation/xs:documentation">
         <div class="documentation">
             <xsl:value-of select="." />
-
+            <br/>
         </div>
     </xsl:template>
 

@@ -25,28 +25,13 @@
     <xs:include schemaLocation="Types/PVData.xsd" />
     <xs:include schemaLocation="Types/RRTypes.xsd" />
     <xs:include schemaLocation="Types/SendingExtract.xsd" />
+    <xs:include schemaLocation="Types/SendingFacility.xsd" />
     <xs:include schemaLocation="VascularAccesses/VascularAccess.xsd" />
 
-    <xs:simpleType name="SendingFacility">
-        <xs:restriction base="xs:string">
-            <xs:minLength value="1" />
-            <xs:maxLength value="7" />
-        </xs:restriction>
-    </xs:simpleType>
     <xs:element name="PatientRecord">
         <xs:complexType>
             <xs:sequence>
-                <xs:element minOccurs="1" name="SendingFacility">
-                    <xs:complexType>
-                        <xs:simpleContent>
-                            <xs:extension base="SendingFacility">
-                                <xs:attribute name="channelName" type="xs:string" use="required" />
-                                <xs:attribute name="time" type="xs:dateTime" use="required" />
-                                <xs:attribute name="schemaVersion" type="UKRDCSchemaVersion" use="required" />
-                            </xs:extension>
-                        </xs:simpleContent>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element minOccurs="1" name="SendingFacility" type="SendingFacility"/>
                 <xs:element minOccurs="1" name="SendingExtract" type="SendingExtract">
                     <xs:annotation>
                         <xs:documentation>The extract process within the facility which produced this file.</xs:documentation>

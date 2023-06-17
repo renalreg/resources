@@ -1,0 +1,13 @@
+<xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
+
+<xs:simpleType name="SendingFacility"
+    <xs:restriction base="xs:string">
+        <xs:minLength value="1" />
+        <xs:maxLength value="7" />
+    </xs:restriction>
+    <xs:attribute name="channelName" type="xs:string" use="required" />
+    <xs:attribute name="time" type="xs:dateTime" use="required" />
+    <xs:attribute name="schemaVersion" type="UKRDCSchemaVersion" use="required" />
+</xs:simpleType>
+
+</xs:schema>
