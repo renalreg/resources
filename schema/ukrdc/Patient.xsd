@@ -16,11 +16,16 @@
         <xs:sequence>
             <xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="1">
                 <xs:annotation>
-                    <xs:documentation>Every Patient should have one MRN type PatientNumber. This should be the primary identifier for the Patient in the sending system and typically not change. If a National Identifier (such as NHS Number) is used as the MRN it should also be submitted as an NI type PatientNumber.
-                    </xs:documentation>
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5</dataset>
+                    </xs:appinfo>
+                    <xs:documentation>Patient Numbers</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Names" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Names</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="Name" type="Name" minOccurs="1" maxOccurs="unbounded"/>
@@ -31,6 +36,9 @@
             <xs:element name="DeathTime" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="Gender" type="Gender" minOccurs="1"/>
             <xs:element name="Addresses" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Addresses</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="Address" type="Address" maxOccurs="unbounded"/>

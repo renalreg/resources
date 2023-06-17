@@ -5,8 +5,8 @@
     <xs:include schemaLocation="Diagnoses/CauseOfDeath.xsd" />
     <xs:include schemaLocation="Diagnoses/Diagnosis.xsd" />
     <xs:include schemaLocation="Diagnoses/RenalDiagnosis.xsd" />
-    <xs:include schemaLocation="DialysisSessions/DialysisSession.xsd" />
     <xs:include schemaLocation="DialysisPrescriptions/DialysisPrescription.xsd" />
+    <xs:include schemaLocation="DialysisSessions/DialysisSession.xsd" />
     <xs:include schemaLocation="Documents/Document.xsd" />
     <xs:include schemaLocation="Encounters/Encounter.xsd" />
     <xs:include schemaLocation="Encounters/TransplantList.xsd" />
@@ -23,8 +23,10 @@
     <xs:include schemaLocation="Surveys/Survey.xsd" />
     <xs:include schemaLocation="Transplants/Transplant.xsd" />
     <xs:include schemaLocation="Types/PVData.xsd" />
+    <xs:include schemaLocation="Types/RRTypes.xsd" />
     <xs:include schemaLocation="Types/SendingExtract.xsd" />
     <xs:include schemaLocation="VascularAccesses/VascularAccess.xsd" />
+
     <xs:simpleType name="SendingFacility">
         <xs:restriction base="xs:string">
             <xs:minLength value="1" />
@@ -38,9 +40,9 @@
                     <xs:complexType>
                         <xs:simpleContent>
                             <xs:extension base="SendingFacility">
-                                <xs:attribute name="channelName" use="required" />
+                                <xs:attribute name="channelName" type="xs:string" use="required" />
                                 <xs:attribute name="time" type="xs:dateTime" use="required" />
-                                <xs:attribute name="schemaVersion" use="required" />
+                                <xs:attribute name="schemaVersion" type="UKRDCSchemaVersion" use="required" />
                             </xs:extension>
                         </xs:simpleContent>
                     </xs:complexType>
@@ -50,15 +52,17 @@
                         <xs:documentation>The extract process within the facility which produced this file.</xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element minOccurs="1" name="Patient" type="Patient" />
+                <xs:element minOccurs="1" name="Patient" type="Patient">
+                    <xs:documentation>Patient Demographics</xs:documentation>
+                </xs:element>
                 <xs:element minOccurs="0" name="LabOrders" type="LabOrders">
                     <xs:annotation>
-                        <xs:documentation>Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory. Our EHR structure requires that all test results are associated with a lab order. If the details of the lab order are not received by the renal system then a generic lab order should be created to contain all results with a common sample time.</xs:documentation>
+                        <xs:documentation>Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory. Our EHR structure requires that all test results are associated with a lab order. If the details of the lab order are not received by the sending system then a generic lab order should be created to contain all results with a common sample time.</xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 <xs:element minOccurs="0" name="SocialHistories">
                     <xs:annotation>
-                        <xs:documentation>Other Health Related Behaviours.</xs:documentation>
+                        <xs:documentation>Other Health Related Behaviours. This element should not be submitted without prior discussion with the UKRR</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
@@ -83,7 +87,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Allergies">
                     <xs:annotation>
-                        <xs:documentation>Allergies</xs:documentation>
+                        <xs:documentation>Allergies. This element should not be submitted without prior discussion with the UKRR</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
@@ -106,8 +110,7 @@
                             </xs:element>
                             <xs:element maxOccurs="1" minOccurs="0" name="RenalDiagnosis" type="RenalDiagnosis">
                                 <xs:annotation>
-                                    <xs:documentation>Primary Renal Diagnosis. These should be used to record the Primary Renal Disease (defined in the ERA-EDTA PRD spreadsheet, notes for users, sections: 'Description of PRD' and 'Selection of the most appropriate PRD' http://www.era-edta-reg.org/prd.jsp ) for analysis by the UKRR, SRR and ERA. In order for the data to be comparable across countries it needs to be coded in using the EDTA code lists. Consequently we expect that some conditions may appear both as PRD objects and as generic diagnoses coded in SNOMED. Patients who started RRT after 01/01/2014 should be coded using the 2012 "EDTA2" code list. Patients who started before then can continue to be submitted using the older EDTA list. Systems should not automatically convert the older codes to the newer ones as this results in a loss of accuracy.
-                                    </xs:documentation>
+                                    <xs:documentation>Renal Diagnoses</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                         </xs:sequence>
@@ -115,7 +118,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Medications">
                     <xs:annotation>
-                        <xs:documentation>Medications. All recorded medications should be submitted whether or not prescribed for the purposes of renal care.</xs:documentation>
+                        <xs:documentation>Medications</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
@@ -141,7 +144,11 @@
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedure" type="Procedure" />
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedure" type="Procedure">
+                                <xs:annotation>
+                                    <xs:documentation>Procedures (not otherwise Specified)</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSessions" type="DialysisSessions">
                                 <xs:annotation>
                                     <xs:documentation>Dialysis Sessions</xs:documentation>
@@ -149,7 +156,7 @@
                             </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Transplant" type="TransplantProcedure">
                                 <xs:annotation>
-                                    <xs:documentation>Transplant Procedures.These should be used to record any Transplants. A single Procedure should be recorded for each organ being transplanted, with multiple organ transplants being identified by multiple transplants occurring on the same day. The record also contains information about the source donor for each transplant.</xs:documentation>
+                                    <xs:documentation>Transplant Procedures</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="VascularAccess" type="VascularAccess">

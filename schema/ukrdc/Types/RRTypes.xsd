@@ -1,5 +1,14 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
 
+<xs:simpleType name="UKRDCSchemaVersion">
+    <xs:annotation>
+        <xs:documentation>UKRDC Schema Version in 0.0.0 Format</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d+\.\d+\.\d+"/>
+    </xs:restriction>
+</xs:simpleType>
+
 <xs:simpleType name='RRYesNo'>
     <xs:restriction base="xs:string">
         <xs:pattern value="Y|N"/>
