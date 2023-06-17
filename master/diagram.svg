@@ -342,11 +342,11 @@ onmouseover='makeVisible("_1_1_1_1")' onmouseout='makeHidden("_1_1_1_1")'/>
 </g>
 
 <g id='_1_1_1_1_1' class='box' transform='translate(599,50)'>
-<rect class='shadow' x='3' y='3' width='129' height='46' rx='9'/>
-<rect class='boxattribute1' x='0' y='0' width='129' height='46' rx='9'
+<rect class='shadow' x='3' y='3' width='93' height='46' rx='9'/>
+<rect class='boxattribute1' x='0' y='0' width='93' height='46' rx='9'
 onmouseover='makeVisible("_1_1_1_1_1")' onmouseout='makeHidden("_1_1_1_1_1")'/>
 <text class='strong' x='5' y='27'><tspan class='big'>@</tspan> channelName</text>
-<text class='visible' x='5' y='41'>type: anySimpleType</text>
+<text class='visible' x='5' y='41'>type: string</text>
 <text class='hidden' visibility='hidden' x='5' y='41'>use: required</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 </g>
@@ -362,11 +362,11 @@ onmouseover='makeVisible("_1_1_1_1_2")' onmouseout='makeHidden("_1_1_1_1_2")'/>
 </g>
 
 <g id='_1_1_1_1_3' class='box' transform='translate(599,192)'>
-<rect class='shadow' x='3' y='3' width='129' height='46' rx='9'/>
-<rect class='boxattribute1' x='0' y='0' width='129' height='46' rx='9'
+<rect class='shadow' x='3' y='3' width='159' height='46' rx='9'/>
+<rect class='boxattribute1' x='0' y='0' width='159' height='46' rx='9'
 onmouseover='makeVisible("_1_1_1_1_3")' onmouseout='makeHidden("_1_1_1_1_3")'/>
 <text class='strong' x='5' y='27'><tspan class='big'>@</tspan> schemaVersion</text>
-<text class='visible' x='5' y='41'>type: anySimpleType</text>
+<text class='visible' x='5' y='41'>type: UKRDCSchemaVersion</text>
 <text class='hidden' visibility='hidden' x='5' y='41'>use: required</text>
 <line class='connection' id='p_1_1_1_1_3' x1='-35' y1='-119' x2='-35' y2='-40'/>
 <path class='connection' d='M-35,-40 Q-35,15 0,23'/>

@@ -80,7 +80,7 @@
                             @
                             channelName</strong>
               </td>
-              <td/>
+              <td>xs:string</td>
             </tr>
             <tr>
               <td colspan="2">
@@ -96,7 +96,7 @@
                             @
                             schemaVersion</strong>
               </td>
-              <td/>
+              <td>UKRDCSchemaVersion</td>
             </tr>
           </table>
         </td>
@@ -115,12 +115,12 @@
       </tr>
       <tr>
         <td colspan="2">LabOrders</td>
-        <td><div class="documentation">Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory. Our EHR structure requires that all test results are associated with a lab order. If the details of the lab order are not received by the renal system then a generic lab order should be created to contain all results with a common sample time.</div>LabOrders</td>
+        <td><div class="documentation">Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory. Our EHR structure requires that all test results are associated with a lab order. If the details of the lab order are not received by the sending system then a generic lab order should be created to contain all results with a common sample time.</div>LabOrders</td>
       </tr>
       <tr>
         <td colspan="2">SocialHistories</td>
         <td>
-          <div class="documentation">Other Health Related Behaviours.</div>
+          <div class="documentation">Other Health Related Behaviours. This element should not be submitted without prior discussion with the UKRR</div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">SocialHistory*</td>
@@ -148,7 +148,7 @@
       <tr>
         <td colspan="2">Allergies</td>
         <td>
-          <div class="documentation">Allergies</div>
+          <div class="documentation">Allergies. This element should not be submitted without prior discussion with the UKRR</div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">Allergy*</td>
@@ -171,8 +171,7 @@
             </tr>
             <tr>
               <td colspan="2">RenalDiagnosis</td>
-              <td><div class="documentation">Primary Renal Diagnosis. These should be used to record the Primary Renal Disease (defined in the ERA-EDTA PRD spreadsheet, notes for users, sections: 'Description of PRD' and 'Selection of the most appropriate PRD' http://www.era-edta-reg.org/prd.jsp ) for analysis by the UKRR, SRR and ERA. In order for the data to be comparable across countries it needs to be coded in using the EDTA code lists. Consequently we expect that some conditions may appear both as PRD objects and as generic diagnoses coded in SNOMED. Patients who started RRT after 01/01/2014 should be coded using the 2012 "EDTA2" code list. Patients who started before then can continue to be submitted using the older EDTA list. Systems should not automatically convert the older codes to the newer ones as this results in a loss of accuracy.
-                                    </div>RenalDiagnosis</td>
+              <td><div class="documentation">Renal Diagnoses</div>RenalDiagnosis</td>
             </tr>
           </table>
         </td>
@@ -180,7 +179,7 @@
       <tr>
         <td colspan="2">Medications</td>
         <td>
-          <div class="documentation">Medications. All recorded medications should be submitted whether or not prescribed for the purposes of renal care.</div>
+          <div class="documentation">Medications</div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">Medication*</td>
@@ -220,7 +219,7 @@
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">Procedure*</td>
-              <td>Procedure</td>
+              <td><div class="documentation">Procedures (not otherwise Specified)</div>Procedure</td>
             </tr>
             <tr>
               <td colspan="2">DialysisSessions*</td>
@@ -228,7 +227,7 @@
             </tr>
             <tr>
               <td colspan="2">Transplant*</td>
-              <td><div class="documentation">Transplant Procedures.These should be used to record any Transplants. A single Procedure should be recorded for each organ being transplanted, with multiple organ transplants being identified by multiple transplants occurring on the same day. The record also contains information about the source donor for each transplant.</div>TransplantProcedure</td>
+              <td><div class="documentation">Transplant Procedures</div>TransplantProcedure</td>
             </tr>
             <tr>
               <td colspan="2">VascularAccess*</td>
