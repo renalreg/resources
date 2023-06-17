@@ -76,20 +76,26 @@
             </TR>
             <tr>
               <td colspan="2">
-                        @
-                        channelName</td>
+                <strong>
+                            @
+                            channelName</strong>
+              </td>
               <td/>
             </tr>
             <tr>
               <td colspan="2">
-                        @
-                        time</td>
-              <td/>
+                <strong>
+                            @
+                            time</strong>
+              </td>
+              <td>xs:dateTime</td>
             </tr>
             <tr>
               <td colspan="2">
-                        @
-                        schemaVersion</td>
+                <strong>
+                            @
+                            schemaVersion</strong>
+              </td>
               <td/>
             </tr>
           </table>
@@ -166,7 +172,7 @@
             <tr>
               <td colspan="2">RenalDiagnosis</td>
               <td><div class="documentation">Primary Renal Diagnosis. These should be used to record the Primary Renal Disease (defined in the ERA-EDTA PRD spreadsheet, notes for users, sections: 'Description of PRD' and 'Selection of the most appropriate PRD' http://www.era-edta-reg.org/prd.jsp ) for analysis by the UKRR, SRR and ERA. In order for the data to be comparable across countries it needs to be coded in using the EDTA code lists. Consequently we expect that some conditions may appear both as PRD objects and as generic diagnoses coded in SNOMED. Patients who started RRT after 01/01/2014 should be coded using the 2012 "EDTA2" code list. Patients who started before then can continue to be submitted using the older EDTA list. Systems should not automatically convert the older codes to the newer ones as this results in a loss of accuracy.
-</div>RenalDiagnosis</td>
+                                    </div>RenalDiagnosis</td>
             </tr>
           </table>
         </td>
@@ -179,6 +185,30 @@
             <tr>
               <td colspan="2">Medication*</td>
               <td>Medication</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">DialysisPrescriptions</td>
+        <td>
+          <div class="documentation">Dialysis Prescriptions</div>
+          <table border="1" cellspacing="0" cellpadding="4">
+            <tr>
+              <td colspan="2">
+                        @
+                        start</td>
+              <td>xs:date</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                        @
+                        stop</td>
+              <td>xs:date</td>
+            </tr>
+            <tr>
+              <td colspan="2">DialysisPrescription*</td>
+              <td>DialysisPrescription</td>
             </tr>
           </table>
         </td>

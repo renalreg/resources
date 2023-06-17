@@ -40,57 +40,91 @@
     <h4>Types</h4>
     <ul>
       <li>
-        <a href="#VascularAccess">VascularAccess</a>
+        <a href="#Assessment">Assessment</a>
       </li>
     </ul>
     <h4>Complex Types</h4>
     <table border="1" cellspacing="0" cellpadding="4">
       <tr bgcolor="#CCC">
         <td colspan="3">
-          <a name="VascularAccess">VascularAccess</a>
+          <a name="Assessment">Assessment</a>
         </td>
       </tr>
       <tr>
         <td colspan="3" class="documentation"/>
       </tr>
-      <TR class="parentref">
-        <TD colspan="3">
-          <em>
-                    extends
-                    <a href="#Procedure">Procedure</a></em>
-        </TD>
-      </TR>
       <tr>
-        <td colspan="2">Attributes</td>
+        <td colspan="2">AssessmentStart</td>
+        <td><div class="documentation">The Date the Assessment Started</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">AssessmentEnd</td>
+        <td><div class="documentation">The Date the Assessment Ended</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>AssessmentType</strong>
+        </td>
         <td>
+          <div class="documentation">Assessment Type</div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
-              <td colspan="2">ACC19</td>
-              <td><div class="documentation">Date Access first used for Dialysis</div>xs:dateTime</td>
-            </tr>
-            <tr>
-              <td colspan="2">ACC20</td>
-              <td><div class="documentation">Date of Access Failure</div>xs:dateTime</td>
-            </tr>
-            <tr>
-              <td colspan="2">ACC21</td>
-              <td><div class="documentation">Date of Removal</div>xs:dateTime</td>
-            </tr>
-            <tr>
-              <td colspan="2">ACC22</td>
-              <td><div class="documentation">Reason for Removal of Haemodialysis Access (HD Only) (RR49)</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">ACC30</td>
-              <td><div class="documentation">PD Catheter Insertion Technique (PD Only) (RR143)</div>xs:string
+              <td colspan="2">CodingStandard</td>
+              <td>xs:string
         (restricted)
         <div class="restriction">
-                Enumeration:
-                <ul><li>1 (Open Surgery (Direct Visualisation))</li><li>2 (Laparoscopic)</li><li>3 (Percutaneous)</li><li>4 (Peritoneoscopic)</li></ul></div></td>
+                maxLength:
+                100</div></td>
             </tr>
             <tr>
-              <td colspan="2">ACC40</td>
-              <td><div class="documentation">Reason for Removal of PD Catheter (PD Only) (RR29)</div>xs:string</td>
+              <td colspan="2">Code</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+            </tr>
+            <tr>
+              <td colspan="2">Description</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>AssessmentOutcome</strong>
+        </td>
+        <td>
+          <div class="documentation">Assessment Outcome</div>
+          <table border="1" cellspacing="0" cellpadding="4">
+            <tr>
+              <td colspan="2">CodingStandard</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+            </tr>
+            <tr>
+              <td colspan="2">Code</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+            </tr>
+            <tr>
+              <td colspan="2">Description</td>
+              <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
             </tr>
           </table>
         </td>

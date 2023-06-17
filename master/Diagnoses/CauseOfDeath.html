@@ -51,20 +51,39 @@
         </td>
       </tr>
       <tr>
-        <td colspan="2">DiagnosisType</td>
-        <td><div class="documentation"/>xs:string</td>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>DiagnosisType</strong>
+        </td>
+        <td><div class="documentation"/>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>PRIMARY (Primary)</li><li>SECONDARY (Secondary)</li><li>OTHER (Other)</li></ul></div></td>
       </tr>
       <tr>
         <td colspan="2">DiagnosingClinician</td>
         <td><div class="documentation">Clinician Coding Death</div>Clinician</td>
       </tr>
       <tr>
-        <td colspan="2">Diagnosis</td>
+        <td colspan="2">
+          <strong>Diagnosis</strong>
+        </td>
         <td><div class="documentation">Coded Caused of Death (EDTA)</div>CF_EDTA_COD</td>
       </tr>
       <tr>
         <td colspan="2">Comments</td>
         <td><div class="documentation">Free text about the Diagnosis</div>xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">VerificationStatus</td>
+        <td><div class="documentation">The verification status to support or decline the clinical status of the condition or diagnosis.</div>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>unconfirmed (Unconfirmed)</li><li>provisional (Provisional)</li><li>differential (Differential)</li><li>confirmed (Confirmed)</li><li>refuted (Refuted)</li><li>entered-in-error (Entered in Error)</li></ul></div></td>
       </tr>
       <tr>
         <td colspan="2">EnteredOn</td>

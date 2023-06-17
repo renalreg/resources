@@ -50,6 +50,9 @@
           <a name="TransplantProcedure">TransplantProcedure</a>
         </td>
       </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
       <TR class="parentref">
         <TD colspan="3">
           <em>
@@ -58,131 +61,36 @@
         </TD>
       </TR>
       <tr>
-        <td colspan="2">Attributes</td>
-        <td>
-          <table border="1" cellspacing="0" cellpadding="4">
-            <tr>
-              <td colspan="2">TRA64</td>
-              <td><div class="documentation">Failure Date</div>xs:dateTime</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA65</td>
-              <td><div class="documentation">Cause of Failure (RR10)</div>xs:string
-        (restricted)
-        <div class="restriction">
-                Enumeration:
-                <ul><li>10 (Hyperacute Rejection)</li><li>11 (Non-Viable Transplant Kidney)</li><li>12 (Primary Non-Function of Transplant Kidney)</li><li>13 (Acute Rejection)</li><li>14 (Chronic Allograft Nephropathy)</li><li>15 (Rejection following withdrawal of immunosuppression - non Medical Reason)</li><li>16 (Rejection following withdrawal of immunosuppression - Medical Reason)</li></ul></div></td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA66</td>
-              <td><div class="documentation">Description of Failure</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA69</td>
-              <td><div class="documentation">Date graft nephrectomy if graft failed</div>xs:dateTime</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA76</td>
-              <td><div class="documentation">Graft Type (RR24)</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA77</td>
-              <td><div class="documentation">NHSBT Type</div>xs:string
+        <td colspan="2">DonorType</td>
+        <td><div class="documentation">NHSBT Type</div>xs:string
         (restricted)
         <div class="restriction">
                 Enumeration:
                 <ul><li>DBD ()</li><li>DCD ()</li><li>LIVE ()</li></ul></div></td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA78</td>
-              <td><div class="documentation">rCMV - Recipient CMV status at transplant</div>RRNegPosUk</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA79</td>
-              <td><div class="documentation">rEBV - Recipient EBV status at transplant</div>RRNegPosUk</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA80</td>
-              <td><div class="documentation">Donor age</div>xs:integer</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA8A</td>
-              <td><div class="documentation">Donor sex</div>Gender</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA81</td>
-              <td><div class="documentation">rCMV - Donor CMV status at transplant </div>RRNegPosUk</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA82</td>
-              <td><div class="documentation">rEBV - Donor CMV status at transplant </div>RRNegPosUk</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA83</td>
-              <td><div class="documentation">Mismatch A</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA84</td>
-              <td><div class="documentation">Mismatch B</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA85</td>
-              <td><div class="documentation">Mismatch DR</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA86</td>
-              <td><div class="documentation">ABO compatible</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA87</td>
-              <td><div class="documentation">Plasma exchange</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA88</td>
-              <td><div class="documentation">Immunoadsorption</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA89</td>
-              <td><div class="documentation">Rituximab</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA90</td>
-              <td><div class="documentation">IV immunoglobulin</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA91</td>
-              <td><div class="documentation">Cold ischaemic time in hours</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA92</td>
-              <td><div class="documentation">Primary function</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA93</td>
-              <td><div class="documentation">Anticoagulation (RR15)</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA94</td>
-              <td><div class="documentation">CMV prophylaxis (RR16)</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA95</td>
-              <td><div class="documentation">Pneumocystis prophylaxis (RR17)</div>xs:string</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA96</td>
-              <td><div class="documentation">Functioning</div>RRYesNo</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA97</td>
-              <td><div class="documentation">Other organ transplanted simultaneously 1 (RR14)</div>NV_RR14</td>
-            </tr>
-            <tr>
-              <td colspan="2">TRA98</td>
-              <td><div class="documentation">Other organ transplanted simultaneously 2 (RR14)</div>NV_RR14</td>
-            </tr>
-          </table>
-        </td>
+      </tr>
+      <tr>
+        <td colspan="2">DateRegistered</td>
+        <td><div class="documentation">Date Registered for Transplantation</div>xs:date</td>
+      </tr>
+      <tr>
+        <td colspan="2">FailureDate</td>
+        <td><div class="documentation">Failure Date</div>xs:date</td>
+      </tr>
+      <tr>
+        <td colspan="2">ColdIschaemicTime</td>
+        <td><div class="documentation">Cold ischaemic time in Minutes</div>xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">HLAMismatchA</td>
+        <td><div class="documentation">Mismatch A</div>xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">HLAMismatchB</td>
+        <td><div class="documentation">Mismatch B</div>xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">HLAMismatchC</td>
+        <td><div class="documentation">Mismatch DR</div>xs:string</td>
       </tr>
     </table>
     <br/>

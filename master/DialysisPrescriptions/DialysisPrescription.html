@@ -40,42 +40,54 @@
     <h4>Types</h4>
     <ul>
       <li>
-        <a href="#FamilyHistory">FamilyHistory</a>
+        <a href="#DialysisPrescription">DialysisPrescription</a>
       </li>
     </ul>
     <h4>Complex Types</h4>
     <table border="1" cellspacing="0" cellpadding="4">
       <tr bgcolor="#CCC">
         <td colspan="3">
-          <a name="FamilyHistory">FamilyHistory</a>
+          <a name="DialysisPrescription">DialysisPrescription</a>
         </td>
       </tr>
       <tr>
         <td colspan="3" class="documentation"/>
       </tr>
       <tr>
-        <td colspan="2">FamilyMember</td>
-        <td><div class="documentation">Family member</div>CodedField</td>
+        <td colspan="2">EnteredOn</td>
+        <td><div class="documentation">The date the Dialysis Prescription was created.</div>xs:dateTime</td>
       </tr>
       <tr>
-        <td colspan="2">Diagnosis</td>
-        <td><div class="documentation">Diagnosis on family member</div>CF_SNOMED</td>
-      </tr>
-      <tr>
-        <td colspan="2">NoteText</td>
-        <td><div class="documentation"/>xs:string</td>
-      </tr>
-      <tr>
-        <td colspan="2">EnteredAt</td>
-        <td><div class="documentation"/>Location</td>
-      </tr>
-      <tr>
-        <td colspan="2">FromTime</td>
-        <td><div class="documentation">Beginning of period covered</div>xs:dateTime</td>
+        <td colspan="2">
+          <strong>FromTime</strong>
+        </td>
+        <td><div class="documentation">Time the Period the Dialysis Prescription Applies To Starts</div>xs:dateTime</td>
       </tr>
       <tr>
         <td colspan="2">ToTime</td>
-        <td><div class="documentation">End of period covered</div>xs:dateTime</td>
+        <td><div class="documentation">Time the Period the Dialysis Prescription Applies To Ends</div>xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">SessionType</td>
+        <td><div class="documentation">Session Type (Same as QHD41)</div>xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>SessionsPerWeek</strong>
+        </td>
+        <td><div class="documentation">Number of Dialysis Sessions per Week</div>xs:integer</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>TimeDialysed</strong>
+        </td>
+        <td><div class="documentation">Time Dialysed (Minutes)</div>xs:integer</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>VascularAccess</strong>
+        </td>
+        <td><div class="documentation">Vascular Access to Use (QHD20)</div>xs:string</td>
       </tr>
     </table>
     <br/>
