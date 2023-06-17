@@ -100,7 +100,7 @@
       </tr>
       <tr>
         <td colspan="2">ReceivingLocation</td>
-        <td><div class="documentation">Location or Facility receiving/performing the order.</div>Location</td>
+        <td><div class="documentation">Location or Facility receiving/performing the order.<br/></div>Location</td>
       </tr>
       <tr>
         <td colspan="2">
@@ -110,7 +110,7 @@
             Should be submitted for:  
                         laborder.placerid
                         UKRRv4,UKRRv5,PKB,RADAR
-                    </div><div class="documentation">ORC:2 Placer's Order Id</div>xs:string
+                    <br/></div><div class="documentation">ORC:2 Placer's Order Id<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -118,7 +118,7 @@
       </tr>
       <tr>
         <td colspan="2">FillerId</td>
-        <td><div class="documentation">ORC:3 Filler (Lab)'s Order Id</div>xs:string
+        <td><div class="documentation">ORC:3 Filler (Lab)'s Order Id<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -126,11 +126,11 @@
       </tr>
       <tr>
         <td colspan="2">OrderedBy</td>
-        <td><div class="documentation">Requesting Location (as in Hospital, GP, etc.)</div>Location</td>
+        <td><div class="documentation">Requesting Location (as in Hospital, GP, etc.)<br/></div>Location</td>
       </tr>
       <tr>
         <td colspan="2">OrderItem</td>
-        <td><div class="documentation">OBR:4 Service Id - the identity of the test ordered.</div>CodedField</td>
+        <td><div class="documentation">OBR:4 Service Id - the identity of the test ordered.<br/></div>CodedField</td>
       </tr>
       <tr>
         <td colspan="2">OrderCategory</td>
@@ -138,15 +138,15 @@
       </tr>
       <tr>
         <td colspan="2">SpecimenCollectedTime</td>
-        <td><div class="documentation">OBR:22</div>xs:dateTime</td>
+        <td><div class="documentation">OBR:22<br/></div>xs:dateTime</td>
       </tr>
       <tr>
         <td colspan="2">SpecimenReceivedTime</td>
-        <td><div class="documentation">OBR:14</div>xs:dateTime</td>
+        <td><div class="documentation">OBR:14<br/></div>xs:dateTime</td>
       </tr>
       <tr>
         <td colspan="2">Status</td>
-        <td><div class="documentation"/>xs:string
+        <td><div class="documentation"><br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -158,7 +158,7 @@
       </tr>
       <tr>
         <td colspan="2">SpecimenSource</td>
-        <td><div class="documentation">OBR:15.1 e.g. serum, blood</div>xs:string
+        <td><div class="documentation">OBR:15.1 e.g. serum, blood<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -166,7 +166,7 @@
       </tr>
       <tr>
         <td colspan="2">Duration</td>
-        <td><div class="documentation">OBR:27.3</div>xs:string</td>
+        <td><div class="documentation">OBR:27.3<br/></div>xs:string</td>
       </tr>
       <tr>
         <td colspan="2">
@@ -176,19 +176,19 @@
       </tr>
       <tr>
         <td colspan="2">PatientClass</td>
-        <td><div class="documentation">In patient / out patient - equivalent to PV1:2 Patient Class</div>CF_HL7_0004</td>
+        <td><div class="documentation">In patient / out patient - equivalent to PV1:2 Patient Class<br/></div>CF_HL7_0004</td>
       </tr>
       <tr>
         <td colspan="2">EnteredOn</td>
-        <td><div class="documentation">Date Order entered</div>xs:dateTime</td>
+        <td><div class="documentation">Date Order entered<br/></div>xs:dateTime</td>
       </tr>
       <tr>
         <td colspan="2">EnteredAt</td>
-        <td><div class="documentation"/>Location</td>
+        <td><div class="documentation"><br/></div>Location</td>
       </tr>
       <tr>
         <td colspan="2">EnteringOrganization</td>
-        <td><div class="documentation"/>Location</td>
+        <td><div class="documentation"><br/></div>Location</td>
       </tr>
     </table>
     <br/>
@@ -203,7 +203,7 @@
       </tr>
       <tr>
         <td colspan="2">ResultType</td>
-        <td><div class="documentation">AT</div>xs:string
+        <td><div class="documentation">AT<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -211,11 +211,11 @@
       </tr>
       <tr>
         <td colspan="2">EnteredOn</td>
-        <td><div class="documentation"/>xs:dateTime</td>
+        <td><div class="documentation"><br/></div>xs:dateTime</td>
       </tr>
       <tr>
         <td colspan="2">PrePost</td>
-        <td><div class="documentation">Was the sample taken PRE or POST dialysis</div>xs:string
+        <td><div class="documentation">Was the sample taken PRE or POST dialysis<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 Enumeration:
@@ -225,11 +225,11 @@
         <td colspan="2">
           <strong>ServiceId</strong>
         </td>
-        <td><div class="documentation">Test Code (OBX:3)</div>ServiceId</td>
+        <td><div class="documentation">Test Code (OBX:3)<br/></div>ServiceId</td>
       </tr>
       <tr>
         <td colspan="2">SubId</td>
-        <td><div class="documentation">Sub-Test Id (OBX:4)</div>xs:string
+        <td><div class="documentation">Sub-Test Id (OBX:4)<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -237,7 +237,7 @@
       </tr>
       <tr>
         <td colspan="2">ResultValue</td>
-        <td><div class="documentation">OBX:5</div>xs:string
+        <td><div class="documentation">OBX:5<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -245,7 +245,7 @@
       </tr>
       <tr>
         <td colspan="2">ResultValueUnits</td>
-        <td><div class="documentation">OBX:6</div>xs:string
+        <td><div class="documentation">OBX:6<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -253,7 +253,7 @@
       </tr>
       <tr>
         <td colspan="2">ReferenceRange</td>
-        <td><div class="documentation">OBX:7</div>xs:string
+        <td><div class="documentation">OBX:7<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -261,7 +261,7 @@
       </tr>
       <tr>
         <td colspan="2">InterpretationCodes</td>
-        <td><div class="documentation">Interpretation Codes (OBX:8)</div>xs:string
+        <td><div class="documentation">Interpretation Codes (OBX:8)<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 Enumeration:
@@ -269,7 +269,7 @@
       </tr>
       <tr>
         <td colspan="2">Status</td>
-        <td><div class="documentation">OBX:11</div>xs:string
+        <td><div class="documentation">OBX:11<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 Enumeration:
@@ -277,11 +277,11 @@
       </tr>
       <tr>
         <td colspan="2">ObservationTime</td>
-        <td><div class="documentation">OBX:14</div>xs:dateTime</td>
+        <td><div class="documentation">OBX:14<br/></div>xs:dateTime</td>
       </tr>
       <tr>
         <td colspan="2">Comments</td>
-        <td><div class="documentation">From NTE:3</div>xs:string
+        <td><div class="documentation">From NTE:3<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -289,7 +289,7 @@
       </tr>
       <tr>
         <td colspan="2">ReferenceComment</td>
-        <td><div class="documentation"/>xs:string
+        <td><div class="documentation"><br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
