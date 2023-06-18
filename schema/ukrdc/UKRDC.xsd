@@ -61,11 +61,17 @@
                 </xs:element>
                 <xs:element name="LabOrders" type="LabOrders" minOccurs="0" maxOccurs="1">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Lab Orders</xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 <xs:element name="SocialHistories" minOccurs="0" maxOccurs="1">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>NONE</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Other Health Related Behaviours</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -76,6 +82,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="FamilyHistories">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>NONE</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Family Histories</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -86,12 +95,22 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Observations" type="Observations">
                     <xs:annotation>
-                        <xs:documentation>Observations. These are measurements taken about a patient that do not involve a Laboratory.</xs:documentation>
+                        <xs:appinfo>
+                            <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>
+                        Observations. These are measurements taken about a patient that do not involve a Laboratory.
+                        </xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 <xs:element minOccurs="0" name="Allergies">
                     <xs:annotation>
-                        <xs:documentation>Allergies. This element should not be submitted without prior discussion with the UKRR</xs:documentation>
+                        <xs:appinfo>
+                            <dataset>NONE</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>
+                        Allergies.
+                        </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
@@ -104,16 +123,25 @@
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Diagnosis" type="Diagnosis">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Co-Morbidities</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="1" minOccurs="0" name="CauseOfDeath" type="CauseOfDeath">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4,UKRRv5,RADAR</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Cause of Death</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="1" minOccurs="0" name="RenalDiagnosis" type="RenalDiagnosis">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Renal Diagnoses</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
@@ -122,6 +150,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Medications">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Medications</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -132,6 +163,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="DialysisPrescriptions">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>UKRRv5</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Dialysis Prescriptions</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -148,23 +182,35 @@
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="Procedure" type="Procedure">
+                            <xs:element name="Procedure" type="Procedure" minOccurs="0" maxOccurs="unbounded" >
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>NONE</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Procedures (not otherwise Specified)</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
-                            <xs:element maxOccurs="unbounded" minOccurs="0" name="DialysisSessions" type="DialysisSessions">
+                            <xs:element name="DialysisSessions" type="DialysisSessions" minOccurs="0" maxOccurs="unbounded" >
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4,UKRRv5</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Dialysis Sessions</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Transplant" type="TransplantProcedure">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4,UKRRv5,PKB</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Transplant Procedures</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="VascularAccess" type="VascularAccess">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>Vascular Access Constructions</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
@@ -173,6 +219,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Documents">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>PKB</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Documents</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -186,16 +235,25 @@
                         <xs:sequence>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Encounter" type="Encounter">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>PKB</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>This is used to record the duration of something other than a Treatment. This element should not be submitted without prior discussion with the UKRR.</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="Treatment" type="Treatment">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>UKRRv4,UKRRv5,PKB</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>This is used to record the duration a Patient received a particular type of Care/Treatment at a particular Treatment Facility. It is similar in concept to the UKRR TXT records however at the end of the period it should be end-dated rather than an additional record being sent. It is possible for treatment records to overlap if a patient has multiple treatments (such as post-transplant dialysis). A treatment record should exist for any period of time where they would be considered a patient (so for example code 900 record for pre-RRT CKD and a code 94 record for post-RRT Conservative care). Details of Transplants themselves should be recorded as Procedures but Treatment records should be used to record periods of Transplant related Inpatient/Outpatient care.</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
                             <xs:element maxOccurs="unbounded" minOccurs="0" name="TransplantList" type="TransplantList">
                                 <xs:annotation>
+                                    <xs:appinfo>
+                                        <dataset>NHSBT</dataset>
+                                    </xs:appinfo>
                                     <xs:documentation>This is only for NHSBT supplied Transplant Waiting List data.</xs:documentation>
                                 </xs:annotation>
                             </xs:element>
@@ -204,7 +262,12 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="ProgramMemberships">
                     <xs:annotation>
-                        <xs:documentation>Program Memberships. These are used to record whether or not a patient wishes to participate in one of the UKRDC’s member projects. In the case of projects such as RADAR the Program Membership record should only be closed if the patient actively wishes to withdraw. It should not be end dated when they leave the unit or die. If a patient decides to leave a project and then re-joins a new Program Membership record should be created (with a different ExternalID) rather than re-opening the original one.</xs:documentation>
+                        <xs:appinfo>
+                            <dataset>NONE</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>
+                        Program Memberships. These are used to record whether or not a patient wishes to participate in one of the UKRDC’s member projects. In the case of projects such as RADAR the Program Membership record should only be closed if the patient actively wishes to withdraw. It should not be end dated when they leave the unit or die. If a patient decides to leave a project and then re-joins a new Program Membership record should be created (with a different ExternalID) rather than re-opening the original one.
+                        </xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
@@ -214,6 +277,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="OptOuts">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>UKRRv4,UKRRv5</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Opt-Outs</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -224,6 +290,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="ClinicalRelationships">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>NONE</dataset>
+                        </xs:appinfo>
                         <xs:documentation>This is used to record the relationship between a Patient and a Clinician or Care Facility. This element should not be submitted without prior discussion with the UKRR.</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -234,6 +303,9 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="Surveys">
                     <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>NONE</dataset>
+                        </xs:appinfo>
                         <xs:documentation>Surveys</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
@@ -244,7 +316,11 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="PVData" type="PVData">
                     <xs:annotation>
-                        <xs:documentation>This is used internally to hold data items sent in PV XML files and should not be sent by external parties.</xs:documentation>
+                        <xs:appinfo>
+                            <dataset>PKB</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>
+                        This is used internally to hold data items sent in PV XML files and should not be sent by external parties.</xs:documentation>
                     </xs:annotation>
                 </xs:element>
             </xs:sequence>
