@@ -255,7 +255,9 @@
                         </a>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:value-of select="@type" />
+                        <a href="{concat('https://renalreg.github.io/resources/master/Types/', @type, '.html')}">
+                            <xsl:value-of select="@type" />
+                        </a>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
