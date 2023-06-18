@@ -31,23 +31,42 @@
     <xs:element name="PatientRecord">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="SendingFacility" type="SendingFacility" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="SendingFacility" type="SendingFacility" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>ALL</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>
+                        The value of this element is the Site or System responsible for the data being sent.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
                 <xs:element name="SendingExtract" type="SendingExtract" minOccurs="1"  maxOccurs="1">
                     <xs:annotation>
-                        <xs:documentation>The extract process within the facility which produced this file.</xs:documentation>
+                        <xs:appinfo>
+                            <dataset>ALL</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>
+                        The type of data feed. This is used to enable different behaviour when the original source of data was something other than a UKRDC feed (i.e. when "PV XML" is converted to "RDA XML" it is given a SendingExtract of "PV"). Unless told otherwise the value should be set to "UKRDC".
+                        </xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 <xs:element name="Patient" type="Patient" minOccurs="1" maxOccurs="1">
-                    <xs:documentation>Patient Demographics</xs:documentation>
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <dataset>ALL</dataset>
+                        </xs:appinfo>
+                        <xs:documentation>Patient Demographics</xs:documentation>
+                    </xs:annotation>
                 </xs:element>
                 <xs:element name="LabOrders" type="LabOrders" minOccurs="0" maxOccurs="1">
                     <xs:annotation>
-                        <xs:documentation>Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory. Our EHR structure requires that all test results are associated with a lab order. If the details of the lab order are not received by the sending system then a generic lab order should be created to contain all results with a common sample time.</xs:documentation>
+                        <xs:documentation>Lab Orders</xs:documentation>
                     </xs:annotation>
                 </xs:element>
                 <xs:element name="SocialHistories" minOccurs="0" maxOccurs="1">
                     <xs:annotation>
-                        <xs:documentation>Other Health Related Behaviours. This element should not be submitted without prior discussion with the UKRR</xs:documentation>
+                        <xs:documentation>Other Health Related Behaviours</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
@@ -57,7 +76,7 @@
                 </xs:element>
                 <xs:element minOccurs="0" name="FamilyHistories">
                     <xs:annotation>
-                        <xs:documentation>This is used to record information about conditions diagnosed in the Patient's relatives. This element should not be submitted without prior discussion with the UKRR</xs:documentation>
+                        <xs:documentation>Family Histories</xs:documentation>
                     </xs:annotation>
                     <xs:complexType>
                         <xs:sequence>
