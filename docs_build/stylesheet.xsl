@@ -256,7 +256,10 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="type" select="@type" />
-                        <xsl:variable name="schemaLocation" select="//xs:include[contains(@schemaLocation, $type + '.xsd') and substring-after(@schemaLocation, $type + '.xsd') = '']/@schemaLocation"/>
+                        <!--
+                        Remove and substring-after(@schemaLocation, $type + '.xsd') = ''
+                        -->
+                        <xsl:variable name="schemaLocation" select="//xs:include[contains(@schemaLocation, $type + '.xsd')]/@schemaLocation"/>
                         <!--
                         This isn't working for some reason.
                         <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
