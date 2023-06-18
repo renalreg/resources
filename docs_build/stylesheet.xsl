@@ -255,9 +255,7 @@
                         </a>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:choose>
                             <xsl:value-of select="@type" />
-                        </xsl:choose>
                         
                             <!--
                             
@@ -265,6 +263,7 @@
                             It somewhat works but there are too many exceptions like 
                             Encounters/Treatment.xsd & Diagnoses/Diagnosis.xsd
 
+                            <xsl:choose>
                             <xsl:when test="@type=@name">
                             This assumes LabOrders/LabOrder.xsd
                             <a href="{concat('https://renalreg.github.io/resources/master/', @name, 's/', @name, '.html')}">
@@ -277,6 +276,7 @@
                                     <xsl:value-of select="@type" />
                             </a>
                             </xsl:otherwise>
+                            </xsl:choose>
 
                             -->
 
