@@ -32,7 +32,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="SendingFacility" type="SendingFacility" minOccurs="1" maxOccurs="1"/>
-                <xs:element mname="SendingExtract" type="SendingExtract" minOccurs="1"  maxOccurs="1">
+                <xs:element name="SendingExtract" type="SendingExtract" minOccurs="1"  maxOccurs="1">
                     <xs:annotation>
                         <xs:documentation>The extract process within the facility which produced this file.</xs:documentation>
                     </xs:annotation>
