@@ -248,65 +248,76 @@
         <xsl:apply-templates select="xs:annotation/xs:documentation" />
         <xsl:choose>
             <xsl:when test="@type">
-                <xsl:text>ZZZ</xsl:text>
                 <xsl:choose>
                     <xsl:when test="starts-with(@type, 'xnat:')">
-                        <xsl:text>XXX</xsl:text>
                         <a href="{concat('#', @type)}">
                             <xsl:value-of select="@type" />
                         </a>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:text>BBB</xsl:text>
                         <xsl:choose>
+                            <xsl:value-of select="@type" />
+                        </xsl:choose>
+                        
+                            <!--
+                            
+                            This attempt is trying to use whether or not @type=@name .
+                            It somewhat works but there are too many exceptions like 
+                            Encounters/Treatment.xsd & Diagnoses/Diagnosis.xsd
+
                             <xsl:when test="@type=@name">
-                            <xsl:text>YYY</xsl:text>
-                            <!-- This assumes LabOrders/LabOrder.xsd -->
+                            This assumes LabOrders/LabOrder.xsd
                             <a href="{concat('https://renalreg.github.io/resources/master/', @name, 's/', @name, '.html')}">
                                     <xsl:value-of select="@type" />
                             </a>
                             </xsl:when>
                             <xsl:otherwise>
-                            <xsl:text>AAA</xsl:text>
-                            <!-- This assumes Types/Whatever.xsd -->
+                            This assumes Types/Whatever.xsd
                             <a href="{concat('https://renalreg.github.io/resources/master/', 'Types/', @type, '.html')}">
                                     <xsl:value-of select="@type" />
                             </a>
                             </xsl:otherwise>
-                        </xsl:choose>
- 
-                        <!--
-                        <xsl:variable name="rootElement" select="ancestor::*[not(parent::*)][last()]" />
-                        -->
-                        <!--
-                        Remove and substring-after(@schemaLocation, $type + '.xsd') = ''
-                        -->
-                        <!--
-                        <xsl:variable name="schemaLocation" select="/xs:include[contains(@schemaLocation, $type + '.xsd')]/@schemaLocation"/>
-                        -->
-                        <!--
-                        This isn't working for some reason.
-                        <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
-                        <xsl:value-of select="$schemaLocation" />
-                        -->
-                        <!--
-                        This requires functions not available in XPath 1.0 which LXML doesn't support.
-                        <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
-                        -->
-                        
-                        <!--
-                        <xsl:choose>
-                            <xsl:when test="$schemaLocation">
-                                <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
-                                <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
+
+                            -->
+
+                            <!--
+                            
+                            This attempt is trying to look for an include statement ending in @type + '.xsd'
+                            This should work better but despite trying a few variations hasn't worked.
+                            My current theory is that you can't 'escape' a template to get at the parents
+                            of the element it's being called against.
+                            
+                            <xsl:variable name="rootElement" select="ancestor::*[not(parent::*)][last()]" />
+                            -->
+                            <!--
+                            Remove and substring-after(@schemaLocation, $type + '.xsd') = ''
+                            -->
+                            <!--
+                            <xsl:variable name="schemaLocation" select="/xs:include[contains(@schemaLocation, $type + '.xsd')]/@schemaLocation"/>
+                            -->
+                            <!--
+                            This isn't working for some reason.
+                            <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
+                            <xsl:value-of select="$schemaLocation" />
+                            -->
+                            <!--
+                            This requires functions not available in XPath 1.0 which LXML doesn't support.
+                            <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
+                            -->
+                            
+                            <!--
+                            <xsl:choose>
+                                <xsl:when test="$schemaLocation">
+                                    <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
+                                    <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
+                                        <xsl:value-of select="@type" />
+                                    </a>
+                                </xsl:when>
+                                <xsl:otherwise>
                                     <xsl:value-of select="@type" />
-                                </a>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="@type" />
-                            </xsl:otherwise>
-                        </xsl:choose>
-                        -->
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            -->
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
