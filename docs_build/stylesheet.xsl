@@ -269,7 +269,7 @@
                         <xsl:value-of select="$schemaLocation" />
                         -->
                         <!--
-                        This requires functions not available in XPath 1.0 which LXML may not support.
+                        This requires functions not available in XPath 1.0 which LXML doesn't support.
                         <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
                         -->
                         <xsl:choose>
@@ -281,12 +281,6 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:value-of select="@type" />
-                                <!--
-                                <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
-                                <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
-                                    <xsl:value-of select="@type" />
-                                </a>
-                                -->
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:otherwise>
