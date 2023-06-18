@@ -257,10 +257,17 @@
                     <xsl:otherwise>
                         <xsl:variable name="type" select="@type" />
                         <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
-                        <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
-                        <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
-                            <xsl:value-of select="@type" />
-                        </a>
+                        <xsl:choose>
+                            <xsl:when test="$schemaLocation">
+                                <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
+                                <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
+                                    <xsl:value-of select="@type" />
+                                </a>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="@type" />
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
