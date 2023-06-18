@@ -256,9 +256,12 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="type" select="@type" />
-                        <xsl:value-of select="$type" />
+                        <xsl:variable name="schemaLocation" select="//xs:include[contains(@schemaLocation, $type + '.xsd') and substring-after(@schemaLocation, $type + '.xsd') = '']/@schemaLocation"/>
+                        <!--
+                        This isn't working for some reason.
                         <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
                         <xsl:value-of select="$schemaLocation" />
+                        -->
                         <!--
                         This requires functions not available in XPath 1.0 which LXML may not support.
                         <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
@@ -271,13 +274,13 @@
                                 </a>
                             </xsl:when>
                             <xsl:otherwise>
+                                <xsl:value-of select="@type" />
                                 <!--
-                                    <xsl:value-of select="@type" />
-                                -->
                                 <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
                                 <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
                                     <xsl:value-of select="@type" />
                                 </a>
+                                -->
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:otherwise>
