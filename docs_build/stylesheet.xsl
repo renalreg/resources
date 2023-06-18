@@ -256,7 +256,9 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="type" select="@type" />
+                        <xsl:value-of select="$type" />
                         <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
+                        <xsl:value-of select="$schemaLocation" />
                         <!--
                         This requires functions not available in XPath 1.0 which LXML may not support.
                         <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
