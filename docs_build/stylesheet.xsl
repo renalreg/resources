@@ -255,7 +255,10 @@
                         </a>
                     </xsl:when>
                     <xsl:otherwise>
-                        <a href="{concat('https://renalreg.github.io/resources/master/Types/', @type, '.html')}">
+                        <xsl:variable name="type" select="@type" />
+                        <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
+                        <xsl:variable name="documentName" select="substring-before(substring-after($schemaLocation, '/'), '.xsd')" />
+                        <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html)}">
                             <xsl:value-of select="@type" />
                         </a>
                     </xsl:otherwise>
