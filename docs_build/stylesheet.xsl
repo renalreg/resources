@@ -256,11 +256,13 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:variable name="type" select="@type" />
+                        <!--
                         <xsl:variable name="rootElement" select="ancestor::*[not(parent::*)][last()]" />
+                        -->
                         <!--
                         Remove and substring-after(@schemaLocation, $type + '.xsd') = ''
                         -->
-                        <xsl:variable name="schemaLocation" select="$rootElement/xs:include[contains(@schemaLocation, $type + '.xsd')]/@schemaLocation"/>
+                        <xsl:variable name="schemaLocation" select="/xs:include[contains(@schemaLocation, $type + '.xsd')]/@schemaLocation"/>
                         <!--
                         This isn't working for some reason.
                         <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
