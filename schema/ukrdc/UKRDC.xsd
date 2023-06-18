@@ -37,15 +37,15 @@
                         <xs:documentation>The extract process within the facility which produced this file.</xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="Patient" type="Patient" minOccurs="1" maxOccurs="1" >
+                <xs:element name="Patient" type="Patient" minOccurs="1" maxOccurs="1">
                     <xs:documentation>Patient Demographics</xs:documentation>
                 </xs:element>
-                <xs:element name="LabOrders" type="LabOrders" minOccurs="0" maxOccurs="unbounded"  >
+                <xs:element name="LabOrders" type="LabOrders" minOccurs="0" maxOccurs="1">
                     <xs:annotation>
                         <xs:documentation>Lab Orders. These are measurements taken about a patient that have been processed by a Laboratory. Our EHR structure requires that all test results are associated with a lab order. If the details of the lab order are not received by the sending system then a generic lab order should be created to contain all results with a common sample time.</xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element minOccurs="0" name="SocialHistories">
+                <xs:element name="SocialHistories" minOccurs="0" maxOccurs="1">
                     <xs:annotation>
                         <xs:documentation>Other Health Related Behaviours. This element should not be submitted without prior discussion with the UKRR</xs:documentation>
                     </xs:annotation>
