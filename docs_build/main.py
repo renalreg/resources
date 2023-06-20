@@ -107,7 +107,7 @@ for path, dirs, files in os.walk(in_path):
         
         html_string = replace_strings(html_string, type_paths)
 
-        with open(out_file, "wb") as html_file:
+        with open(out_file, "w") as html_file:
             html_file.write(html_string)
 
     index_path = out_path.joinpath(path_relative_to_base, "index.html")
