@@ -77,7 +77,7 @@ for path, dirs, files in os.walk(in_path):
         dom = ET.parse(in_file.as_posix())
         
         namespace = "http://www.w3.org/2001/XMLSchema"
-        xpath_expr = "/xs:complexType/@name|/xs:simpleType/@name"
+        xpath_expr = "//xs:complexType/@name|//xs:simpleType/@name"
         xsd_types = dom.xpath(xpath_expr, namespaces={"xs": namespace})
         
         for xsd_type in xsd_types:
