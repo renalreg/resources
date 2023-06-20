@@ -255,7 +255,7 @@
                         </a>
                     </xsl:when>
                     <xsl:otherwise>
-                            Type: <xsl:value-of select="@type" />
+                            XXX<xsl:value-of select="@type" />YYY
                             <br/>
                         
                             <!--

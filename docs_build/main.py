@@ -1,8 +1,10 @@
 import os
+import re
 import sys
-import lxml.etree as ET
-from typing import List
 from pathlib import Path
+from typing import List
+
+import lxml.etree as ET
 
 in_path = Path(sys.argv[1])
 out_path = Path(sys.argv[2])
@@ -12,6 +14,26 @@ out_path.mkdir(exist_ok=True)
 
 xslt = ET.parse(xsl_path.as_posix())
 transform = ET.XSLT(xslt)
+
+
+def replace_strings(html_document, lookup_dict):
+    pattern = r'XXX(\w+)YYY'  # Regular expression pattern to match XXXValueYYY
+
+    def replace(match):
+        value = match.group(1)
+        
+        type_path = lookup_dict.get(Value, None)
+        
+        if type_path:
+            replacement = f"<A HREF='{type_path}'>Type: {value}</A>"
+        else:
+            replacement = f"Type: {value}"
+
+        return replacement
+
+    replaced_html = re.sub(pattern, replace, html_document)
+
+    return replaced_html
 
 
 def make_index(title: str, dir_links: List[str], file_links: List[str]):
@@ -46,6 +68,21 @@ for path, dirs, files in os.walk(in_path):
     page_dir.mkdir(exist_ok=True)
 
     file_links = []
+    
+    type_paths = {}
+    
+    for xsd_file in [f for f in files if f.endswith(".xsd")]:
+    
+        in_file = Path(path).joinpath(xsd_file)
+        dom = ET.parse(in_file.as_posix())
+        
+        namespace = "http://www.w3.org/2001/XMLSchema"
+        xpath_expr = "/xs:complexType/@name|/xs:simpleType/@name"
+        xsd_types = dom.xpath(xpath_expr, namespaces={"ns": namespace})
+        
+        for xsd_type in xsd_types:
+            type_paths[xsd_type] = in_file[:-4] + ".html"
+
 
     for xsd_file in [f for f in files if f.endswith(".xsd")]:
         base_name = xsd_file.split(".xsd")[0]
@@ -62,9 +99,13 @@ for path, dirs, files in os.walk(in_path):
 
         dom = ET.parse(in_file.as_posix())
         newdom = transform(dom)
+        
+        html_string = ET.tostring(newdom, pretty_print=True)
+        
+        html_string = replace_strings(html_string, type_paths)
 
-        with open(out_file, "wb") as html:
-            html.write(ET.tostring(newdom, pretty_print=True))
+        with open(out_file, "wb") as html_file:
+            html_file.write(html_string)
 
     index_path = out_path.joinpath(path_relative_to_base, "index.html")
     with open(index_path, "w") as html:
