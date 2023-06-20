@@ -254,6 +254,9 @@
                             <xsl:value-of select="@type" />
                         </a>
                     </xsl:when>
+                    <xsl:when test="starts-with(@type, 'xs:')">
+                            Type: <xsl:value-of select="@type" />
+                    </xsl:when>
                     <xsl:otherwise>
                             XXX<xsl:value-of select="@type" />YYY
                             <br/>

@@ -15,6 +15,8 @@ out_path.mkdir(exist_ok=True)
 xslt = ET.parse(xsl_path.as_posix())
 transform = ET.XSLT(xslt)
 
+type_paths = {}
+
 
 def replace_strings(html_document, lookup_dict):
     pattern = r'XXX(\w+)YYY'  # Regular expression pattern to match XXXValueYYY
@@ -26,7 +28,7 @@ def replace_strings(html_document, lookup_dict):
         value = match.group(1)
         
         type_path = lookup_dict.get(value, None)
-        
+
         if type_path:
             replacement = f"<A HREF='{type_path}'>Type: {value}</A>"
         else:
@@ -63,17 +65,12 @@ def make_index(title: str, dir_links: List[str], file_links: List[str]):
     content += "</html>"
     return content
 
-
 for path, dirs, files in os.walk(in_path):
 
     path_relative_to_base = Path(path).relative_to(in_path)
     page_dir = out_path.joinpath(path_relative_to_base)
     page_dir.mkdir(exist_ok=True)
 
-    file_links = []
-    
-    type_paths = {}
-    
     for xsd_file in [f for f in files if f.endswith(".xsd")]:
     
         in_file = Path(path).joinpath(xsd_file)
@@ -84,8 +81,16 @@ for path, dirs, files in os.walk(in_path):
         xsd_types = dom.xpath(xpath_expr, namespaces={"xs": namespace})
         
         for xsd_type in xsd_types:
-            type_paths[xsd_type] = str(in_file)[:-4] + ".html"
+            type_path = str(in_file).replace('schema/ukrdc/', '')
+            type_paths[xsd_type] = str(type_path)[:-4] + ".html"
 
+for path, dirs, files in os.walk(in_path):
+
+    path_relative_to_base = Path(path).relative_to(in_path)
+    page_dir = out_path.joinpath(path_relative_to_base)
+    page_dir.mkdir(exist_ok=True)
+
+    file_links = []
 
     for xsd_file in [f for f in files if f.endswith(".xsd")]:
         base_name = xsd_file.split(".xsd")[0]
