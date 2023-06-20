@@ -18,6 +18,9 @@ transform = ET.XSLT(xslt)
 
 def replace_strings(html_document, lookup_dict):
     pattern = r'XXX(\w+)YYY'  # Regular expression pattern to match XXXValueYYY
+    
+    if isinstance(html_document, bytes):
+            html_document = html_document.decode()
 
     def replace(match):
         value = match.group(1)
