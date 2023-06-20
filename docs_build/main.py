@@ -25,7 +25,7 @@ def replace_strings(html_document, lookup_dict):
     def replace(match):
         value = match.group(1)
         
-        type_path = lookup_dict.get(Value, None)
+        type_path = lookup_dict.get(value, None)
         
         if type_path:
             replacement = f"<A HREF='{type_path}'>Type: {value}</A>"
