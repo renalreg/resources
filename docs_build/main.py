@@ -81,7 +81,7 @@ for path, dirs, files in os.walk(in_path):
         xsd_types = dom.xpath(xpath_expr, namespaces={"xs": namespace})
         
         for xsd_type in xsd_types:
-            type_paths[xsd_type] = in_file[:-4] + ".html"
+            type_paths[xsd_type] = str(in_file)[:-4] + ".html"
 
 
     for xsd_file in [f for f in files if f.endswith(".xsd")]:
