@@ -78,7 +78,7 @@ for path, dirs, files in os.walk(in_path):
         
         namespace = "http://www.w3.org/2001/XMLSchema"
         xpath_expr = "/xs:complexType/@name|/xs:simpleType/@name"
-        xsd_types = dom.xpath(xpath_expr, namespaces={"ns": namespace})
+        xsd_types = dom.xpath(xpath_expr, namespaces={"xs": namespace})
         
         for xsd_type in xsd_types:
             type_paths[xsd_type] = in_file[:-4] + ".html"
