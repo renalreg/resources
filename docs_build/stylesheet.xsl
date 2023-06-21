@@ -173,8 +173,11 @@
             <td>
                 <xsl:apply-templates select="xs:annotation/xs:documentation" />
                 <xsl:choose>
+                    <xsl:when test="starts-with(@type, 'xs:')">
+                        Type: <xsl:value-of select="@type" />
+                    </xsl:when>
                     <xsl:when test="@type">
-                        <xsl:value-of select="@type" />
+                        XXX<xsl:value-of select="@type" />YYY
                     </xsl:when>
                     <xsl:when test="xs:simpleType/xs:restriction">
                         <xsl:call-template name="restriction" />
