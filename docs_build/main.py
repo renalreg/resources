@@ -84,7 +84,10 @@ for path, dirs, files in os.walk(in_path):
             type_path = str(in_file).replace('schema/ukrdc/', '')
             
             # HACK: This only fixes a specific case.
-            type_path.replace('Types/Types/', 'Types/')
+            type_path_list = type_path.split('/')
+            if type_path_list[0] == type_path_list[1]:
+                type_path = "/".join(type_path_list[1:]
+            # type_path.replace('Types/Types/', 'Types/')
             
             type_paths[xsd_type] = str(type_path)[:-4] + ".html"
 
