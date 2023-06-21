@@ -427,6 +427,8 @@
                     </td>
                 </tr>
             </xsl:if>
+            
+            <xsl:apply-templates select="xs:attribute" />
 
         </table>
 
