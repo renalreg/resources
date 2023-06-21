@@ -82,6 +82,10 @@ for path, dirs, files in os.walk(in_path):
         
         for xsd_type in xsd_types:
             type_path = str(in_file).replace('schema/ukrdc/', '')
+            
+            # HACK: This only fixes a specific case.
+            type_path.replace('Types/Types/', 'Types/')
+            
             type_paths[xsd_type] = str(type_path)[:-4] + ".html"
 
 for path, dirs, files in os.walk(in_path):
@@ -110,6 +114,9 @@ for path, dirs, files in os.walk(in_path):
         
         html_string = ET.tostring(newdom, pretty_print=True)
         
+        # TODO: This doesn't work if the definition is in a different
+        # file in the same folder as it's being used in.
+        # The replace function needs to take account of the current path.
         html_string = replace_strings(html_string, type_paths)
 
         with open(out_file, "w") as html_file:

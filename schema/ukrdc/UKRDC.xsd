@@ -63,6 +63,7 @@
                     <xs:annotation>
                         <xs:appinfo>
                             <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                            <database>Test</database>
                         </xs:appinfo>
                         <xs:documentation>Lab Orders</xs:documentation>
                     </xs:annotation>
