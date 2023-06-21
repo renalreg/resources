@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
+<xsl:stylesheet xmlns="http://www.rixg.org.uk/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
     <!-- 
     Notes:
         originally-created-by: MJS (matthew.south@psych.ox.ac.uk)
@@ -90,7 +90,7 @@
     </xsl:template>
 
     <!-- Found under xs:complexType, xs:element, xs:attribute -->
-    <xsl:template match="xs:annotation/xs:appinfo">
+    <xsl:template match="xs:annotation/xs:appinfo/dataset">
         <div class="dataset">
             Should be submitted for:  <xsl:value-of select="." />
             <br/>
@@ -247,7 +247,7 @@
     </xsl:template>
 
     <xsl:template name="elementContent">
-        <xsl:apply-templates select="xs:annotation/xs:appinfo" />
+        <xsl:apply-templates select="xs:annotation/xs:appinfo/dataset" />
         <xsl:apply-templates select="xs:annotation/xs:documentation" />
         <xsl:choose>
             <xsl:when test="@type">
