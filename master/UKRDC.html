@@ -45,7 +45,10 @@
         <td colspan="2">
           <strong>SendingFacility</strong>
         </td>
-        <td><div class="documentation">
+        <td><div class="dataset">
+            Should be submitted for:  
+                            ALL
+                        <br/></div><div class="documentation">
                         The value of this element is the Site or System responsible for the data being sent.
                         <br/></div>
                             <A HREF='Types/SendingFacility.html'>Type: SendingFacility</A>
@@ -55,7 +58,10 @@
         <td colspan="2">
           <strong>SendingExtract</strong>
         </td>
-        <td><div class="documentation">
+        <td><div class="dataset">
+            Should be submitted for:  
+                            ALL
+                        <br/></div><div class="documentation">
                         The type of data feed. This is used to enable different behaviour when the original source of data was something other than a UKRDC feed (i.e. when "PV XML" is converted to "RDA XML" it is given a SendingExtract of "PV"). Unless told otherwise the value should be set to "UKRDC".
                         <br/></div>
                             <A HREF='Types/SendingExtract.html'>Type: SendingExtract</A>
@@ -65,19 +71,30 @@
         <td colspan="2">
           <strong>Patient</strong>
         </td>
-        <td><div class="documentation">Patient Demographics<br/></div>
+        <td><div class="dataset">
+            Should be submitted for:  
+                            ALL
+                        <br/></div><div class="documentation">Patient Demographics<br/></div>
                             <A HREF='Patient.html'>Type: Patient</A>
                             <br/></td>
       </tr>
       <tr>
         <td colspan="2">LabOrders</td>
-        <td><div class="documentation">Lab Orders<br/></div>
+        <td><div class="dataset">
+            Should be submitted for:  
+                            UKRRv4,UKRRv5,PKB,RADAR
+                            Test
+                        <br/></div><div class="documentation">Lab Orders<br/></div>
                             <A HREF='LabOrders/LabOrder.html'>Type: LabOrders</A>
                             <br/></td>
       </tr>
       <tr>
         <td colspan="2">SocialHistories</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            NONE
+                        <br/></div>
           <div class="documentation">Other Health Related Behaviours<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -92,6 +109,10 @@
       <tr>
         <td colspan="2">FamilyHistories</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            NONE
+                        <br/></div>
           <div class="documentation">Family Histories<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -105,7 +126,10 @@
       </tr>
       <tr>
         <td colspan="2">Observations</td>
-        <td><div class="documentation">
+        <td><div class="dataset">
+            Should be submitted for:  
+                            UKRRv4,UKRRv5,PKB,RADAR
+                        <br/></div><div class="documentation">
                         Observations. These are measurements taken about a patient that do not involve a Laboratory.
                         <br/></div>
                             <A HREF='Observations/Observation.html'>Type: Observations</A>
@@ -114,6 +138,10 @@
       <tr>
         <td colspan="2">Allergies</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            NONE
+                        <br/></div>
           <div class="documentation">
                         Allergies.
                         <br/></div>
@@ -133,19 +161,28 @@
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">Diagnosis*</td>
-              <td><div class="documentation">Co-Morbidities<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4,UKRRv5,PKB,RADAR
+                                    <br/></div><div class="documentation">Co-Morbidities<br/></div>
                             <A HREF='Diagnoses/Diagnosis.html'>Type: Diagnosis</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">CauseOfDeath</td>
-              <td><div class="documentation">Cause of Death<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4,UKRRv5,RADAR
+                                    <br/></div><div class="documentation">Cause of Death<br/></div>
                             <A HREF='Diagnoses/CauseOfDeath.html'>Type: CauseOfDeath</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">RenalDiagnosis</td>
-              <td><div class="documentation">Renal Diagnoses<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4,UKRRv5,PKB,RADAR
+                                    <br/></div><div class="documentation">Renal Diagnoses<br/></div>
                             <A HREF='Diagnoses/RenalDiagnosis.html'>Type: RenalDiagnosis</A>
                             <br/></td>
             </tr>
@@ -155,6 +192,10 @@
       <tr>
         <td colspan="2">Medications</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            UKRRv4,UKRRv5,PKB,RADAR
+                        <br/></div>
           <div class="documentation">Medications<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -169,6 +210,10 @@
       <tr>
         <td colspan="2">DialysisPrescriptions</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            UKRRv5
+                        <br/></div>
           <div class="documentation">Dialysis Prescriptions<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -201,25 +246,37 @@
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">Procedure*</td>
-              <td><div class="documentation">Procedures (not otherwise Specified)<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        NONE
+                                    <br/></div><div class="documentation">Procedures (not otherwise Specified)<br/></div>
                             <A HREF='Procedures/Procedure.html'>Type: Procedure</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">DialysisSessions*</td>
-              <td><div class="documentation">Dialysis Sessions<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4,UKRRv5
+                                    <br/></div><div class="documentation">Dialysis Sessions<br/></div>
                             <A HREF='DialysisSessions/DialysisSession.html'>Type: DialysisSessions</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">Transplant*</td>
-              <td><div class="documentation">Transplant Procedures<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4,UKRRv5,PKB
+                                    <br/></div><div class="documentation">Transplant Procedures<br/></div>
                             <A HREF='Transplants/Transplant.html'>Type: TransplantProcedure</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">VascularAccess*</td>
-              <td><div class="documentation">Vascular Access Constructions<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4
+                                    <br/></div><div class="documentation">Vascular Access Constructions<br/></div>
                             <A HREF='VascularAccesses/VascularAccess.html'>Type: VascularAccess</A>
                             <br/></td>
             </tr>
@@ -229,6 +286,10 @@
       <tr>
         <td colspan="2">Documents</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            PKB
+                        <br/></div>
           <div class="documentation">Documents<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -246,19 +307,28 @@
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
               <td colspan="2">Encounter*</td>
-              <td><div class="documentation">This is used to record the duration of something other than a Treatment. This element should not be submitted without prior discussion with the UKRR.<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        PKB
+                                    <br/></div><div class="documentation">This is used to record the duration of something other than a Treatment. This element should not be submitted without prior discussion with the UKRR.<br/></div>
                             <A HREF='Encounters/Encounter.html'>Type: Encounter</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">Treatment*</td>
-              <td><div class="documentation">This is used to record the duration a Patient received a particular type of Care/Treatment at a particular Treatment Facility. It is similar in concept to the UKRR TXT records however at the end of the period it should be end-dated rather than an additional record being sent. It is possible for treatment records to overlap if a patient has multiple treatments (such as post-transplant dialysis). A treatment record should exist for any period of time where they would be considered a patient (so for example code 900 record for pre-RRT CKD and a code 94 record for post-RRT Conservative care). Details of Transplants themselves should be recorded as Procedures but Treatment records should be used to record periods of Transplant related Inpatient/Outpatient care.<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        UKRRv4,UKRRv5,PKB
+                                    <br/></div><div class="documentation">This is used to record the duration a Patient received a particular type of Care/Treatment at a particular Treatment Facility. It is similar in concept to the UKRR TXT records however at the end of the period it should be end-dated rather than an additional record being sent. It is possible for treatment records to overlap if a patient has multiple treatments (such as post-transplant dialysis). A treatment record should exist for any period of time where they would be considered a patient (so for example code 900 record for pre-RRT CKD and a code 94 record for post-RRT Conservative care). Details of Transplants themselves should be recorded as Procedures but Treatment records should be used to record periods of Transplant related Inpatient/Outpatient care.<br/></div>
                             <A HREF='Encounters/Treatment.html'>Type: Treatment</A>
                             <br/></td>
             </tr>
             <tr>
               <td colspan="2">TransplantList*</td>
-              <td><div class="documentation">This is only for NHSBT supplied Transplant Waiting List data.<br/></div>
+              <td><div class="dataset">
+            Should be submitted for:  
+                                        NHSBT
+                                    <br/></div><div class="documentation">This is only for NHSBT supplied Transplant Waiting List data.<br/></div>
                             <A HREF='Encounters/TransplantList.html'>Type: TransplantList</A>
                             <br/></td>
             </tr>
@@ -268,6 +338,10 @@
       <tr>
         <td colspan="2">ProgramMemberships</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            NONE
+                        <br/></div>
           <div class="documentation">
                         Program Memberships. These are used to record whether or not a patient wishes to participate in one of the UKRDC&#8217;s member projects. In the case of projects such as RADAR the Program Membership record should only be closed if the patient actively wishes to withdraw. It should not be end dated when they leave the unit or die. If a patient decides to leave a project and then re-joins a new Program Membership record should be created (with a different ExternalID) rather than re-opening the original one.
                         <br/></div>
@@ -284,6 +358,10 @@
       <tr>
         <td colspan="2">OptOuts</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            UKRRv4,UKRRv5
+                        <br/></div>
           <div class="documentation">Opt-Outs<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -298,6 +376,10 @@
       <tr>
         <td colspan="2">ClinicalRelationships</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            NONE
+                        <br/></div>
           <div class="documentation">This is used to record the relationship between a Patient and a Clinician or Care Facility. This element should not be submitted without prior discussion with the UKRR.<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -312,6 +394,10 @@
       <tr>
         <td colspan="2">Surveys</td>
         <td>
+          <div class="dataset">
+            Should be submitted for:  
+                            NONE
+                        <br/></div>
           <div class="documentation">Surveys<br/></div>
           <table border="1" cellspacing="0" cellpadding="4">
             <tr>
@@ -325,7 +411,10 @@
       </tr>
       <tr>
         <td colspan="2">PVData</td>
-        <td><div class="documentation">
+        <td><div class="dataset">
+            Should be submitted for:  
+                            PKB
+                        <br/></div><div class="documentation">
                         This is used internally to hold data items sent in PV XML files and should not be sent by external parties.<br/></div>
                             <A HREF='Types/PVData.html'>Type: PVData</A>
                             <br/></td>
