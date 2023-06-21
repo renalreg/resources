@@ -8,10 +8,10 @@
 
     <xs:complexType name="LabOrders">
         <xs:attribute name="start" type="xs:date">
-            <xs:documentation>Lab Orders</xs:documentation>
+            <xs:documentation></xs:documentation>
         </xs:attribute>
         <xs:attribute name="stop" type="xs:date">
-            <xs:documentation>Lab Orders</xs:documentation>
+            <xs:documentation></xs:documentation>
         </xs:attribute>
         <xs:sequence>
             <xs:element name="LabOrder" type="LabOrder" minOccurs="0" maxOccurs="unbounded"/>
@@ -27,23 +27,27 @@
 
     <xs:complexType name="LabOrder">
         <xs:annotation>
-            <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+            <xs:appinfo>
+                <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+            </xs:appinfo>
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="ReceivingLocation" type="Location" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>Location or Facility receiving/performing the order.</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="PlacerId" minOccurs="1">
                 <xs:annotation>
                     <xs:appinfo>
-                        <database>laborder.placerid</database>
+                        <!-- <database>laborder.placerid</database> -->
                         <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
                     </xs:appinfo>
-                    <xs:documentation>ORC:2 Placer's Order Id</xs:documentation>
+                    <xs:documentation>ORC:2 Placer (Hospital)'s Order Id</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -53,8 +57,10 @@
             </xs:element>
             <xs:element name="FillerId" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>laborder.fillerid</xs:appinfo> -->
-                    <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+                    <xs:appinfo>
+                        <!-- <xs:appinfo>laborder.fillerid</xs:appinfo> -->
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>ORC:3 Filler (Lab)'s Order Id</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -65,6 +71,9 @@
             </xs:element>
             <xs:element name="OrderedBy" type="Location" minOccurs="0">
                 <xs:annotation>
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>Requesting Location (as in Hospital, GP, etc.)</xs:documentation>
                 </xs:annotation>
             </xs:element>
