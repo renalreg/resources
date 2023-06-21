@@ -106,7 +106,10 @@
       </tr>
       <tr>
         <td colspan="2">ReceivingLocation</td>
-        <td><div class="documentation">Location or Facility receiving/performing the order.<br/></div>
+        <td><div class="dataset">
+            Should be submitted for:  
+                        UKRRv4,UKRRv5,PKB,RADAR
+                    <br/></div><div class="documentation">Location or Facility receiving/performing the order.<br/></div>
                             <A HREF='Types/Location.html'>Type: Location</A>
                             <br/></td>
       </tr>
@@ -116,9 +119,9 @@
         </td>
         <td><div class="dataset">
             Should be submitted for:  
-                        laborder.placerid
+                        
                         UKRRv4,UKRRv5,PKB,RADAR
-                    <br/></div><div class="documentation">ORC:2 Placer's Order Id<br/></div>xs:string
+                    <br/></div><div class="documentation">ORC:2 Placer (Hospital)'s Order Id<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -126,7 +129,11 @@
       </tr>
       <tr>
         <td colspan="2">FillerId</td>
-        <td><div class="documentation">ORC:3 Filler (Lab)'s Order Id<br/></div>xs:string
+        <td><div class="dataset">
+            Should be submitted for:  
+                        
+                        UKRRv4,UKRRv5,PKB,RADAR
+                    <br/></div><div class="documentation">ORC:3 Filler (Lab)'s Order Id<br/></div>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -134,7 +141,10 @@
       </tr>
       <tr>
         <td colspan="2">OrderedBy</td>
-        <td><div class="documentation">Requesting Location (as in Hospital, GP, etc.)<br/></div>
+        <td><div class="dataset">
+            Should be submitted for:  
+                        UKRRv4,UKRRv5,PKB,RADAR
+                    <br/></div><div class="documentation">Requesting Location (as in Hospital, GP, etc.)<br/></div>
                             <A HREF='Types/Location.html'>Type: Location</A>
                             <br/></td>
       </tr>
