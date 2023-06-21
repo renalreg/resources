@@ -7,15 +7,16 @@
     <xs:include schemaLocation="../Types/ServiceId.xsd"/>
 
     <xs:complexType name="LabOrders">
-        <xs:sequence>
-            <xs:element name="LabOrder" type="LabOrder" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
         <xs:attribute name="start" type="xs:date">
             <xs:documentation>Lab Orders</xs:documentation>
         </xs:attribute>
         <xs:attribute name="stop" type="xs:date">
             <xs:documentation>Lab Orders</xs:documentation>
         </xs:attribute>
+        <xs:sequence>
+            <xs:element name="LabOrder" type="LabOrder" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+
     </xs:complexType>
 
     <xs:complexType name="ResultItems">
