@@ -1,0 +1,319 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#LabOrder">LabOrder</a>
+      </li>
+      <li>
+        <a href="#LabOrders">LabOrders</a>
+      </li>
+      <li>
+        <a href="#ResultItem">ResultItem</a>
+      </li>
+      <li>
+        <a href="#ResultItems">ResultItems</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="LabOrders">LabOrders</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+                        @
+                        start</td>
+        <td>xs:date</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+                        @
+                        stop</td>
+        <td>xs:date</td>
+      </tr>
+      <tr>
+        <td colspan="2">LabOrder*</td>
+        <td>
+                            Type: LabOrder<br/></td>
+      </tr>
+    </table>
+    <br/>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="ResultItems">ResultItems</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">ResultItem*</td>
+        <td>
+                            Type: ResultItem<br/></td>
+      </tr>
+    </table>
+    <br/>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="LabOrder">LabOrder</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <tr>
+        <td colspan="2">ReceivingLocation</td>
+        <td><div class="documentation">Location or Facility receiving/performing the order.<br/></div>
+                            Type: Location<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>PlacerId</strong>
+        </td>
+        <td><div class="dataset">
+            Should be submitted for:  
+                        laborder.placerid
+                        UKRRv4,UKRRv5,PKB,RADAR
+                    <br/></div><div class="documentation">ORC:2 Placer's Order Id<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">FillerId</td>
+        <td><div class="documentation">ORC:3 Filler (Lab)'s Order Id<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">OrderedBy</td>
+        <td><div class="documentation">Requesting Location (as in Hospital, GP, etc.)<br/></div>
+                            Type: Location<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">OrderItem</td>
+        <td><div class="documentation">OBR:4 Service Id - the identity of the test ordered.<br/></div>
+                            Type: CodedField<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">OrderCategory</td>
+        <td>
+                            Type: CodedField<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">SpecimenCollectedTime</td>
+        <td><div class="documentation">OBR:22<br/></div>
+                            Type: xs:dateTime<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">SpecimenReceivedTime</td>
+        <td><div class="documentation">OBR:14<br/></div>
+                            Type: xs:dateTime<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">Status</td>
+        <td><div class="documentation"><br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Priority</td>
+        <td>
+                            Type: CodedField<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">SpecimenSource</td>
+        <td><div class="documentation">OBR:15.1 e.g. serum, blood<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                50</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Duration</td>
+        <td><div class="documentation">OBR:27.3<br/></div>
+                            Type: xs:string<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>ResultItems</strong>
+        </td>
+        <td>
+                            Type: ResultItems<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">PatientClass</td>
+        <td><div class="documentation">In patient / out patient - equivalent to PV1:2 Patient Class<br/></div>
+                            Type: CF_HL7_0004<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteredOn</td>
+        <td><div class="documentation">Date Order entered<br/></div>
+                            Type: xs:dateTime<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteredAt</td>
+        <td><div class="documentation"><br/></div>
+                            Type: Location<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteringOrganization</td>
+        <td><div class="documentation"><br/></div>
+                            Type: Location<br/></td>
+      </tr>
+    </table>
+    <br/>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="ResultItem">ResultItem</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <tr>
+        <td colspan="2">ResultType</td>
+        <td><div class="documentation">AT<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                2</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteredOn</td>
+        <td><div class="documentation"><br/></div>
+                            Type: xs:dateTime<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">PrePost</td>
+        <td><div class="documentation">Was the sample taken PRE or POST dialysis<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>PRE (Pre-Dialysis)</li><li>POST (Post-Dialysis)</li><li>UNK (Unknown)</li><li>NA (Not Applicable)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>ServiceId</strong>
+        </td>
+        <td><div class="documentation">Test Code (OBX:3)<br/></div>
+                            Type: ServiceId<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">SubId</td>
+        <td><div class="documentation">Sub-Test Id (OBX:4)<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                30</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">ResultValue</td>
+        <td><div class="documentation">OBX:5<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                20</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">ResultValueUnits</td>
+        <td><div class="documentation">OBX:6<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                30</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">ReferenceRange</td>
+        <td><div class="documentation">OBX:7<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                220</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">InterpretationCodes</td>
+        <td><div class="documentation">Interpretation Codes (OBX:8)<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>POS (Positive)</li><li>NEG (Negative)</li><li>UNK (Unknown)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Status</td>
+        <td><div class="documentation">OBX:11<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>F (Final)</li><li>P (Preliminary)</li><li>D (Deleted)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">ObservationTime</td>
+        <td><div class="documentation">OBX:14<br/></div>
+                            Type: xs:dateTime<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">Comments</td>
+        <td><div class="documentation">From NTE:3<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                1000</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">ReferenceComment</td>
+        <td><div class="documentation"><br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                1000</div></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>

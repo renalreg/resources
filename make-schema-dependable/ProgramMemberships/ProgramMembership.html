@@ -1,0 +1,97 @@
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#ProgramMembership">ProgramMembership</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="ProgramMembership">ProgramMembership</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <tr>
+        <td colspan="2">EnteredBy</td>
+        <td><div class="documentation">Person entering the consent as a National Clinicial code where possible or other local code if not.<br/></div>
+                            Type: Clinician<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">EnteredAt</td>
+        <td><div class="documentation">National code for the trust recording the consent - e.g. RXF01<br/></div>
+                            Type: Location<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">ProgramName</td>
+        <td><div class="documentation">Name of RDG or study<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">ProgramDescription</td>
+        <td><div class="documentation">Free text<br/></div>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                100</div></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>FromTime</strong>
+        </td>
+        <td><div class="documentation">Date Consent Given<br/></div>
+                            Type: xs:date<br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">ToTime</td>
+        <td><div class="documentation">Date Consent Withdrawn<br/></div>
+                            Type: xs:date<br/></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>
