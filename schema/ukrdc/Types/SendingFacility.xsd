@@ -2,11 +2,18 @@
 
 <xs:include schemaLocation="../Types/RRTypes.xsd" />
 
-<xs:simpleType name="SendingFacility">
-    <xs:restriction base="xs:string">
-        <xs:minLength value="1" />
-        <xs:maxLength value="7" />
-    </xs:restriction>
+<xs:simpleType name="SendingFacilityType">
+  <xs:restriction base="xs:string">
+    <xs:minLength value="1" />
+    <xs:maxLength value="7" />
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+<xs:complexType name="SendingFacility">
+  <xs:simpleContent>
+    <xs:extension base="SendingFacilityType">
     <xs:attribute name="channelName" type="xs:string" use="required">
         <xs:annotation>
             <xs:documentation>This should be a reference for the System / Version which generated the file. The intended purpose is to allow us to identify, or temporarily rectify, issues with what a particular extract is generating.</xs:documentation>
@@ -22,6 +29,8 @@
             <xs:documentation>This should be the version (from the XSD Schema) that the extract has been written against. This is to allow us to process incoming files accordingly as well as track which Units are submitting which version. Note that the RDA Schema version is unrelated to the UKRR Dataset version.</xs:documentation>
         </xs:annotation>
     </xs:attribute>
-</xs:simpleType>
+        </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
 
 </xs:schema>

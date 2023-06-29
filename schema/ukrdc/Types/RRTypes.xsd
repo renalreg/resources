@@ -1,6 +1,6 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
 
-<xs:simpleType name="UKRDCSchemaVersion">
+<xs:simpleType name='UKRDCSchemaVersion'>
     <xs:annotation>
         <xs:documentation>UKRDC Schema Version in 0.0.0 Format</xs:documentation>
     </xs:annotation>

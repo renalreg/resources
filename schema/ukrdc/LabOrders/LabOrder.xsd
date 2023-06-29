@@ -7,16 +7,13 @@
     <xs:include schemaLocation="../Types/ServiceId.xsd"/>
 
     <xs:complexType name="LabOrders">
-        <xs:attribute name="start" type="xs:date">
-            <xs:documentation></xs:documentation>
-        </xs:attribute>
-        <xs:attribute name="stop" type="xs:date">
-            <xs:documentation></xs:documentation>
-        </xs:attribute>
         <xs:sequence>
             <xs:element name="LabOrder" type="LabOrder" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-
+        <xs:attribute name="start" type="xs:date">
+        </xs:attribute>
+        <xs:attribute name="stop" type="xs:date">
+        </xs:attribute>
     </xs:complexType>
 
     <xs:complexType name="ResultItems">
@@ -79,7 +76,9 @@
             </xs:element>
             <xs:element name="OrderItem" type="CodedField" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>OBR:4 Service Id - the identity of the test ordered.</xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -87,14 +86,18 @@
             <xs:element name="SpecimenCollectedTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>laborder.specimencollectedtime</xs:appinfo> -->
-                    <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>OBR:22</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="SpecimenReceivedTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>laborder.specimenreceivedtime</xs:appinfo> -->
-                    <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>OBR:14</xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -162,7 +165,9 @@
 
     <xs:complexType name="ResultItem">
         <xs:annotation>
-            <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
+            <xs:appinfo>
+                <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+             </xs:appinfo>
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
@@ -185,7 +190,10 @@
             </xs:element>
             <xs:element name="PrePost" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>resultitem.prepost</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        <!-- <xs:appinfo>resultitem.prepost</xs:appinfo> -->
+                    </xs:appinfo>
                     <xs:documentation>Was the sample taken PRE or POST dialysis</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -215,6 +223,9 @@
             </xs:element>
             <xs:element name="ServiceId" type="ServiceId">
                 <xs:annotation>
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>Test Code (OBX:3)</xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -231,7 +242,10 @@
             </xs:element>
             <xs:element name="ResultValue" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>resultitem.resultvalue</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        <!-- <xs:appinfo>resultitem.resultvalue</xs:appinfo> -->
+                    </xs:appinfo>
                     <xs:documentation>OBX:5</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -242,7 +256,10 @@
             </xs:element>
             <xs:element name="ResultValueUnits" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>resultitem.resultvalueunits</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        <!-- <xs:appinfo>resultitem.resultvalueunits</xs:appinfo> -->
+                    </xs:appinfo>
                     <xs:documentation>OBX:6</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -253,7 +270,9 @@
             </xs:element>
             <xs:element name="ReferenceRange" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>resultitem.referencerange</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                    </xs:appinfo>
                     <xs:documentation>OBX:7</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
@@ -264,7 +283,10 @@
             </xs:element>
             <xs:element name="InterpretationCodes" minOccurs="0">
                 <xs:annotation>
-                    <!-- <xs:appinfo>resultitem.interpretationcodes</xs:appinfo> -->
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5,PKB,RADAR</dataset>
+                        <!-- <xs:appinfo>resultitem.interpretationcodes</xs:appinfo> -->
+                    </xs:appinfo>
                     <xs:documentation>Interpretation Codes (OBX:8)</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
