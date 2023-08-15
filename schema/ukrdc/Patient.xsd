@@ -1,26 +1,32 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
     <xs:include schemaLocation="Types/Address.xsd"/>
+    <xs:include schemaLocation="Types/BloodGroup.xsd"/>
+    <xs:include schemaLocation="Types/BloodRhesus.xsd"/>
+    <xs:include schemaLocation="Types/CommonMetadata.xsd"/>
     <xs:include schemaLocation="Types/ContactDetail.xsd"/>
     <xs:include schemaLocation="Types/EthnicGroup.xsd"/>
     <xs:include schemaLocation="Types/FamilyDoctor.xsd"/>
     <xs:include schemaLocation="Types/Gender.xsd"/>
+    <xs:include schemaLocation="Types/Language.xsd"/>
     <xs:include schemaLocation="Types/Name.xsd"/>
     <xs:include schemaLocation="Types/Occupation.xsd"/>
-    <xs:include schemaLocation="Types/Language.xsd"/>
     <xs:include schemaLocation="Types/PatientNumber.xsd"/>
     <xs:include schemaLocation="Types/PersonalContactType.xsd"/>
-    <xs:include schemaLocation="Types/CommonMetadata.xsd"/>
-    <xs:include schemaLocation="Types/BloodGroup.xsd"/>
-    <xs:include schemaLocation="Types/BloodRhesus.xsd"/>
+
     <xs:complexType name="Patient">
         <xs:sequence>
-            <xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="1">
+            <xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="1" maxOccurs="unbounded">
                 <xs:annotation>
-                    <xs:documentation>Every Patient should have one MRN type PatientNumber. This should be the primary identifier for the Patient in the sending system and typically not change. If a National Identifier (such as NHS Number) is used as the MRN it should also be submitted as an NI type PatientNumber.
-                    </xs:documentation>
+                    <xs:appinfo>
+                        <dataset>UKRRv4,UKRRv5</dataset>
+                    </xs:appinfo>
+                    <xs:documentation>Patient Numbers</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Names" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Names</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="Name" type="Name" minOccurs="1" maxOccurs="unbounded"/>
@@ -31,6 +37,9 @@
             <xs:element name="DeathTime" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="Gender" type="Gender" minOccurs="1"/>
             <xs:element name="Addresses" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Addresses</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="Address" type="Address" maxOccurs="unbounded"/>
@@ -42,7 +51,7 @@
                     <xs:sequence>
                         <xs:element name="ContactDetail" type="ContactDetail" maxOccurs="4">
                             <xs:annotation>
-                                <xs:documentation>Only 1 of each type should be sent. This must only be used for the Patient's own Contact Details and not those of third parties.</xs:documentation>
+                                <xs:documentation>Only 1 of each type should be sent. This must only be used for the Patient's own Contact Details and not those of third parties. This should not be submitted for patients who are only being sent as part of the UKRR data collection.</xs:documentation>
                             </xs:annotation>
                         </xs:element>
                     </xs:sequence>

@@ -1,13 +1,13 @@
-from setuptools import setup
-from setuptools import find_packages
 from pathlib import Path
+from setuptools import find_packages
+from setuptools import setup
 
 # Read the contents of the README file
 long_description = (Path(__file__).parent / "README.md").read_text()
 
 setup(
     name="ukrdc-xsdata",
-    version="3.3.1",
+    version="4.0.0",
     long_description=long_description,
     long_description_content_type='text/markdown',
     author="UK Renal Registry",

@@ -1,5 +1,28 @@
 # Changelog
 
+## 4.0.0 - 2023-06-13
+### Added
+- Assessment Element Type
+- Dialysis Prescription Element Type
+
+### Changed
+- Amended RenalDiagnosis / CauseOfDeath to support Primary/Secondary diagnoses.
+- Amended Diagnosis / RenalDiagnosis to allow for refuted or "negative" diagnoses.
+- Amended Diagnosis / RenalDiagnosis to allow whether a Biopsy was used to arrive at the diagnosis.
+- Amended DialysisSession to remove items not in V5.
+- Amended Treatment to remove items not in V5.
+- Added V5 Treatment Modality Codes.
+
+
+
+### 3.4.5 - 2023-06-14
+### Changed
+- Version increment for package build.
+
+### 3.4.0 - 2023-06-14
+### Changed
+- Add ug to the RR23 enumeration.
+
 ## 3.3.0 - 2021-12-16
 ### Changed
 - Add to Clinician/Location Enumeration to support PV 

@@ -39,7 +39,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+          password: ${{ secrets.PYPI_API_TOKEN_SCHEMA }}
           packages_dir: pyxb_build/dist
 
 
@@ -76,7 +76,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+          password: ${{ secrets.PYPI_API_TOKEN_XSDATA }}
           packages_dir: xsdata_build/dist
 
   github-release:
