@@ -111,13 +111,16 @@
                                 <xs:documentation>Acute Kidney Injury - RRT not provided by renal service</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
-                        
+                        <xs:enumeration value="88">
+                            <xs:annotation>
+                                <xs:documentation>Acute Kidney Injury receiving RRT not by renal service</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
                         <xs:enumeration value="101">
                             <xs:annotation>
                                 <xs:documentation>First Assessment by Renal Service</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
-                        
                         <xs:enumeration value="93">
                             <xs:annotation>
                                 <xs:documentation>Conservative Management - Mutual decision not to offer RRT</xs:documentation>
@@ -161,6 +164,26 @@
                         <xs:enumeration value="900">
                             <xs:annotation>
                                 <xs:documentation>CKD (Not on RRT)</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="901">
+                            <xs:annotation>
+                                <xs:documentation>Patient - ESKD with no RRT</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="902">
+                            <xs:annotation>
+                                <xs:documentation>Patient - CKD-advanced MDT clinic</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="903">
+                            <xs:annotation>
+                                <xs:documentation>Patient - CKD-clinic follow-up</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="904">
+                            <xs:annotation>
+                                <xs:documentation>Patient - CKD-remote monitoring</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
                         <!-- Deprecated v4 Codes -->
@@ -255,7 +278,7 @@
             <xs:element name="Description" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:maxLength value="32000"/>
+                        <xs:maxLength value="100"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
