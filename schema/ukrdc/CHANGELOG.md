@@ -5,6 +5,8 @@
 - Added Missing EDTA2 PRD Codes
 - Added Missing Admisssion Reason Codes
 - Reduced Admission Reason Description to 100 characters to match database.
+- Changed Mandatory fields in DialysisPrescription
+
 
 ## 4.0.0 - 2023-06-13
 ### Added
