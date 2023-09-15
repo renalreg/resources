@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.5.0 - 2023-09-15
+### Changed
+- Add 101 (First Seen) to the RR7 Treatment List
+
+### 3.4.5 - 2023-06-14
+### Changed
+- Version increment for package build.
+
+### 3.4.0 - 2023-06-14
+### Changed
+- Add ug to the RR23 enumeration.
+
 ## 3.3.0 - 2021-12-16
 ### Changed
 - Add to Clinician/Location Enumeration to support PV 

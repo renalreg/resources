@@ -226,6 +226,13 @@
                                 <xs:documentation>CKD (Not on RRT)</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
+                        
+                        <xs:enumeration value="101">
+                            <xs:annotation>
+                                <xs:documentation>First Assessment by Renal Service</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
