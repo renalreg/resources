@@ -1,5 +1,5 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
-	<xs:complexType name="Diagnosis">
+	<xs:complexType name="DiagnosisCodeType">
 		<xs:sequence>
 			<xs:element name="CodingStandard" minOccurs="0">
 				<xs:simpleType>
