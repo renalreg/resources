@@ -6,6 +6,7 @@
 - Added Missing Admisssion Reason Codes
 - Reduced Admission Reason Description to 100 characters to match database.
 - Changed Mandatory fields in DialysisPrescription
+- Modified Diagnosis to allow LOCAL/ICD-10 CodingStandards
 
 
 ## 4.0.0 - 2023-06-13
