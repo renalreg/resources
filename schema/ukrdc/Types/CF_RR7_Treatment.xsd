@@ -106,11 +106,6 @@
                                 <xs:documentation>Acute Kidney Injury - Peritoneal Dialysis</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
-                        <xs:enumeration value="83">
-                            <xs:annotation>
-                                <xs:documentation>Acute Kidney Injury - RRT not provided by renal service</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
                         <xs:enumeration value="88">
                             <xs:annotation>
                                 <xs:documentation>Acute Kidney Injury receiving RRT not by renal service</xs:documentation>
