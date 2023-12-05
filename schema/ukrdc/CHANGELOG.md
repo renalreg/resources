@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.2.0 - 2023-12-05
+### Changed
+- Restricted Treatment/VisitDescription to 255 characters
+- Increased ResultItem/ResultValue to 30 characters
+- Increased Observation/ObservationValue to 30 characters
+
 ## 4.1.0 - 2023-08-13
 ### Changed
 - Added Missing EDTA2 PRD Codes
