@@ -251,16 +251,16 @@
                 <StrengthUnits>
                     <CodingStandard>CF_RR23</CodingStandard>
                     <Code>l</Code>
-                    <Description>Description61</Description>
+                    <Description>Litre</Description>
                 </StrengthUnits>
             </DrugProduct>
             <Frequency>Frequency0</Frequency>
             <Comments>Comments17</Comments>
             <DoseQuantity>0</DoseQuantity>
             <DoseUoM>
-                <CodingStandard>CodingStandard62</CodingStandard>
-                <Code>Code62</Code>
-                <Description>Description62</Description>
+                <CodingStandard>CF_RR23</CodingStandard>
+                <Code>other</Code>
+                <Description>Other</Description>
             </DoseUoM>
             <Indication>Indication0</Indication>
             <EncounterNumber>EncounterNumber2</EncounterNumber>
