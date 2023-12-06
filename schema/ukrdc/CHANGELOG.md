@@ -5,6 +5,7 @@
 - Restricted Treatment/VisitDescription to 255 characters
 - Increased ResultItem/ResultValue to 30 characters
 - Increased Observation/ObservationValue to 30 characters
+- Amended Medication UoM to use CF_RR23 type.
 
 ## 4.1.0 - 2023-08-13
 ### Changed
