@@ -6,6 +6,7 @@
 - Increased ResultItem/ResultValue to 30 characters
 - Increased Observation/ObservationValue to 30 characters
 - Amended Medication UoM to use CF_RR23 type.
+- Remove EnteredBy from Procedure
 
 ## 4.1.0 - 2023-08-13
 ### Changed

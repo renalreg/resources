@@ -21,12 +21,6 @@
                     <xs:documentation>The time the Procedure started.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="EnteredBy" type="Clinician" minOccurs="0">
-                <xs:annotation>
-                    <!-- <xs:appinfo>NONE</xs:appinfo> -->
-                    <xs:documentation>Person entering the diagnosis as a National Clinicial code where possible or other local code if not.</xs:documentation>
-                </xs:annotation>
-            </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>NONE</xs:appinfo> -->
