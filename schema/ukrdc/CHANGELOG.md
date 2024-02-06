@@ -1,12 +1,13 @@
 # Changelog
 
-## 4.2.0 - 2023-12-05
+## 4.2.0 - 2024-02-06
 ### Changed
 - Restricted Treatment/VisitDescription to 255 characters
 - Increased ResultItem/ResultValue to 30 characters
 - Increased Observation/ObservationValue to 30 characters
 - Amended Medication UoM to use CF_RR23 type.
 - Remove EnteredBy from Procedure
+- All Multiple PRD/CoD Records
 
 ## 4.1.0 - 2023-08-13
 ### Changed
@@ -15,7 +16,6 @@
 - Reduced Admission Reason Description to 100 characters to match database.
 - Changed Mandatory fields in DialysisPrescription
 - Modified Diagnosis to allow LOCAL/ICD-10 CodingStandards
-
 
 ## 4.0.0 - 2023-06-13
 ### Added
