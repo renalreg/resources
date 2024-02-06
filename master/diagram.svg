@@ -427,7 +427,6 @@ onmouseover='makeVisible("_1_1_1_3_1_1")' onmouseout='makeHidden("_1_1_1_3_1_1")
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
 <text class='strong' x='5' y='27'>PatientNumbers</text>
 <text class='visible' x='5' y='41'>type: PatientNumbers</text>
-<text x='5' y='59'>1..∞</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 <use x='134' y='17' xlink:href='#minus' id='s_1_1_1_3_1_1' onclick='show("_1_1_1_3_1_1")'/>
 </g>
