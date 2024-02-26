@@ -334,7 +334,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="ObservationTime" type="xs:dateTime" minOccurs="0">
+            <xs:element name="ObservationTime" type="xs:dateTime" minOccurs="1">
                 <xs:annotation>
                     <!-- <xs:appinfo>resultitem.observationtime</xs:appinfo> -->
                     <xs:documentation>OBX:14</xs:documentation>

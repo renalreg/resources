@@ -1,13 +1,14 @@
 # Changelog
 
-## 4.2.0 - 2024-02-06
+## 4.2.0 - 2024-02-26
 ### Changed
 - Restricted Treatment/VisitDescription to 255 characters
 - Increased ResultItem/ResultValue to 30 characters
 - Increased Observation/ObservationValue to 30 characters
 - Amended Medication UoM to use CF_RR23 type.
 - Remove EnteredBy from Procedure
-- All Multiple PRD/CoD Records
+- Allow Multiple PRD/CoD Records
+- Make ObservationTime mandatory on ResultItem/Observation
 
 ## 4.1.0 - 2023-08-13
 ### Changed
