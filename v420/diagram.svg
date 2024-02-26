@@ -2320,7 +2320,6 @@ onmouseover='makeVisible("_1_1_1_4_1_1_1_13_1_1_1_11")' onmouseout='makeHidden("
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
 <text class='strong' x='5' y='27'>ObservationTime</text>
 <text class='visible' x='5' y='41'>type: dateTime</text>
-<text x='5' y='59'>0..1</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 </g>
 
