@@ -251,16 +251,16 @@
                 <StrengthUnits>
                     <CodingStandard>CF_RR23</CodingStandard>
                     <Code>l</Code>
-                    <Description>Description61</Description>
+                    <Description>Litre</Description>
                 </StrengthUnits>
             </DrugProduct>
             <Frequency>Frequency0</Frequency>
             <Comments>Comments17</Comments>
             <DoseQuantity>0</DoseQuantity>
             <DoseUoM>
-                <CodingStandard>CodingStandard62</CodingStandard>
-                <Code>Code62</Code>
-                <Description>Description62</Description>
+                <CodingStandard>CF_RR23</CodingStandard>
+                <Code>other</Code>
+                <Description>Other</Description>
             </DoseUoM>
             <Indication>Indication0</Indication>
             <EncounterNumber>EncounterNumber2</EncounterNumber>
@@ -278,11 +278,6 @@
                     <Description>Haemodialysis</Description>
                 </ProcedureType>
                 <ProcedureTime>2006-05-04T18:13:51.0</ProcedureTime>
-                <EnteredBy>
-                    <CodingStandard>ODS</CodingStandard>
-                    <Code>ABC123</Code>
-                    <Description>Dr Foster</Description>
-                </EnteredBy>
                 <EnteredAt>
                     <CodingStandard>RR1+</CodingStandard>
                     <Code>ABC123</Code>
@@ -298,11 +293,6 @@
                     <Description>Description82</Description>
                 </ProcedureType>
                 <ProcedureTime>2006-05-04T18:13:51.0</ProcedureTime>
-                <EnteredBy>
-                    <CodingStandard>ODS</CodingStandard>
-                    <Code>Code84</Code>
-                    <Description>Description84</Description>
-                </EnteredBy>
                 <EnteredAt>
                     <CodingStandard>ODS</CodingStandard>
                     <Code>Code85</Code>
@@ -319,11 +309,6 @@
                 <Description>PEX</Description>
             </ProcedureType>
             <ProcedureTime>2006-05-04T18:13:51.0</ProcedureTime>
-            <EnteredBy>
-                <CodingStandard>ODS</CodingStandard>
-                <Code>ABC123</Code>
-                <Description>Dr Foster</Description>
-            </EnteredBy>
             <EnteredAt>
                 <CodingStandard>RR1+</CodingStandard>
                 <Code>ABC123</Code>
@@ -339,11 +324,6 @@
                 <Description>Construction of arteriovenous fistula</Description>
             </ProcedureType>
             <ProcedureTime>2006-05-04T18:13:51.0</ProcedureTime>
-            <EnteredBy>
-                <CodingStandard>ODS</CodingStandard>
-                <Code>ABC123</Code>
-                <Description>Dr Foster</Description>
-            </EnteredBy>
             <EnteredAt>
                 <CodingStandard>RR1+</CodingStandard>
                 <Code>ABC123</Code>

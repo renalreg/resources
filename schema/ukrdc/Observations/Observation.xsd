@@ -17,7 +17,7 @@
             <xs:documentation/>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="ObservationTime" type="xs:dateTime">
+            <xs:element name="ObservationTime" type="xs:dateTime" minOccurs="1">
                 <xs:annotation>
                     <!-- <xs:appinfo>observation.observationtime</xs:appinfo> -->
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo> -->
@@ -77,7 +77,7 @@
                 </xs:annotation>
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:maxLength value="20"/>
+                        <xs:maxLength value="30"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
