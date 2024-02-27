@@ -10,6 +10,10 @@
 - Allow Multiple PRD/CoD Records
 - Make ObservationTime mandatory on ResultItem/Observation
 
+## 4.1.3 - 2023-12-22
+### Changed
+- Remove maxOccurs from PatientNumbers to fix PyXB
+
 ## 4.1.0 - 2023-08-13
 ### Changed
 - Added Missing EDTA2 PRD Codes

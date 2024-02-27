@@ -15,7 +15,7 @@
 
     <xs:complexType name="Patient">
         <xs:sequence>
-            <xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="PatientNumbers" type="PatientNumbers" minOccurs="1">
                 <xs:annotation>
                     <xs:appinfo>
                         <dataset>UKRRv4,UKRRv5</dataset>
