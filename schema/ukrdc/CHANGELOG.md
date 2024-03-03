@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.3.0 - ???
+### Changed
+- Make Treatment/AdmitReason mandatory
+- Make Treatment/HealthCareFacility mandatory
+- Increase Max Length of SendingFacility
+
 ## 4.2.0 - 2024-02-26
 ### Changed
 - Restricted Treatment/VisitDescription to 255 characters

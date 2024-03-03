@@ -4,7 +4,7 @@
     <xs:simpleType name="SendingFacilityType">
         <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
-            <xs:maxLength value="7"/>
+            <xs:maxLength value="10"/>
         </xs:restriction>
     </xs:simpleType>
 

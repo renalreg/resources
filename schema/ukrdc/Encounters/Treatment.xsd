@@ -39,13 +39,13 @@
                     <xs:documentation>Responsible Clinician as a National Clinicial code where possible or other local code if not.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="HealthCareFacility" type="Location" minOccurs="0">
+            <xs:element name="HealthCareFacility" type="Location" minOccurs="1">
                 <xs:annotation>
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
                     <xs:documentation>Treatment Centre (TXT20)</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="AdmitReason" type="CF_RR7_TREATMENT" minOccurs="0">
+            <xs:element name="AdmitReason" type="CF_RR7_TREATMENT" minOccurs="1">
                 <xs:annotation>
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
                     <xs:documentation>Modality</xs:documentation>
