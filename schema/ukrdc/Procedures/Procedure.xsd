@@ -20,7 +20,7 @@
                 </xs:annotation>
             </xs:element>
             <xs:element name="EnteredAt" type="Location" minOccurs="0">
-                <xs:annotation>>
+                <xs:annotation>
                     <xs:documentation>Location the procedure was performed at. Use National coding e.g. RXF01</xs:documentation>
                 </xs:annotation>
             </xs:element>
