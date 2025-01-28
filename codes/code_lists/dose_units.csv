@@ -16,3 +16,5 @@ RADAR,patch,patch,dose_unit
 RADAR,sachet,sachet,dose_unit
 RADAR,µg,microgram,dose_unit
 RADAR,tbsp,table_spoon,dose_unit
+RADAR,units,units,dose_unit
+RADAR,other,other,dose_unit
