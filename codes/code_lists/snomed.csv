@@ -2,10 +2,10 @@
 SNOMED,445119005,Steroid sensitive nephrotic syndrome of childhood 
 SNOMED,48796009,Congenital nephrotic syndrome 
 SNOMED,197601003,Finnish congenital nephrotic syndrome 
-SNOMED,722369003,Congenital nephrotic syndrome 
+SNOMED,722369003,Congenital nephrotic syndrome due to diffuse mesangial sclerosis 
 SNOMED,236384008,Congenital nephrotic syndrome with focal glomerulosclerosis 
 SNOMED,236385009,Drash syndrome
-SNOMED,722118005,Congenital nephrotic syndrome 
+SNOMED,722118005,Congenital nephrotic syndrome due to congenital infection 
 SNOMED,44785005,Minimal change disease 
 SNOMED,236407003,IgA nephropathy 
 SNOMED,445404003,Familial immunoglobulin A nephropathy 
@@ -18,7 +18,7 @@ SNOMED,722168002,Membranous glomerulonephritis with infectious disease
 SNOMED,75888001,"Mesangiocapillary glomerulonephritis, type I "
 SNOMED,722760002,"Mesangiocapillary glomerulonephritis, type II "
 SNOMED,236409000,Mesangiocapillary glomerulonephritis type III 
-SNOMED,197697005,
+SNOMED,197697005,Rapidly progressive nephritic syndrome, diffuse crescentic glomerulonephritis
 SNOMED,236404005,Classical focal segmental glomerulosclerosis
 SNOMED,445388002,Autosomal recessive focal segmental glomerulosclerosis 
 SNOMED,444977005,Autosomal dominant focal segmental glomerulosclerosis 
