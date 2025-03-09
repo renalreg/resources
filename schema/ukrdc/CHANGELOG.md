@@ -6,6 +6,7 @@
 - Make Treatment/HealthCareFacility mandatory
 - Make Medication/FromTime mandatory
 - Increase Max Length of SendingFacility
+- Add "IND" to InterpretationCodes
 
 ## 4.2.0 - 2024-02-26
 ### Changed
