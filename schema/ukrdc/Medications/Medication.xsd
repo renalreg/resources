@@ -24,7 +24,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="FromTime" type="xs:dateTime">
+            <xs:element name="FromTime" type="xs:dateTime" minOccurs="1">
                 <xs:annotation>
                     <!-- <xs:appinfo>medication.fromtime</xs:appinfo> -->
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo> -->

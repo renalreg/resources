@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.3.0 - ???
+### Changed
+- Make Treatment/AdmitReason mandatory
+- Make Treatment/HealthCareFacility mandatory
+- Make Medication/FromTime mandatory
+- Increase Max Length of SendingFacility
+- Add "IND" to InterpretationCodes
+
 ## 4.2.0 - 2024-02-26
 ### Changed
 - Restricted Treatment/VisitDescription to 255 characters
