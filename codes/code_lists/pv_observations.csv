@@ -1,6 +1,6 @@
 PV,BodyTemperature,Body Temperature,obs
 PV,FaecalCalprotectin,Faecal Calprotectin,result,ug/g
-PV,TargetWeight,Target Weight,obs
+PV,TargetWeight,Target Weight,obs,
 PV,acr,ACR,result,mg/mmol
 PV,adjustedcalcium,Adjusted Calcium,result,mmol/L
 PV,albumin,Albumin,result,g/L
