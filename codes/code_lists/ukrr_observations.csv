@@ -22,7 +22,7 @@ UKRR,QBLD6,CRP,result,mg/L
 UKRR,QBLD8,Hba1c %,result,%
 UKRR,QBLDA,Hba1c,result,mmol/mol
 UKRR,QBLE1,Haemoglobin,result,g/dL
-UKRR,QBLE3,MCH,result,
+UKRR,QBLE3,MCH,result,g/dL
 UKRR,QBLE4,Platelets,result,
 UKRR,QBLE5,WBC (from full blood count),result,
 UKRR,QBLEB,Haemloglobin,result,g/L
@@ -32,7 +32,7 @@ UKRR,QBLF5,Percentage of Hypochromic Cells,result,%
 UKRR,QBLF7,Serum B12,result,ng/L
 UKRR,QBLF9,Serum Folate,result,ug/L
 UKRR,QBLFB,Red Cell Folate,result,ug/L
-UKRR,QBLFD,Serum Aluminium,result,
+UKRR,QBLFD,Serum Aluminium,result,umol/L
 UKRR,QBLFF,Tacrolimus Blood Concentration Level,result,ng/mL
 UKRR,QBLFH,Sirolimus Blood Concentration Level,result,ng/mL
 UKRR,QBLFK,Ciclosporin Blood Concentration Level,result,ng/mL
@@ -47,13 +47,13 @@ UKRR,QBLHA,HBV Antibody Status,result,
 UKRR,QBLHC,HBV Surface Antigen Status,result,
 UKRR,QBLHE,HCV Antibody Status,result,
 UKRR,QBLHG,CMV Antibody Status,result,
-UKRR,QBLHK,CMV PCR Copies/ML,result,
+UKRR,QBLHK,CMV PCR Copies/ML,result,IU/mL
 UKRR,QBLHM,HIV Antigen Status,result,
 UKRR,QBLHN,Varicella,result,
 UKRR,QBLHR,EBV Status,result,
 UKRR,QBLHS,EBV Log Count,result,
 UKRR,QBLHV,Urine Volume in 24 Hours,observation,ml
-UKRR,QBLHX,Urinary Creatinine Extraction,result,mmol/L
+UKRR,QBLHX,Urinary Creatinine Excretion,result,mmol/L
 UKRR,QBLPA,PTH ULN,result,
 UKRR,QBLPB,PTH / PTHH ULN Ratio,result,
 UKRR,QBLPC,ALT,result,IU/L
