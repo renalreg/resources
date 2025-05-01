@@ -3,9 +3,9 @@ UKRR,QBLA3,Serum Urea,result,mmol/L
 UKRR,QBLA4,Serum Bicarbonate,result,mmol/L
 UKRR,QBLA6,Serum Sodium,result,mmol/L
 UKRR,QBLA9,Serum Potassium,result,mmol/L
-UKRR,QBLAB,Lab Calculated eGFR,result,
+UKRR,QBLAB,Lab Calculated eGFR,result,mL/min/1.72m^2
 UKRR,QBLAC,Serum Uric Acid (Urate),result,mmol/L
-UKRR,QBLAL,Unit Calculated eGFR,result,
+UKRR,QBLAL,Unit Calculated eGFR,result,mL/min/1.72m^2
 UKRR,QBLB1,Serum Phosphate,result,mmol/L
 UKRR,QBLB3,Serum Calcium,result,mmol/L
 UKRR,QBLB4,Corrected Serum Calcium,result,mmol/L
@@ -23,8 +23,8 @@ UKRR,QBLD8,Hba1c %,result,%
 UKRR,QBLDA,Hba1c,result,mmol/mol
 UKRR,QBLE1,Haemoglobin,result,g/dL
 UKRR,QBLE3,MCH,result,g/dL
-UKRR,QBLE4,Platelets,result,
-UKRR,QBLE5,WBC (from full blood count),result,
+UKRR,QBLE4,Platelets,result,10^9/L
+UKRR,QBLE5,WBC (from full blood count),result,10^9/L
 UKRR,QBLEB,Haemloglobin,result,g/L
 UKRR,QBLF1,Serum Ferritin,result,ug/L = ng/ml
 UKRR,QBLF3,Transferrin Saturation,result,%
@@ -54,7 +54,7 @@ UKRR,QBLHR,EBV Status,result,
 UKRR,QBLHS,EBV Log Count,result,
 UKRR,QBLHV,Urine Volume in 24 Hours,observation,ml
 UKRR,QBLHX,Urinary Creatinine Excretion,result,mmol/L
-UKRR,QBLPA,PTH ULN,result,
+UKRR,QBLPA,PTH ULN,result,pmol/L
 UKRR,QBLPB,PTH / PTHH ULN Ratio,result,
 UKRR,QBLPC,ALT,result,IU/L
 UKRR,QBLPD,ANC,result,
