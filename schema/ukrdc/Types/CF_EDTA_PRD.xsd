@@ -1705,6 +1705,51 @@
                                 <xs:documentation>Glomerulonephritis - No Histology</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
+                        <xs:enumeration value="3754">
+                            <xs:annotation>
+                                <xs:documentation>Focal segmental glomerulosclerosis (FSGS) secondary to HIV</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3765">
+                            <xs:annotation>
+                                <xs:documentation>Focal segmental glomerulosclerosis (FSGS) secondary to lithium</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3777">
+                            <xs:annotation>
+                                <xs:documentation>Focal segmental glomerulosclerosis (FSGS) secondary to sickle cell</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3783">
+                            <xs:annotation>
+                                <xs:documentation>Renal papillary necrosis caused by diabetes</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3796">
+                            <xs:annotation>
+                                <xs:documentation>Renal papillary necrosis caused by analgesics</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3806">
+                            <xs:annotation>
+                                <xs:documentation>Renal papillary necrosis caused by sickle cell</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3810">
+                            <xs:annotation>
+                                <xs:documentation>Kidney stones due to ARPT deficiency</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3823">
+                            <xs:annotation>
+                                <xs:documentation>Infiltration by lymphoma - histologically proven</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="3834">
+                            <xs:annotation>
+                                <xs:documentation>Nephropathy due to pre-eclampsia</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
                         <xs:enumeration value="3847">
                             <xs:annotation>
                                 <xs:documentation>Systemic vasculitis - ANCA negative - no histology</xs:documentation>
@@ -2857,7 +2902,7 @@
                         </xs:enumeration>
                         <xs:enumeration value="722149000">
                             <xs:annotation>
-                                <xs:documentation> Chronic kidney disease following excision of renal neoplasm (disorder)</xs:documentation>
+                                <xs:documentation>Chronic kidney disease following excision of renal neoplasm (disorder)</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
                         <xs:enumeration value="722467000">

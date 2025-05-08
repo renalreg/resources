@@ -1,4 +1,5 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
+    <xs:include schemaLocation="../Types/CF_RR23.xsd"/>
     <xs:include schemaLocation="../Types/Clinician.xsd"/>
     <xs:include schemaLocation="../Types/CodedField.xsd"/>
     <xs:include schemaLocation="../Types/DrugProduct.xsd"/>
@@ -107,7 +108,7 @@
                     <xs:documentation>Dose</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="DoseUoM" type="CodedField" minOccurs="0"/>
+            <xs:element name="DoseUoM" type="CF_RR23" minOccurs="0"/>
             <xs:element name="Indication" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>medication.indication</xs:appinfo> -->
