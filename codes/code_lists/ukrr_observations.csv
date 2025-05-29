@@ -57,5 +57,5 @@ UKRR,QBLHX,Urinary Creatinine Excretion,result,mmol/L
 UKRR,QBLPA,PTH ULN,result,pmol/L
 UKRR,QBLPB,PTH / PTHH ULN Ratio,result,
 UKRR,QBLPC,ALT,result,IU/L
-UKRR,QBLPD,ANC,result,
-UKRR,QBLPE,ALC,result,
+UKRR,QBLPD,ANC,result,10^9/L
+UKRR,QBLPE,ALC,result,10^9/L
