@@ -7,6 +7,7 @@
 - Make Medication/FromTime mandatory
 - Increase Max Length of SendingFacility
 - Add "IND" to InterpretationCodes
+- 111 (COVID 19) has been added to the EDTA_COD code list.
 
 ## 4.2.0 - 2024-02-26
 ### Changed

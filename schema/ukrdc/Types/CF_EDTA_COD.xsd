@@ -338,6 +338,11 @@
                                 <xs:documentation>Line Related Sepsis</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
+                        <xs:enumeration value="111">
+                            <xs:annotation>
+                                <xs:documentation>COVID 19</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>						
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
