@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
+<xsl:stylesheet xmlns="http://www.rixg.org.uk/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0">
     <!-- 
     Notes:
         originally-created-by: MJS (matthew.south@psych.ox.ac.uk)
@@ -90,9 +90,17 @@
     </xsl:template>
 
     <!-- Found under xs:complexType, xs:element, xs:attribute -->
+    <xsl:template match="xs:annotation/xs:appinfo">
+        <div class="dataset">
+            Should be submitted for:  <xsl:value-of select="." />
+            <br/>
+        </div>
+    </xsl:template>
+
     <xsl:template match="xs:annotation/xs:documentation">
         <div class="documentation">
             <xsl:value-of select="." />
+            <br/>
         </div>
     </xsl:template>
 
@@ -165,8 +173,11 @@
             <td>
                 <xsl:apply-templates select="xs:annotation/xs:documentation" />
                 <xsl:choose>
+                    <xsl:when test="starts-with(@type, 'xs:')">
+                        Type: <xsl:value-of select="@type" />
+                    </xsl:when>
                     <xsl:when test="@type">
-                        <xsl:value-of select="@type" />
+                        XXX<xsl:value-of select="@type" />YYY
                     </xsl:when>
                     <xsl:when test="xs:simpleType/xs:restriction">
                         <xsl:call-template name="restriction" />
@@ -236,6 +247,7 @@
     </xsl:template>
 
     <xsl:template name="elementContent">
+        <xsl:apply-templates select="xs:annotation/xs:appinfo" />
         <xsl:apply-templates select="xs:annotation/xs:documentation" />
         <xsl:choose>
             <xsl:when test="@type">
@@ -245,8 +257,74 @@
                             <xsl:value-of select="@type" />
                         </a>
                     </xsl:when>
+                    <xsl:when test="starts-with(@type, 'xs:')">
+                            Type: <xsl:value-of select="@type" />
+                    </xsl:when>
                     <xsl:otherwise>
-                        <xsl:value-of select="@type" />
+                            XXX<xsl:value-of select="@type" />YYY
+                            <br/>
+                        
+                            <!--
+                            
+                            This attempt is trying to use whether or not @type=@name .
+                            It somewhat works but there are too many exceptions like 
+                            Encounters/Treatment.xsd & Diagnoses/Diagnosis.xsd
+
+                            <xsl:choose>
+                            <xsl:when test="@type=@name">
+                            This assumes LabOrders/LabOrder.xsd
+                            <a href="{concat('https://renalreg.github.io/resources/master/', @name, 's/', @name, '.html')}">
+                                    <xsl:value-of select="@type" />
+                            </a>
+                            </xsl:when>
+                            <xsl:otherwise>
+                            This assumes Types/Whatever.xsd
+                            <a href="{concat('https://renalreg.github.io/resources/master/', 'Types/', @type, '.html')}">
+                                    <xsl:value-of select="@type" />
+                            </a>
+                            </xsl:otherwise>
+                            </xsl:choose>
+
+                            -->
+
+                            <!--
+                            
+                            This attempt is trying to look for an include statement ending in @type + '.xsd'
+                            This should work better but despite trying a few variations hasn't worked.
+                            My current theory is that you can't 'escape' a template to get at the parents
+                            of the element it's being called against.
+                            
+                            <xsl:variable name="rootElement" select="ancestor::*[not(parent::*)][last()]" />
+                            -->
+                            <!--
+                            Remove and substring-after(@schemaLocation, $type + '.xsd') = ''
+                            -->
+                            <!--
+                            <xsl:variable name="schemaLocation" select="/xs:include[contains(@schemaLocation, $type + '.xsd')]/@schemaLocation"/>
+                            -->
+                            <!--
+                            This isn't working for some reason.
+                            <xsl:variable name="schemaLocation" select="//xs:include[substring(@schemaLocation, string-length(@schemaLocation) - string-length($type) + 1) = $type + '.xsd']/@schemaLocation" />
+                            <xsl:value-of select="$schemaLocation" />
+                            -->
+                            <!--
+                            This requires functions not available in XPath 1.0 which LXML doesn't support.
+                            <xsl:variable name="schemaLocation" select="//xs:include[ends-with(@schemaLocation, $type + '.xsd')]/@schemaLocation" />
+                            -->
+                            
+                            <!--
+                            <xsl:choose>
+                                <xsl:when test="$schemaLocation">
+                                    <xsl:variable name="documentName" select="substring-before($schemaLocation, '.xsd')" />
+                                    <a href="{concat('https://renalreg.github.io/resources/master/', $documentName, '.html')}">
+                                        <xsl:value-of select="@type" />
+                                    </a>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="@type" />
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            -->
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
@@ -352,6 +430,8 @@
                     </td>
                 </tr>
             </xsl:if>
+            
+            <xsl:apply-templates select="xs:attribute" />
 
         </table>
 
