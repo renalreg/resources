@@ -15,9 +15,9 @@
                 <xs:annotation>
                     <xs:documentation>
                         Code values for PRD are maintained in the Registry Codes repository https://github.com/renalreg/registry-codes:
-                        - EDTA PRD: tables/code_list/edta_prd.csv
-                        - EDTA2: tables/code_list/edta2.csv
-                        - SNOMED Renal Diagnosis: tables/code_list/snomed_renal_diagnosis.csv
+                        - tables/code_list/edta_prd.csv
+                        - tables/code_list/edta2.csv
+                        - tables/code_list/snomed_renal_diagnosis.csv
                 
                         Any valid SNOMED CT code may be submitted when CodingStandard = SNOMED.
                     </xs:documentation>
