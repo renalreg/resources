@@ -8,6 +8,7 @@
 - Increase Max Length of SendingFacility
 - Add "IND" to InterpretationCodes
 - 111 (COVID 19) has been added to the EDTA_COD code list.
+- Modify PRD and COD Types - remove the enumeration so any SNOMED code can be submitted
 
 ## 4.2.0 - 2024-02-26
 ### Changed
