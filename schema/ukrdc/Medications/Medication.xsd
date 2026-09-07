@@ -1,9 +1,11 @@
 <xs:schema xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.rixg.org.uk/">
+    <xs:include schemaLocation="../Types/CF_RR23.xsd"/>
     <xs:include schemaLocation="../Types/Clinician.xsd"/>
     <xs:include schemaLocation="../Types/CodedField.xsd"/>
     <xs:include schemaLocation="../Types/DrugProduct.xsd"/>
     <xs:include schemaLocation="../Types/Location.xsd"/>
     <xs:include schemaLocation="../Types/CommonMetadata.xsd"/>
+    <xs:include schemaLocation="../Types/Route.xsd"/>
 
     <xs:complexType name="Medication">
         <xs:annotation>
@@ -23,7 +25,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="FromTime" type="xs:dateTime">
+            <xs:element name="FromTime" type="xs:dateTime" minOccurs="1">
                 <xs:annotation>
                     <!-- <xs:appinfo>medication.fromtime</xs:appinfo> -->
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo> -->
@@ -43,37 +45,11 @@
                     <xs:documentation>Where the Medicine was Prescribed</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="Route" minOccurs="0">
+            <xs:element name="Route" type="Route" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR,INSApp</xs:appinfo> -->
                     <xs:documentation>Medication Route</xs:documentation>
                 </xs:annotation>
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="CodingStandard" minOccurs="0">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:enumeration value="SNOMED"/>
-                                    <xs:enumeration value="RR22"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                        <xs:element name="Code" minOccurs="0">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:maxLength value="18"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                        <xs:element name="Description" minOccurs="0">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:maxLength value="100"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                    </xs:sequence>
-                </xs:complexType>
             </xs:element>
             <xs:element name="DrugProduct" type="DrugProduct"/>
             <xs:element name="Frequency" minOccurs="0">
@@ -107,7 +83,7 @@
                     <xs:documentation>Dose</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="DoseUoM" type="CodedField" minOccurs="0"/>
+            <xs:element name="DoseUoM" type="CF_RR23" minOccurs="0"/>
             <xs:element name="Indication" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>medication.indication</xs:appinfo> -->

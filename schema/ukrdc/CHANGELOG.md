@@ -1,5 +1,37 @@
 # Changelog
 
+## 4.3.0 - 2026-09-07
+### Changed
+- Make Treatment/AdmitReason mandatory
+- Make Treatment/HealthCareFacility mandatory
+- Make Medication/FromTime mandatory
+- Increase Max Length of SendingFacility
+- Add "IND" to InterpretationCodes
+- 111 (COVID 19) has been added to the EDTA_COD code list.
+- Modify PRD and COD Types - remove the enumeration so any SNOMED code can be submitted
+
+## 4.2.0 - 2024-02-26
+### Changed
+- Restricted Treatment/VisitDescription to 255 characters
+- Increased ResultItem/ResultValue to 30 characters
+- Increased Observation/ObservationValue to 30 characters
+- Amended Medication UoM to use CF_RR23 type.
+- Remove EnteredBy from Procedure
+- Allow Multiple PRD/CoD Records
+- Make ObservationTime mandatory on ResultItem/Observation
+
+## 4.1.3 - 2023-12-22
+### Changed
+- Remove maxOccurs from PatientNumbers to fix PyXB
+
+## 4.1.0 - 2023-08-13
+### Changed
+- Added Missing EDTA2 PRD Codes
+- Added Missing Admisssion Reason Codes
+- Reduced Admission Reason Description to 100 characters to match database.
+- Changed Mandatory fields in DialysisPrescription
+- Modified Diagnosis to allow LOCAL/ICD-10 CodingStandards
+
 ## 4.0.0 - 2023-06-13
 ### Added
 - Assessment Element Type
@@ -13,7 +45,9 @@
 - Amended Treatment to remove items not in V5.
 - Added V5 Treatment Modality Codes.
 
-
+## 3.5.0 - 2023-09-15
+### Changed
+- Add 101 (First Seen) to the RR7 Treatment List
 
 ### 3.4.5 - 2023-06-14
 ### Changed
