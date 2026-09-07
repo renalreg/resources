@@ -40,14 +40,14 @@
     <h4>Types</h4>
     <ul>
       <li>
-        <a href="#CF_EDTA_PRD">CF_EDTA_PRD</a>
+        <a href="#Route">Route</a>
       </li>
     </ul>
     <h4>Complex Types</h4>
     <table border="1" cellspacing="0" cellpadding="4">
       <tr bgcolor="#CCC">
         <td colspan="3">
-          <a name="CF_EDTA_PRD">CF_EDTA_PRD</a>
+          <a name="Route">Route</a>
         </td>
       </tr>
       <tr>
@@ -56,18 +56,11 @@
         (restricted)
         <div class="restriction">
                 Enumeration:
-                <ul><li>EDTA ()</li><li>EDTA2 ()</li><li>SNOMED ()</li></ul></div></td>
+                <ul><li>SNOMED ()</li><li>RR22 ()</li></ul></div></td>
       </tr>
       <tr>
         <td colspan="2">Code</td>
-        <td><div class="documentation">
-                        Code values for PRD are maintained in the Registry Codes repository https://github.com/renalreg/registry-codes:
-                        - tables/code_list/edta_prd.csv
-                        - tables/code_list/edta2.csv
-                        - tables/code_list/snomed_renal_diagnosis.csv
-                
-                        Any valid SNOMED CT code may be submitted when CodingStandard = SNOMED.
-                    <br/></div>xs:string
+        <td>xs:string
         (restricted)
         <div class="restriction">
                 maxLength:
@@ -79,7 +72,7 @@
         (restricted)
         <div class="restriction">
                 maxLength:
-                255</div></td>
+                100</div></td>
       </tr>
     </table>
     <br/>
