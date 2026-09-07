@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.3.0 - 2026-09-07
+### Changed
+- Make Treatment/AdmitReason mandatory
+- Make Treatment/HealthCareFacility mandatory
+- Make Medication/FromTime mandatory
+- Increase Max Length of SendingFacility
+- Add "IND" to InterpretationCodes
+- 111 (COVID 19) has been added to the EDTA_COD code list.
+- Modify PRD and COD Types - remove the enumeration so any SNOMED code can be submitted
+
 ## 4.2.0 - 2024-02-26
 ### Changed
 - Restricted Treatment/VisitDescription to 255 characters
@@ -35,7 +45,9 @@
 - Amended Treatment to remove items not in V5.
 - Added V5 Treatment Modality Codes.
 
-
+## 3.5.0 - 2023-09-15
+### Changed
+- Add 101 (First Seen) to the RR7 Treatment List
 
 ### 3.4.5 - 2023-06-14
 ### Changed

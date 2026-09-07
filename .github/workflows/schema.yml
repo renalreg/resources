@@ -42,7 +42,6 @@ jobs:
           password: ${{ secrets.PYPI_API_TOKEN_SCHEMA }}
           packages_dir: pyxb_build/dist
 
-
   build-xsdata:
     runs-on: ubuntu-latest
 

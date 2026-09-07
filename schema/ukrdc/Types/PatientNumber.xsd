@@ -73,7 +73,7 @@
                         </xs:enumeration>
                         <xs:enumeration value="UKRR_UID">
                             <xs:annotation>
-                                <xs:documentation>UKRR Unique Identifier for Refused Consent Patients</xs:documentation>
+                                <xs:documentation>UKRR Unique Identifier</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
                         <xs:enumeration value="STUDYNO">

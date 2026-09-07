@@ -306,6 +306,11 @@
                                 <xs:documentation>Unknown</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
+                        <xs:enumeration value="IND">
+                            <xs:annotation>
+                                <xs:documentation>Indeterminate</xs:documentation>
+                            </xs:annotation>
+                        </xs:enumeration>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
