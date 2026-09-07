@@ -1,6 +1,6 @@
 # Changelog
 
-## 4.3.0 - ???
+## 4.3.0 - 2026-09-07
 ### Changed
 - Make Treatment/AdmitReason mandatory
 - Make Treatment/HealthCareFacility mandatory
