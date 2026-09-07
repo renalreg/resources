@@ -1688,6 +1688,116 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="Picklist_RR19">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="101">
+                <xs:annotation>
+                    <xs:documentation>
+                        Non-melanoma skin cancer, BCC, SCC
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="102">
+                <xs:annotation>
+                    <xs:documentation>
+                        Melanoma
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="103">
+                <xs:annotation>
+                    <xs:documentation>
+                        Breast
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="104">
+                <xs:annotation>
+                    <xs:documentation>
+                        Upper GI (oesophagus/stomach)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="105">
+                <xs:annotation>
+                    <xs:documentation>
+                        Lower GI (small/large bowel)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="106">
+                <xs:annotation>
+                    <xs:documentation>
+                        Lung
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="107">
+                <xs:annotation>
+                    <xs:documentation>
+                        Urological NOT prostate
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="108">
+                <xs:annotation>
+                    <xs:documentation>
+                        Prostate
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="109">
+                <xs:annotation>
+                    <xs:documentation>
+                        Testicular
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="110">
+                <xs:annotation>
+                    <xs:documentation>
+                        Leukaemia
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="111">
+                <xs:annotation>
+                    <xs:documentation>
+                        Lymphoma
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="112">
+                <xs:annotation>
+                    <xs:documentation>
+                        Myeloma
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="113">
+                <xs:annotation>
+                    <xs:documentation>
+                        CNS Tumour
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="114">
+                <xs:annotation>
+                    <xs:documentation>
+                        Musculo-skeletal
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="115">
+                <xs:annotation>
+                    <xs:documentation>
+                        Other
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="Picklist_RR21">
         <xs:restriction base="xs:integer">
             <xs:enumeration value="101">
@@ -3593,6 +3703,37 @@
                                             </xs:simpleType>
                                         </xs:element>
 
+
+                                        <xs:element name="PATR8" type="RRDateType" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>RR_DATE_FIRST_CKD1</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="PATR6" type="RRDateType" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>RR_DATE_FIRST_CKD2</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="PATR7" type="RRDateType" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>RR_DATE_FIRST_CKD3</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="PATR1" type="RRDateType" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>RR_DATE_FIRST_CKD4</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
+                                        <xs:element name="PATR2" type="RRDateType" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>RR_DATE_FIRST_CKD5</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+
                                         <xs:element name="PAT72" type="xs:string" minOccurs="0" />
 
                                         <!-- Note: PAT80/PAT82/PAT83 are meant to be mandatory -->
@@ -3654,14 +3795,12 @@
                                             <xs:annotation>
                                                 <xs:documentation>Pre dialysis Creatinine at 1st RRT / ERF treatment</xs:documentation>
                                             </xs:annotation>
-
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:integer">
                                                     <xs:minInclusive value="20"/>
                                                     <xs:maxInclusive value="4000"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
-
                                         </xs:element>
                                         <xs:element name="ERF03" type="xs:string" minOccurs="0">
                                             <xs:annotation>
@@ -4073,7 +4212,7 @@
                                         <xs:element name="COM78" type="RRDateType" minOccurs="0" />
                                         <xs:element name="COM79" type="RRDateType" minOccurs="0" />
                                         <xs:element name="COM81" type="xs:string" minOccurs="0" />
-                                        <xs:element name="COM82" type="xs:string" minOccurs="0" />
+                                        <xs:element name="COM82" type="Picklist_RR19" minOccurs="0" />
                                         <xs:element name="COM83" type="RRDateType" minOccurs="0" />
                                         <xs:element name="COM84" type="xs:string" minOccurs="0" />
                                         <xs:element name="COM85" type="RRDateType" minOccurs="0" />
@@ -4970,6 +5109,8 @@
                                         <xs:element name="QBLFJ" type="RRDateType" minOccurs="0"/>
                                         <xs:element name="QBLFK" type="xs:decimal" minOccurs="0"/>
                                         <xs:element name="QBLFL" type="RRDateType" minOccurs="0"/>
+                                        <xs:element name="QBLJD" type="RRDateType" minOccurs="0"/>
+                                        <xs:element name="QBLJF" type="RRDateType" minOccurs="0"/>
                                         <xs:element name="QBLFM" type="xs:decimal" minOccurs="0"/>
                                         <xs:element name="QBLFN" type="RRDateType" minOccurs="0"/>
 
