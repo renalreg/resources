@@ -4761,6 +4761,7 @@ onmouseover='makeVisible("_1_1_1_10_1_1_1_5")' onmouseout='makeHidden("_1_1_1_10
 <text class='hidden' visibility='hidden' x='5' y='13'>nillable: 0</text>
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
 <text class='strong' x='5' y='27'>Route</text>
+<text class='visible' x='5' y='41'>type: Route</text>
 <text x='5' y='59'>0..1</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 <use x='80' y='17' xlink:href='#minus' id='s_1_1_1_10_1_1_1_5' onclick='show("_1_1_1_10_1_1_1_5")'/>
@@ -7872,7 +7873,6 @@ onmouseover='makeVisible("_1_1_1_14_1_2_1_5")' onmouseout='makeHidden("_1_1_1_14
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
 <text class='strong' x='5' y='27'>HealthCareFacility</text>
 <text class='visible' x='5' y='41'>type: Location</text>
-<text x='5' y='59'>0..1</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 <use x='140' y='17' xlink:href='#minus' id='s_1_1_1_14_1_2_1_5' onclick='show("_1_1_1_14_1_2_1_5")'/>
 </g>
@@ -7935,7 +7935,6 @@ onmouseover='makeVisible("_1_1_1_14_1_2_1_6")' onmouseout='makeHidden("_1_1_1_14
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
 <text class='strong' x='5' y='27'>AdmitReason</text>
 <text class='visible' x='5' y='41'>type: CF_RR7_TREATMENT</text>
-<text x='5' y='59'>0..1</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
 <use x='146' y='17' xlink:href='#minus' id='s_1_1_1_14_1_2_1_6' onclick='show("_1_1_1_14_1_2_1_6")'/>
 </g>
