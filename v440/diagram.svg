@@ -4088,7 +4088,7 @@ onmouseover='makeVisible("_1_1_1_9_1_1_1_7")' onmouseout='makeHidden("_1_1_1_9_1
 onmouseover='makeVisible("_1_1_1_9_1_1_1_8")' onmouseout='makeHidden("_1_1_1_9_1_1_1_8")'/>
 <text class='hidden' visibility='hidden' x='5' y='13'>nillable: 0</text>
 <text class='hidden' visibility='hidden' x='5' y='41'>abstract: 0</text>
-<text class='strong' x='5' y='27'>AbatementDate</text>
+<text class='strong' x='5' y='27'>AbatementTime</text>
 <text class='visible' x='5' y='41'>type: dateTime</text>
 <text x='5' y='59'>0..1</text>
 <line class='connection' x1='-35' y1='23' x2='0' y2='23'/>
