@@ -51,7 +51,7 @@
                     <xs:documentation>Date condition began.</xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="AbatementDate" type="xs:dateTime" minOccurs="0">
+            <xs:element name="AbatementTime" type="xs:dateTime" minOccurs="0">
                 <xs:annotation>
                     <!-- <xs:appinfo>UKRRv4,UKRRv5,PKB,RADAR</xs:appinfo> -->
                     <xs:documentation>Date the condition or diagnosis ended or resolved.</xs:documentation>
