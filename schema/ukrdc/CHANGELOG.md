@@ -2,7 +2,7 @@
 
 ## 4.4.0 - 2026-09-22
 ### Changed
-- Add AbatementDate to RenalDiagnosis / Diagnosis
+- Add AbatementTime to RenalDiagnosis / Diagnosis
 
 ## 4.3.0 - 2026-09-07
 ### Changed
