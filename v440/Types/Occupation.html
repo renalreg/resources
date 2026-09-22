@@ -1,0 +1,80 @@
+<html xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#Occupation">Occupation</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="Occupation">Occupation</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">CodingStandard</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>NHS_DATA_DICTIONARY_EMPLOYMENT_STATUS (http://www.datadictionary.nhs.uk/data_dictionary/attributes/e/emp/employment_status_de.asp)</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Code</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                Enumeration:
+                <ul><li>01 (Employed)</li><li>02 (Unemployed)</li><li>03 (Students who are undertaking full (at least 16 hours per week) or part-time (less than 16 hours per week) education or training and who are not working or actively seeking work)</li><li>04 (Long-term sick or disabled, those who are receiving Incapacity Benefit, Income Support or both; or Employment and Support Allowance)</li><li>05 (Homemaker looking after the family or home and who are not working or actively seeking work)</li><li>06 (Not receiving benefits and who are not working or actively seeking work)</li><li>07 (Unpaid voluntary work who are not working or actively seeking work)</li><li>08 (Retired)</li><li>ZZ (Not Stated (Asked but declined to provide a response))</li></ul></div></td>
+      </tr>
+      <tr>
+        <td colspan="2">Description</td>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                32000</div></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>

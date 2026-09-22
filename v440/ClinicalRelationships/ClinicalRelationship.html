@@ -1,0 +1,83 @@
+<html xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#ClinicalRelationship">ClinicalRelationship</a>
+      </li>
+    </ul>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="ClinicalRelationship">ClinicalRelationship</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="documentation"/>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>FromTime</strong>
+        </td>
+        <td><div class="documentation">Start of the relationship<br/></div>
+                            Type: xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">ToTime</td>
+        <td><div class="documentation">End of the relationship<br/></div>
+                            Type: xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">Clinician</td>
+        <td><div class="documentation"><br/></div>
+                            <A HREF='Types/Clinician.html'>Type: Clinician</A>
+                            <br/></td>
+      </tr>
+      <tr>
+        <td colspan="2">FacilityCode</td>
+        <td><div class="documentation"><br/></div>
+                            <A HREF='Types/Location.html'>Type: Location</A>
+                            <br/></td>
+      </tr>
+    </table>
+    <br/>
+  </body>
+</html>
