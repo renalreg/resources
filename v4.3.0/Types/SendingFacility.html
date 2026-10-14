@@ -1,0 +1,122 @@
+<html xmlns="http://www.rixg.org.uk/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <head>
+    <title>UKRDC data schema</title>
+    <style>
+                    body {
+                        margin: 0;
+                        font-family: Helvetica, Arial, Sans-Serif;
+                        font-size: 14px;
+                    }
+                    .restriction {
+                        color: darkred;
+                    }
+                    .documentation {
+                        color: grey;
+                    }
+                    .childrefs {
+                        background-color: #EEE;
+                    }
+                    .parentref {
+                        background-color: #DDD;
+                    }
+                    table {
+                        border-spacing: 0;
+                        border-collapse:collapse
+                    }
+                    td, th {
+                        padding:0
+                    }
+                    td {
+                        border: 2px solid #b0b0b0;
+                        padding: 8px !important;
+                    }
+                    table, th, td {
+                        margin-top: 2px;
+                        font-size: 12px !important;
+                    }
+                </style>
+  </head>
+  <body>
+    <h4>Types</h4>
+    <ul>
+      <li>
+        <a href="#SendingFacility">SendingFacility</a>
+      </li>
+      <li>
+        <a href="#SendingFacilityType">SendingFacilityType</a>
+      </li>
+    </ul>
+    <h4>Simple Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="SendingFacilityType">SendingFacilityType</a>
+        </td>
+      </tr>
+      <tr>
+        <td>xs:string
+        (restricted)
+        <div class="restriction">
+                maxLength:
+                10</div></td>
+      </tr>
+    </table>
+    <br/>
+    <h4>Complex Types</h4>
+    <table border="1" cellspacing="0" cellpadding="4">
+      <tr bgcolor="#CCC">
+        <td colspan="3">
+          <a name="SendingFacility">SendingFacility</a>
+        </td>
+      </tr>
+      <TR class="parentref">
+        <TD colspan="3">
+          <em>
+                    extends
+                    <a href="#SendingFacilityType">SendingFacilityType</a></em>
+        </TD>
+      </TR>
+      <tr>
+        <td colspan="2">
+          <strong>
+                            @
+                            channelName</strong>
+        </td>
+        <td><div class="documentation">This should be a reference for the System / Version which generated the file. The intended purpose is to allow us to identify, or temporarily rectify, issues with what a particular extract is generating.<br/></div>
+                        Type: xs:string</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>
+                            @
+                            time</strong>
+        </td>
+        <td><div class="documentation">This should be the time that the extract was generated.<br/></div>
+                        Type: xs:dateTime</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>
+                            @
+                            schemaVersion</strong>
+        </td>
+        <td><div class="documentation">This should be the version (from the XSD Schema) that the extract has been written against. This is to allow us to process incoming files accordingly as well as track which Units are submitting which version. Note that the RDA Schema version is unrelated to the UKRR Dataset version.<br/></div>
+                        <A HREF='Types/RRTypes.html'>Type: UKRDCSchemaVersion</A>
+                    </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+                        @
+                        batchNo</td>
+        <td><div class="documentation">The batch number as used in the filenames. This should be incremented each time the extract is run, not per-patient<br/></div>
+                        Type: xs:integer</td>
+      </tr>
+      <TR class="childrefs">
+        <TD colspan="3">
+                    extended by:
+                    <a href="#SendingFacility">SendingFacility</a></TD>
+      </TR>
+    </table>
+    <br/>
+  </body>
+</html>
