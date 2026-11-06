@@ -2,7 +2,7 @@
 
 	<xs:include schemaLocation="CF_DMD.xsd"/>
 	<xs:include schemaLocation="CF_SNOMED.xsd"/>
-	<xs:include schemaLocation="CF_RR23.xsd"/>
+	<xs:include schemaLocation="DoseUoM.xsd"/>
 
 	<xs:complexType name="DrugProduct">
 		<xs:sequence>
@@ -38,7 +38,7 @@
 					<xs:documentation>SNOMED Code and description</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="StrengthUnits" type="CF_RR23" minOccurs="0">
+			<xs:element name="StrengthUnits" type="DoseUoM" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Units</xs:documentation>
 				</xs:annotation>
