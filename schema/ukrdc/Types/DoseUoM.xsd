@@ -73,61 +73,6 @@
                                 <xs:documentation>Other</xs:documentation>
                             </xs:annotation>
                         </xs:enumeration>
-                        <xs:enumeration value="258771000">
-                            <xs:annotation>
-                                <xs:documentation>Deciliters</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258682000">
-                            <xs:annotation>
-                                <xs:documentation>Grams</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258770004">
-                            <xs:annotation>
-                                <xs:documentation>Litres</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258684004">
-                            <xs:annotation>
-                                <xs:documentation>Milligrams</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258773002">
-                            <xs:annotation>
-                                <xs:documentation>Milliliters</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258718000">
-                            <xs:annotation>
-                                <xs:documentation>Millimols</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258686002">
-                            <xs:annotation>
-                                <xs:documentation>Nanograms</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="767524001">
-                            <xs:annotation>
-                                <xs:documentation>Other - please specify in comments</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="428673006">
-                            <xs:annotation>
-                                <xs:documentation>Tablets</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258997004">
-                            <xs:annotation>
-                                <xs:documentation>International Units (i.e. for Epoetins)</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="258685003">
-                            <xs:annotation>
-                                <xs:documentation>Micro-grams</xs:documentation>
-                            </xs:annotation>
-                        </xs:enumeration>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
